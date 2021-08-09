@@ -1,0 +1,19 @@
+query ($page: Int!, $perPage: Int!, $sort: [MediaSort]!, $search: String!) {
+    Page(page: $page, perPage: $perPage) {
+        media(sort: $sort, search: $search, type: ANIME) {
+            id
+                title {
+                english
+                romaji,
+                native
+            }
+            format
+            status
+            season
+            seasonYear
+            coverImage {
+                large
+            }
+        }
+    }
+}
