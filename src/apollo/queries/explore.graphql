@@ -1,0 +1,140 @@
+query {
+    trendingAnime: Page(page: 1, perPage: 12) {
+        media(sort: TRENDING_DESC, type: ANIME) {
+            id
+                title {
+                english
+                romaji,
+                native
+            }
+            format
+            status
+            season
+            seasonYear
+            coverImage {
+                large
+            }
+        }
+    }
+  	popularAnime: Page(page: 1, perPage: 12) {
+        media(sort: POPULARITY_DESC, type: ANIME) {
+            id
+            title {
+                english
+                romaji,
+                native
+            }
+            format
+            status
+            season
+            seasonYear
+            coverImage {
+                large
+            }
+        }
+    }
+  	bestRatedAnime: Page(page: 1, perPage: 12) {
+        media(sort: SCORE_DESC, type: ANIME) {
+            id
+            title {
+                english
+                romaji,
+                native
+            }
+            format
+            status
+            season
+            seasonYear
+            coverImage {
+                large
+            }
+        }
+    }
+  	mostFavoritedAnime: Page(page: 1, perPage: 12) {
+        media(sort: FAVOURITES_DESC, type: ANIME) {
+            id
+            title {
+                english
+                romaji,
+                native
+            }
+            format
+            status
+            season
+            seasonYear
+            coverImage {
+                large
+            }
+        }
+    }
+  
+  
+  	trendingManga: Page(page: 1, perPage: 12) {
+        media(sort: TRENDING_DESC, type: MANGA) {
+            id
+            title {
+                english
+                romaji,
+                native
+            }
+            format
+            status
+            season
+            seasonYear
+            coverImage {
+                large
+            }
+        }
+    }
+  	popularManga: Page(page: 1, perPage: 12) {
+        media(sort: POPULARITY_DESC, type: MANGA) {
+            id
+            title {
+                english
+                romaji,
+                native
+            }
+            format
+            status
+            season
+            seasonYear
+            coverImage {
+                large
+            }
+        }
+    }
+  	bestRatedManga: Page(page: 1, perPage: 12) {
+        media(sort: SCORE_DESC, type: MANGA) {
+            id
+            title {
+                english
+                romaji,
+                native
+            }
+            format
+            status
+            season
+            seasonYear
+            coverImage {
+                large
+            }
+        }
+    }
+  	mostFavoritedManga: Page(page: 1, perPage: 12) {
+        media(sort: FAVOURITES_DESC, type: MANGA) {
+            id
+                title {
+                english
+                romaji,
+                native
+            }
+            format
+            status
+            season
+            seasonYear
+            coverImage {
+                large
+            }
+        }
+    }
+}
