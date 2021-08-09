@@ -37,40 +37,40 @@ query ($id: Int!) {
 		}
 		characters {
 			edges {
-			id
-		role
-		node {
-			id
-			name {
-			full
-			}
-			image {
-			large
-			medium
-			}
-			description(asHtml: true)
-			gender
-			dateOfBirth {
-			year
-			month
-			day
-			}
-			age
-			siteUrl
-			favourites
-		}
+				id
+				role
+				node {
+					id
+					name {
+						full
+					}
+					image {
+						large
+						medium
+					}
+					description(asHtml: true)
+					gender
+					dateOfBirth {
+						year
+						month
+						day
+					}
+					age
+					siteUrl
+					favourites
+				}
 			}
 		}
 		studios {
 			edges {
-			id
-		isMain
-		node {
-			id
-			name
-			isAnimationStudio
-			favourites
-		}
+				id
+				isMain
+				node {
+					id
+					name
+					isAnimationStudio
+					favourites
+				}
 			}
 		}
 		favourites
@@ -86,10 +86,10 @@ query ($id: Int!) {
           	native
         }
         streamingEpisodes {
-    		    title
-    		    thumbnail
-    		    url
-    		    site
-    		}
+			title
+			thumbnail
+			url
+			site
+		}
     }
 }
