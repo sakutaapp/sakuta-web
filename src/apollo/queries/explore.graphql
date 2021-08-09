@@ -8,6 +8,7 @@ query {
                 native
             }
             format
+            type
             status
             season
             seasonYear
@@ -25,6 +26,7 @@ query {
                 native
             }
             format
+            type
             status
             season
             seasonYear
@@ -42,6 +44,7 @@ query {
                 native
             }
             format
+            type
             status
             season
             seasonYear
@@ -59,6 +62,7 @@ query {
                 native
             }
             format
+            type
             status
             season
             seasonYear
@@ -78,6 +82,7 @@ query {
                 native
             }
             format
+            type
             status
             season
             seasonYear
@@ -95,6 +100,7 @@ query {
                 native
             }
             format
+            type
             status
             season
             seasonYear
@@ -112,6 +118,7 @@ query {
                 native
             }
             format
+            type
             status
             season
             seasonYear
@@ -129,6 +136,7 @@ query {
                 native
             }
             format
+            type
             status
             season
             seasonYear
