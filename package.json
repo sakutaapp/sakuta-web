@@ -1,0 +1,31 @@
+{
+  "name": "sakuta-web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "generate-types": "graphql-codegen --config codegen.yml"
+  },
+  "dependencies": {
+    "@nuxtjs/apollo": "^4.0.1-rc.5",
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/pwa": "^3.3.5",
+    "core-js": "^3.15.1",
+    "graphql-tag": "^2.12.5",
+    "nuxt": "^2.15.7",
+    "nuxt-webfontloader": "^1.1.0",
+    "vue-i18n": "^8.25.0"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^2.0.1",
+    "@graphql-codegen/typescript": "^2.0.0",
+    "@graphql-codegen/typescript-graphql-files-modules": "^2.0.0",
+    "@graphql-codegen/typescript-operations": "^2.0.1",
+    "@nuxt/types": "^2.15.7",
+    "@nuxt/typescript-build": "^2.1.0",
+    "nuxt-windicss": "^1.1.1"
+  }
+}
