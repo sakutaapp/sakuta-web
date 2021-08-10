@@ -82,8 +82,8 @@ query ($id: Int!) {
         }
         title {
             english
-          	romaji
-          	native
+			romaji
+			native
         }
         streamingEpisodes {
 			title
