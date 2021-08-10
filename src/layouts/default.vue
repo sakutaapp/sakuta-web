@@ -1,9 +1,9 @@
 <template>
-  <div class="relative min-h-screen pb-64 md:pb-45">
-      <Navbar />
-      <nuxt />
-      <Footer />
-  </div>
+    <div class="relative min-h-screen pb-64 md:pb-45">
+        <Navbar />
+        <nuxt />
+        <Footer />
+    </div>
 </template>
 
 <script lang="ts">
