@@ -10,12 +10,22 @@
 import Vue from "vue";
 
 export default Vue.extend({
-    head: {
-        bodyAttrs: {
-            class: "bg-gray-900 dark:bg-dark-900 text-gray-300"
-        },
-        htmlAttrs: {
-            class: localStorage.getItem("theme") === "dark" ? "dark" : ""
+    data: {
+        theme: localStorage.getItem("theme") === "dark"
+    },
+    head() {
+        return {
+            bodyAttrs: {
+                class: "bg-gray-900 dark:bg-dark-900 text-gray-300"
+            },
+            htmlAttrs: {
+                class: this.theme ? "dark" : ""
+            }
+        };
+    },
+    methods: {
+        overrideTheme(theme: any) {
+            this.theme = theme;
         }
     }
 });
