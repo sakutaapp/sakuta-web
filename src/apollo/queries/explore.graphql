@@ -17,7 +17,7 @@ query {
             }
         }
     }
-  	popularAnime: Page(page: 1, perPage: 12) {
+    popularAnime: Page(page: 1, perPage: 12) {
         media(sort: POPULARITY_DESC, type: ANIME) {
             id
             title {
@@ -35,7 +35,7 @@ query {
             }
         }
     }
-  	bestRatedAnime: Page(page: 1, perPage: 12) {
+    bestRatedAnime: Page(page: 1, perPage: 12) {
         media(sort: SCORE_DESC, type: ANIME) {
             id
             title {
@@ -53,7 +53,7 @@ query {
             }
         }
     }
-  	mostFavoritedAnime: Page(page: 1, perPage: 12) {
+    mostFavoritedAnime: Page(page: 1, perPage: 12) {
         media(sort: FAVOURITES_DESC, type: ANIME) {
             id
             title {
@@ -71,10 +71,46 @@ query {
             }
         }
     }
-  
 
-  
-  	trendingManga: Page(page: 1, perPage: 12) {
+    trendingMovies: Page(page: 1, perPage: 12) {
+        media(sort: TRENDING_DESC, type: ANIME, format: MOVIE) {
+            id
+                title {
+                english
+                romaji,
+                native
+            }
+            format
+            type
+            status
+            season
+            seasonYear
+            coverImage {
+                large
+            }
+        }
+    }
+    mostFavoritedMovies: Page(page: 1, perPage: 12) {
+        media(sort: FAVOURITES_DESC, type: ANIME, format: MOVIE) {
+            id
+            title {
+                english
+                romaji,
+                native
+            }
+            format
+            type
+            status
+            season
+            seasonYear
+            coverImage {
+                large
+            }
+        }
+    }
+
+
+    trendingManga: Page(page: 1, perPage: 12) {
         media(sort: TRENDING_DESC, type: MANGA) {
             id
             title {
@@ -92,7 +128,7 @@ query {
             }
         }
     }
-  	popularManga: Page(page: 1, perPage: 12) {
+    popularManga: Page(page: 1, perPage: 12) {
         media(sort: POPULARITY_DESC, type: MANGA) {
             id
             title {
@@ -110,7 +146,7 @@ query {
             }
         }
     }
-  	bestRatedManga: Page(page: 1, perPage: 12) {
+    bestRatedManga: Page(page: 1, perPage: 12) {
         media(sort: SCORE_DESC, type: MANGA) {
             id
             title {
@@ -128,7 +164,7 @@ query {
             }
         }
     }
-  	mostFavoritedManga: Page(page: 1, perPage: 12) {
+    mostFavoritedManga: Page(page: 1, perPage: 12) {
         media(sort: FAVOURITES_DESC, type: MANGA) {
             id
                 title {
