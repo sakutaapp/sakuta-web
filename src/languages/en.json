@@ -86,5 +86,15 @@
     "user.stats.episodesWatched.title": "Anime episodes watched",
     "user.stats.mangaCount.title": "Mangas read",
     "user.stats.chaptersRead.title": "Mangas chapters read",
-    "user.stats.volumesRead.title": "Manga volumes read"
+    "user.stats.volumesRead.title": "Manga volumes read",
+    "explore.heading.trendingAnime": "Trending anime",
+    "explore.heading.popularAnime": "Popular anime",
+    "explore.heading.bestRatedAnime": "Best rated anime",
+    "explore.heading.mostFavoritedAnime": "Most favorited anime",
+    "explore.heading.trendingManga": "Trending manga",
+    "explore.heading.popularManga": "Popular manga",
+    "explore.heading.bestRatedManga": "Best rated manga",
+    "explore.heading.mostFavoritedManga": "Most favorited manga",
+    "explore.heading.trendingMovies": "Trending movies",
+    "explore.heading.mostFavoritedMovies": "Most favorited movies"
 }
