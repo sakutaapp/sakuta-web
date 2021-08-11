@@ -1,7 +1,7 @@
 <template>
     <Container>
         <anilist-gql-response>{{ Media }}</anilist-gql-response>
-        <MediaHeader :media="Media" />
+        <MediaHeader :media="Media" mediaType="manga" />
         <div class="flex flex-col md:flex-row md:space-x-3 space-y-4 md:space-y-0">
             <div class="w-full md:w-1/5 flex flex-col space-y-3">
                 <MediaProperties :properties="properties" />
@@ -12,7 +12,6 @@
             <div class="w-full md:w-4/5 flex flex-col space-y-3">
                 <MediaDescription :description="description" />
                 <MediaCharacters :characters="characters" />
-                <MediaEpisodes :episodes="episodes" />
             </div>
         </div>
         <CharacterModal v-if="modalData.show && modalData.character" :character="modalData.character" @close="modal()" />
@@ -21,11 +20,11 @@
 
 
 <script>
-import anime from "../../apollo/queries/anime";
+import manga from "../../apollo/queries/manga";
 export default {
     apollo: {
         Media: {
-            query: anime,
+            query: manga,
             prefetch: ({ route }) => ({ id: route.params.id }),
             variables () {
                 return { id: this.$route.params.id }
@@ -60,12 +59,8 @@ export default {
         properties() {
             return [
                 {
-                    prop: "season",
-                    value: this.$i18n.t("media.season", { season: this.$i18n.t(`media.season.${this.Media?.season}`), year: this.Media?.seasonYear }),
-                },
-                {
-                    prop: "length",
-                    value: this.$i18n.tc("media.length", this.Media?.duration, [this.Media?.duration])
+                    prop: "chapters",
+                    value: this.Media?.chapters,
                 },
                 {
                     prop: "source",

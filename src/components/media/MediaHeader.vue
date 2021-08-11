@@ -11,7 +11,8 @@
                     <div class="hidden md:block bg-white w-1.5 h-1.5 rounded-full"></div>
                     <p>{{ $t(`media.status.${status}`) }}</p>
                     <div class="hidden md:block bg-white w-1.5 h-1.5 rounded-full"></div>
-                    <p>{{ $t("media.episodes.text", [episodes]) }}</p>
+                    <p v-if="type === 'anime'">{{ $tc("media.episodes.text", episodes, [episodes]) }}</p>
+                    <p v-if="type === 'manga'">{{ $tc("media.volumes.text", volumes, [volumes]) }}</p>
                 </div>
                 <div class="hidden md:flex items-center space-x-5">
                     <Button :to="`https://anilist.co/anime/${id}`" :newTab="true" css="bg-blue-500 hover:bg-blue-600" textColor="white">{{ $t("general.viewOn", ["AniList"]) }}</Button>
@@ -26,15 +27,19 @@
 import Vue from "vue";
 export default Vue.extend({
     props: {
-        media: Object
+        media: Object,
+        mediaType: String
     },
     computed: {
+        type(): any { if (this.mediaType === "manga") { return "manga" } else { return "anime" } },
+
         coverImageXl(): any { return this.media?.coverImage?.extraLarge || "" },
         title(): any { return this.media?.title?.english || this.media?.title?.romaji || this.media?.title?.native || "" },
         favourites(): any { return this.media?.favourites || 0 },
         format(): any { return this.media?.format || "TV" },
         status(): any { return this.media?.status || "FINISHED" },
         episodes(): any { return this.media?.episodes || 0 },
+        volumes(): any { return this.media?.volumes || 0 },
         id(): any { return this.media?.id || 0 },
         idMal(): any { return this.media?.idMal || 0 }
     }

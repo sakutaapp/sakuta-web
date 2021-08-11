@@ -1,5 +1,5 @@
 query ($id: Int!) {
-	Media (id: $id, type: ANIME) {
+	Media (id: $id, type: MANGA) {
         id
         idMal
 		format
@@ -15,10 +15,8 @@ query ($id: Int!) {
 			month
 			day
 		}
-		season
-		seasonYear
-		episodes
-		duration
+		chapters
+		volumes
 		source
 		hashtag
 		trailer {
