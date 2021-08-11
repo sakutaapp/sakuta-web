@@ -1,5 +1,5 @@
 <template>
-    <div class="whitespace-nowrap md:whitespace-normal">
+    <div class="whitespace-nowrap md:whitespace-normal" v-if="value">
         <p class="text-gray-300 font-semibold">{{ $t(`media.props.${prop}.title`) }}</p>
         <p class="text-gray-400">{{ value }}</p>
     </div>
