@@ -12,7 +12,7 @@ const config: NuxtConfig = {
     srcDir: "src",
     ssr: false,
     target: "static",
-    components: true,
+    components: [ { path: '~/components', pathPrefix: false } ],
 
     buildModules,
     head,
