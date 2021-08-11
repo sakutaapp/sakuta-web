@@ -6,9 +6,7 @@
                     <nuxt-link to="/"><img src="/assets/svg/logo.svg" class="h-8" /></nuxt-link>
                 </div>
                 <div class="w-full flex-grow flex justify-center items-center space-x-6">
-                    <nuxt-link to="/">Home</nuxt-link>
-                    <nuxt-link to="/search">Search</nuxt-link>
-                    <nuxt-link to="/anime/101291">Example Anime</nuxt-link>
+                    <nuxt-link v-for="link in nav" :key="link.to" :to="link.to">{{ $t(`nav.link.${link.name}`) }}</nuxt-link>
                 </div>
                 <div class="flex-grow w-1/5 text-right">
                 </div>
@@ -25,9 +23,27 @@ export default Vue.extend({
     },
     data() {
         return {
+            navLinks: [
+                {
+                    to: "/",
+                    name: "home"
+                },
+                {
+                    to: "/explore",
+                    name: "explore"
+                },
+                {
+                    to: "/anime/101291",
+                    name: "exampleAnime"
+                }
+            ]
         }
     },
     computed: {
+        nav(): any {
+            if(localStorage.getItem("homePage") !== "explore") return this.navLinks;
+            return this.navLinks.filter(link => link.name !== "home");
+        }
     }
 });
 </script>

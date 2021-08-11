@@ -14,6 +14,8 @@
     "general.month.12.full": "December",
     "general.date.dayMonth": "{month} {day}{suffix}",
     "general.date.full": "{month} {day}{suffix} {year}",
+    "nav.link.home": "Home",
+    "nav.link.explore": "Explore",
     "footer.category.sakuta": "Sakuta",
     "footer.category.legal": "Legal",
     "footer.category.social": "Social",
