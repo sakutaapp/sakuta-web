@@ -1,6 +1,6 @@
 <template>
     <div class="relative min-h-screen pb-64 md:pb-45">
-        <Navbar :fixed="navbar" />
+        <Navbar :fixed="navbar" @toggleSettings="settingsModal = true" />
         <nuxt :class="navbar ? 'pt-21' : ''" />
         <Footer />
         <SettingsModal v-if="settingsModal" @close="settingsModal = false" @theme="$event === 'dark' ? theme = true : theme = false" @navbar="$event === 'fixed' ? navbar = true : navbar = false" />
