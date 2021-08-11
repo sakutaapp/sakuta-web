@@ -23,20 +23,20 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from "vue";
 export default Vue.extend({
-  props: {
-    media: Object
-  },
-  computed: {
-      coverImageXl(): any { return this.media?.coverImage?.extraLarge || "" },
-      title(): any { return this.media?.title?.english || this.media?.title?.romaji || this.media?.title?.native || "" },
-      favourites(): any { return this.media?.favourites || 0 },
-      format(): any { return this.media?.format || "TV" },
-      status(): any { return this.media?.status || "FINISHED" },
-      episodes(): any { return this.media?.episodes || 0 },
-      id(): any { return this.media?.id || 0 },
-      idMal(): any { return this.media?.idMal || 0 }
-  }
+    props: {
+        media: Object
+    },
+    computed: {
+        coverImageXl(): any { return this.media?.coverImage?.extraLarge || "" },
+        title(): any { return this.media?.title?.english || this.media?.title?.romaji || this.media?.title?.native || "" },
+        favourites(): any { return this.media?.favourites || 0 },
+        format(): any { return this.media?.format || "TV" },
+        status(): any { return this.media?.status || "FINISHED" },
+        episodes(): any { return this.media?.episodes || 0 },
+        id(): any { return this.media?.id || 0 },
+        idMal(): any { return this.media?.idMal || 0 }
+    }
 });
 </script>
