@@ -72,6 +72,7 @@
     "media.section.chapters": "Chapters",
     "media.section.genres": "Genres",
     "media.section.tags": "Tags",
+    "media.tags.toggleSpoilers": "Toggle spoiler tags",
     "character.role.MAIN": "Main",
     "character.role.SUPPORTING": "Supporting",
     "character.role.BACKGROUND": "Background",
