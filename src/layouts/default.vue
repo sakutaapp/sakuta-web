@@ -1,8 +1,9 @@
 <template>
     <div class="relative min-h-screen pb-64 md:pb-45">
-        <Navbar />
-        <nuxt />
+        <Navbar :fixed="navbar" />
+        <nuxt :class="navbar ? 'pt-21' : ''" />
         <Footer />
+        <SettingsModal v-if="settingsModal" @close="settingsModal = false" @theme="$event === 'dark' ? theme = true : theme = false" @navbar="$event === 'fixed' ? navbar = true : navbar = false" />
     </div>
 </template>
 
@@ -10,8 +11,12 @@
 import Vue from "vue";
 
 export default Vue.extend({
-    data: {
-        theme: localStorage.getItem("theme") === "dark"
+    data() {
+        return {
+            theme: localStorage.getItem("theme") === "dark",
+            navbar: localStorage.getItem("navbar") === "fixed",
+            settingsModal: false
+        }
     },
     head() {
         return {
@@ -19,14 +24,10 @@ export default Vue.extend({
                 class: "bg-gray-900 dark:bg-dark-900 text-gray-300"
             },
             htmlAttrs: {
+                /// @ts-ignore
                 class: this.theme ? "dark" : ""
             }
         };
-    },
-    methods: {
-        overrideTheme(theme: any) {
-            this.theme = theme;
-        }
     }
 });
 </script>

@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-gray-800 dark:bg-dark-800 shadow-sm py-4 mb-5">
+    <div :class="`bg-gray-800 dark:bg-dark-800 shadow-sm py-4 mb-5 ${ fixed ? 'fixed fixed-navbar backdrop-filter backdrop-blur-lg w-full z-90 border-b shadow border-gray-900 dark:border-black' : '' }`">
         <Container>
             <div class="flex items-center">
                 <div class="flex-grow w-1/5 text-left">
@@ -16,3 +16,27 @@
         </Container>
     </div>
 </template>
+
+<script lang="ts">
+import Vue from "vue";
+export default Vue.extend({
+    props: {
+        fixed: Boolean
+    },
+    data() {
+        return {
+        }
+    },
+    computed: {
+    }
+});
+</script>
+
+<style>
+.fixed-navbar {
+    background-color: rgba(17,24,39,.8)!important;
+}
+.dark .fixed-navbar {
+    background-color: rgba(15,15,15,.8)!important;
+}
+</style>

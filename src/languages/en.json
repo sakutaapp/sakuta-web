@@ -96,5 +96,15 @@
     "explore.heading.bestRatedManga": "Best rated manga",
     "explore.heading.mostFavoritedManga": "Most favorited manga",
     "explore.heading.trendingMovies": "Trending movies",
-    "explore.heading.mostFavoritedMovies": "Most favorited movies"
+    "explore.heading.mostFavoritedMovies": "Most favorited movies",
+    "settings.heading": "Settings",
+    "settings.setting.theme": "Theme",
+    "settings.setting.homePage": "Home page",
+    "settings.setting.navbar": "Navigation",
+    "settings.option.blue": "Blue",
+    "settings.option.dark": "Dark",
+    "settings.option.landing": "Landing page",
+    "settings.option.explore": "Explore",
+    "settings.option.fixed": "Fixed to screen",
+    "settings.option.unfixed": "On top of page"
 }
