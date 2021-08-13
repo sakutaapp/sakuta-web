@@ -11,7 +11,7 @@
             </div>
             <div class="w-full md:w-4/5 flex flex-col space-y-3">
                 <MediaDescription :description="description" />
-                <MediaCharacters :characters="characters" />
+                <MediaCharacters :characters="characters" @open="modal($event)" />
                 <MediaEpisodes :episodes="episodes" />
             </div>
         </div>
