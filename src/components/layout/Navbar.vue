@@ -38,10 +38,6 @@ export default Vue.extend({
                 {
                     to: "/search",
                     name: "search"
-                },
-                {
-                    to: "/anime/101291",
-                    name: "exampleAnime"
                 }
             ],
             sidebar: false
