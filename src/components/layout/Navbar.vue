@@ -36,6 +36,10 @@ export default Vue.extend({
                     name: "explore"
                 },
                 {
+                    to: "/search",
+                    name: "search"
+                },
+                {
                     to: "/anime/101291",
                     name: "exampleAnime"
                 }

@@ -16,6 +16,7 @@
     "general.date.full": "{month} {day}{suffix} {year}",
     "nav.link.home": "Home",
     "nav.link.explore": "Explore",
+    "nav.link.search": "Search",
     "footer.category.sakuta": "Sakuta",
     "footer.category.legal": "Legal",
     "footer.category.social": "Social",
@@ -53,6 +54,8 @@
     "media.source.NOVEL": "Novel",
     "media.source.DOUUJINSHI": "Doujinshi",
     "media.source.ANIME": "Anime",
+    "media.type.ANIME": "Anime",
+    "media.type.MANGA": "Manga",
     "media.season": "{season} {year}",
     "media.length": "{0} minute | {0} minutes",
     "media.mean": "{0}/100",
@@ -112,5 +115,13 @@
     "settings.option.landing": "Landing page",
     "settings.option.explore": "Explore",
     "settings.option.fixed": "Fixed to screen",
-    "settings.option.unfixed": "On top of page"
+    "settings.option.unfixed": "On top of page",
+    "search.filters.type.ALL": "All types",
+    "search.sort.POPULARITY_DESC": "Most popular",
+    "search.sort.POPULARITY": "Least popular",
+    "search.sort.TRENDING_DESC": "Trending",
+    "search.sort.FAVOURITES_DESC": "Most favorited",
+    "search.sort.FAVOURITES": "Least favorited",
+    "search.sort.SCORE_DESC": "Highest rated",
+    "search.sort.SCORE": "Lowest rated"
 }

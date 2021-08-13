@@ -2,9 +2,7 @@
     <Container>
         <div v-for="category in categories" :key="category.key" class="mb-15">
             <h2 class="text-xl font-bold uppercase mb-3">{{ $t(`explore.heading.${category.key}`) }}</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-5">
-                <MediaCard v-for="media in category.media" :key="media.id" :media="media" />
-            </div>
+            <MediaGrid :media="category.media" />
         </div>
     </Container>
 </template>

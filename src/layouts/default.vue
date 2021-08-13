@@ -53,4 +53,10 @@ anilist-gql-response {
     border-radius: 0px;
     box-shadow: inset 0px 0px 0px 0px #F0F0F0;
 }
+
+.dark ::-webkit-scrollbar-track{
+    background: #181818;
+    border-radius: 0px;
+    box-shadow: inset 0px 0px 0px 0px #F0F0F0;
+}
 </style>
