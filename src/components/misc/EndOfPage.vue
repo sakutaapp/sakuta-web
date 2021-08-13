@@ -1,5 +1,5 @@
 <template>
-    <div class="text-center mt-20">
+    <div class="text-center mt-30 mb-20">
         <div class="flex justify-center space-x-2 mb-3">
             <Eye />
             <Eye />
