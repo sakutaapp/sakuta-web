@@ -8,6 +8,7 @@ query ($page: Int!, $perPage: Int = 48, $sort: [MediaSort]!, $search: String, $t
                 native
             }
             format
+            type
             status
             season
             seasonYear
