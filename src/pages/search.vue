@@ -15,6 +15,7 @@
         <MediaGrid :media="previousEntries" />
         <div id="scroll-sensor"></div>
         <MediaGrid :media="data" /> 
+        <EndOfPage />
     </Container>
 </template>
 
