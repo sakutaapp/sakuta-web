@@ -40,11 +40,6 @@ export default Vue.extend({
               external: false,
               link: "/privacy",
               text: "footer.link.privacy"
-            },
-            {
-              external: false,
-              link: "/terms",
-              text: "footer.link.terms"
             }
           ]
         },
