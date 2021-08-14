@@ -61,8 +61,8 @@ export default Vue.extend({
             },
             {
               external: true,
-              link: "https://discord.gg",
-              text: "Discord"
+              link: "https://github.com/sakutaapp",
+              text: "GitHub"
             }
           ]
         }
