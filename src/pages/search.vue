@@ -1,5 +1,5 @@
 <template>
-    <Container>
+    <Container class="mt-5">
         <div class="flex mb-5 space-x-3">
             <input v-model="filters.query" type="text" class="bg-gray-800 dark:bg-dark-800 px-3 py-1 rounded focus:bg-gray-700 focus:dark:bg-dark-700 focus:outline-none focus:rounded-lg transition duration-250 w-full flex-grow" placeholder="Search...">
             <select class="bg-gray-800 dark:bg-dark-800 focus:outline-none rounded transition duration-250 focus:bg-gray-700 focus:dark:bg-dark-700 pr-8" v-model="filters.type">

@@ -1,5 +1,5 @@
 <template>
-    <Container>
+    <Container class="mt-5">
         <anilist-gql-response>{{ Media }}</anilist-gql-response>
         <MediaHeader :media="Media" />
         <div class="flex flex-col md:flex-row md:space-x-3 space-y-4 md:space-y-0">

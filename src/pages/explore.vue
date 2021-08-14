@@ -1,5 +1,5 @@
 <template>
-    <Container>
+    <Container class="mt-5">
         <div v-for="category in categories" :key="category.key" class="mb-15">
             <h2 class="text-xl font-bold uppercase mb-3">{{ $t(`explore.heading.${category.key}`) }}</h2>
             <MediaGrid :media="category.media" />
