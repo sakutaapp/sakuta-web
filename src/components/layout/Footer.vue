@@ -9,7 +9,8 @@
         <div class="text-left flex flex-col" v-for="category in links" :key="category.title">
           <h2 class="font-semibold mb-1">{{ $t(category.title) }}</h2>
           <div class="text-gray-400" v-for="link in category.links" :key="link.link">
-            <nuxt-link :to="link.link">{{ $t(link.text) }}</nuxt-link>
+            <nuxt-link v-if="!link.external" :to="link.link">{{ $t(link.text) }}</nuxt-link>
+            <a v-else :href="link.link" target="_blank">{{ $t(link.text) }}</a>
           </div>
         </div>
       </div>
@@ -26,18 +27,25 @@ export default Vue.extend({
       links: [
         {
           title: "footer.category.sakuta",
-          links: []
+          links: [
+            {
+              link: "/explore",
+              text: "nav.link.explore"
+            },
+            {
+              link: "/search",
+              text: "nav.link.search"
+            }
+          ]
         },
         {
           title: "footer.category.legal",
           links: [
             {
-              external: false,
               link: "/imprint",
               text: "footer.link.imprint"
             },
             {
-              external: false,
               link: "/privacy",
               text: "footer.link.privacy"
             }
