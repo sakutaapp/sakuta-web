@@ -124,7 +124,6 @@
     "search.sort.FAVOURITES_DESC": "Most favorited",
     "search.sort.FAVOURITES": "Least favorited",
     "search.sort.SCORE_DESC": "Highest rated",
-    "search.sort.SCORE": "Lowest rated",
     "landing.heading": "Welcome to {sakuta}!",
     "landing.subheading": "The new way to track anime",
     "landing.intro": "A simple and modern {anilist} client",
