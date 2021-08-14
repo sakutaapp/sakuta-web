@@ -12,11 +12,19 @@ export default ({ app }) => {
 }
 
 function getMessages() {
-    const locales = require.context("~/languages", true, /[A-Za-z0-9-_,\s]+\.json$/i)
+    const locales = require.context("~/languages", true, /[A-Za-z0-9-_,\s]+\.json$/i);
 	const messages = {};
 	locales.keys().forEach(key => {
-		let matched = key.match(/(?<=\.\/)[a-z-]*(?=\.json)/g)[0];
-		if(matched && matched.length > 1) messages[matched] = locales(key);
+		const matched = key.match(/(?<=\.\/)[a-z-]*\/[A-Za-z]*(?=\.json)/g)[0];
+		const lang = matched.split("/")[0];
+		const file = matched.split("/")[1];
+
+		if(matched && lang && file && lang.length > 1 && file.length > 1) {
+			if(!messages[lang]) messages[lang] = {};
+			Object.keys(locales(`./${matched}.json`)).forEach(key => {
+				messages[lang][`${file}.${key}`] = locales(`./${matched}.json`)[key];
+			});
+		}
 	});
 	console.log(messages);
 	return messages;

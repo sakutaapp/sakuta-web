@@ -1,0 +1,13 @@
+{
+	"heading": "Einstellungen",
+	"setting.theme": "Theme",
+	"setting.homePage": "Startseite",
+	"setting.navbar": "Navigation",
+	"setting.language": "Sprache",
+	"option.blue": "Blau",
+	"option.dark": "Dunkel",
+	"option.landing": "Landing Page",
+	"option.explore": "Erkunden",
+	"option.fixed": "Scrollt mit",
+	"option.unfixed": "Bleibt oben"
+}

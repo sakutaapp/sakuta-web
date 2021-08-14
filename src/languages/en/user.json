@@ -1,0 +1,10 @@
+{
+	"section.statistics": "Statistics",
+	"section.about": "About",
+	"stats.animeCount.title": "Animes watched",
+	"stats.minutesWatched.title": "Minutes spent watching Anime",
+	"stats.episodesWatched.title": "Anime episodes watched",
+	"stats.mangaCount.title": "Mangas read",
+	"stats.chaptersRead.title": "Mangas chapters read",
+	"stats.volumesRead.title": "Manga volumes read"
+}

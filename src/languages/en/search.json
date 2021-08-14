@@ -1,0 +1,9 @@
+{
+	"filters.type.ALL": "All types",
+	"sort.POPULARITY_DESC": "Most popular",
+	"sort.POPULARITY": "Least popular",
+	"sort.TRENDING_DESC": "Trending",
+	"sort.FAVOURITES_DESC": "Most favorited",
+	"sort.FAVOURITES": "Least favorited",
+	"sort.SCORE_DESC": "Highest rated"
+}

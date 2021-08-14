@@ -1,0 +1,14 @@
+{
+	"role.MAIN": "Hauptrolle",
+	"role.SUPPORTING": "Nebenrolle",
+	"role.BACKGROUND": "Hintergrundrolle",
+	"role.MAIN.long": "Hauptcharakter",
+	"role.SUPPORTING.long": "Nebencharakter",
+	"role.BACKGROUND.long": "Hintergrundcharakter",
+	"birthDate.text": "Geboren am {0}",
+	"age.text": "{0} Jahre alt",
+	"favorites.text": "{0} mal favorisiert",
+	"favorites.heading": "Favorisiert:",
+	"birthDate.heading": "Geburtsdatum:",
+	"age.heading": "ALter:"
+}

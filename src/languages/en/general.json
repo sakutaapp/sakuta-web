@@ -1,0 +1,17 @@
+{
+	"viewOn": "View on {0}",
+	"month.1.full": "January",
+	"month.2.full": "February",
+	"month.3.full": "March",
+	"month.4.full": "April",
+	"month.5.full": "May",
+	"month.6.full": "June",
+	"month.7.full": "July",
+	"month.8.full": "August",
+	"month.9.full": "September",
+	"month.10.full": "October",
+	"month.11.full": "November",
+	"month.12.full": "December",
+	"date.dayMonth": "{month} {day}{suffix}",
+	"date.full": "{month} {day}{suffix} {year}"
+}

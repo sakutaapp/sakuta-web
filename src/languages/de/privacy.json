@@ -1,0 +1,6 @@
+{
+	"heading": "Datenschutzerklärung",
+	"text": "Sakuta sammelt keine Benutzerinformationen. Alle Daten stammen von den AniList-Servern. Alle Einstellungen werden entweder lokal auf dem Gerät oder auf den Servern von AniList gespeichert. Durch die Nutzung unseres Dienstes könnten jedoch unser Hosting-Anbieter \"Netlify\" und die Plattform \"AniList\" Daten erfassen. Um mehr darüber zu erfahren, wie diese die Daten verwenden, schauen Sie sich {netlify} und {anilist} an!",
+	"netlifyLink": "Netlify's Datenschutzerklärung",
+	"anilistLink": "AniList's Datenschutzerklärung"
+}

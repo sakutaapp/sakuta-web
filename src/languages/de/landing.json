@@ -1,0 +1,15 @@
+{
+	"heading": "Willkommen bei {sakuta}!",
+	"subheading": "Die neue Art, Anime zu tracken",
+	"intro": "Ein simpler und moderner {anilist} Client",
+	"imageSource": "Bildquelle:",
+	"iconCredits": "Icons auf dieser Seite sind von {icons8}",
+	"features.layout.title": "Simples Layout",
+	"features.layout.description": "Sakuta hat ein sehr simples Layout und ist nicht mit Infos vollgestopft, die du vielleicht alle 3 Monate einmal benutzt.",
+	"features.linked.title": "Mit AniList verbunden",
+	"features.linked.description": "Sämtliche Daten stammen von AniList. Abseits davon, wenn du einen Anime oder Manga einmal auf AniList ansehen willst, kannst du über einen Button direkt dorthin gelangen!",
+	"features.mobile.title": "Handy-freundlich",
+	"features.mobile.description": "Sakuta wurde mit einem Blick auf Smartphones entwickelt. Die gesamte Website kann intuitive Art und Weise über das Smartphone navigiert werden. Du kannst Sakuta außerdem zu deinem Homebildschirm hinzufügen, um es wie eine App zu benutzen!",
+	"features.list.title": "Verwalte deine Watchlist",
+	"features.list.description": "Bald wirst du die Möglichkeit haben, dich mit deinem AniList Account einzuloggen und ganz simpel deine Watchlist, dein Profil usw. direkt von Sakuta aus zu verwalten!"
+}
