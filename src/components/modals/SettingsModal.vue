@@ -2,14 +2,17 @@
     <Modal @close="$emit('close')">
         <h1 class="font-bold text-3xl mb-2">{{ $t("settings.heading") }}</h1>
 
-        <h2 class="font-semibold text-xl">{{ $t("settings.setting.theme") }}</h2>
+        <h2 class="font-semibold text-xl mt-2">{{ $t("settings.setting.theme") }}</h2>
         <SettingsSelector :options="['blue', 'dark']" v-model="theme" />
 
-        <h2 class="font-semibold text-xl">{{ $t("settings.setting.homePage") }}</h2>
+        <h2 class="font-semibold text-xl mt-2">{{ $t("settings.setting.homePage") }}</h2>
         <SettingsSelector :options="['landing', 'explore']" v-model="homePage" />
 
-        <h2 class="font-semibold text-xl">{{ $t("settings.setting.navbar") }}</h2>
+        <h2 class="font-semibold text-xl mt-2">{{ $t("settings.setting.navbar") }}</h2>
         <SettingsSelector :options="['fixed', 'unfixed']" v-model="navbar" />
+
+        <h2 class="font-semibold text-xl mt-2">{{ $t("settings.setting.language") }}</h2>
+        <SettingsSelector :options="$i18n.availableLocales" v-model="lang" :lang="true" />
     </Modal>
 </template>
 
@@ -20,7 +23,8 @@ export default Vue.extend({
         return {
             theme: localStorage.getItem("theme") === "dark" ? localStorage.getItem("theme") : "blue",
             homePage: localStorage.getItem("homePage") === "explore" ? localStorage.getItem("homePage") : "landing",
-            navbar: localStorage.getItem("navbar") === "fixed" ? localStorage.getItem("navbar") : "unfixed"
+            navbar: localStorage.getItem("navbar") === "fixed" ? localStorage.getItem("navbar") : "unfixed",
+            lang: localStorage.getItem("lang") || "en"
         }
     },
     watch: {
@@ -34,6 +38,10 @@ export default Vue.extend({
         navbar(navbar) {
             localStorage.setItem("navbar", navbar);
             this.$emit("navbar", navbar);
+        },
+        lang(lang) {
+            localStorage.setItem("lang", lang);
+            this.$i18n.locale = lang;
         }
     }
 });
