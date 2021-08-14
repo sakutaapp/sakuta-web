@@ -136,5 +136,20 @@
     "landing.features.mobile.title": "Mobile-friendly",
     "landing.features.mobile.description": "Sakuta was designed with mobiles in mind. The whole website can be navigated right from your phone in an intuitive way! You can even add the app to your home screen to use it like an App!",
     "landing.features.list.title": "Manage your watchlist",
-    "landing.features.list.description": "Soon you'll be able to log in using your AniList account and be able to easily manage your watch list, profile etc. right from Sakuta!"
+    "landing.features.list.description": "Soon you'll be able to log in using your AniList account and be able to easily manage your watch list, profile etc. right from Sakuta!",
+    "imprint.heading": "Imprint",
+    "imprint.accordingTo": "According to § 5 TMG (German law)",
+    "imprint.responsible": "Responsible for this website is:",
+    "imprint.germany": "Germany",
+    "imprint.disclaimers": "Disclaimers",
+    "imprint.disclaimers.content.heading": "Accountability for content",
+    "imprint.disclaimers.content.text": "The contents of our pages have been created with the utmost care. However, we cannot guarantee the contents’ accuracy, completeness or topicality. According to statutory provisions, we are furthermore responsible for our own content on these web pages. In this matter, please note that we are not obliged to monitor the transmitted or saved information of third parties, or investigate circumstances pointing to illegal activity. Our obligations to remove or block the use of information under generally applicable laws remain unaffected by this as per §§ 8 to 10 of the Telemedia Act (TMG).",
+    "imprint.disclaimers.content.tldr": "tl;dr: Most data on this website is from AniList. We cannot guarantee the accuracy of that data. Besides this, we do not scan that data for illegal activity. If something illegal is reported to us, we will remove it from our website, though.",
+    "imprint.disclaimers.links.heading": "Accountability for links",
+    "imprint.disclaimers.links.text": "Responsibility for the content of external links (to web pages of third parties) lies solely with the operators of the linked pages. No violations were evident to us at the time of linking. Should any legal infringement become known to us, we will remove the respective link immediately.",
+    "imprint.disclaimers.links.tldr": "tl;dr: We're not responsible for external websites we link to. If we get informed that something shady happens there, we'll remove it, though!",
+    "privacy.heading": "Privacy Policy",
+    "privacy.text": "Sakuta does not collect any user information. All information is taken from the AniList Servers. All settings are either saved locally on your device or on AniList's Servers. However, through the use of our Service, our hosting provider \"Netlify\" and the platform \"AniList\" may collect your data. To find out more about how they use your information, you check out {netlify} and {anilist}!",
+    "privacy.netlifyLink": "Netlify's Privacy Policy",
+    "privacy.anilistLink": "AniList's Privacy Policy"
 }
