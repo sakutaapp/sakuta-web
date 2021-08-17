@@ -1,7 +1,7 @@
 <template>
     <Container class="mt-5">
         <div class="flex flex-col md:flex-row mb-5 md:space-x-3 space-y-2 md:space-y-0">
-            <input v-model="filters.query" type="text" class="bg-gray-800 dark:bg-dark-800 px-3 py-1 rounded focus:bg-gray-700 focus:dark:bg-dark-700 focus:outline-none focus:rounded-lg transition duration-250 w-full flex-grow" placeholder="Search...">
+            <input v-model="filters.query" type="text" class="bg-gray-800 dark:bg-dark-800 px-3 py-1 rounded focus:bg-gray-700 focus:dark:bg-dark-700 focus:outline-none focus:rounded-lg transition duration-250 w-full flex-grow" :placeholder="$t('search.placeholder')">
             <div class="flex space-x-3 justify-between md:justify-end w-full">
                 <div class="flex space-x-3">
                     <select class="bg-gray-800 dark:bg-dark-800 focus:outline-none rounded transition duration-250 focus:bg-gray-700 focus:dark:bg-dark-700 pr-8" v-model="filters.type">
