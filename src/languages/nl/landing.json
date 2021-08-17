@@ -1,0 +1,15 @@
+{
+	"heading": "Welkom op {sakuta}!",
+	"subheading": "Dé nieuwe manier om anime te volgen",
+	"intro": "Een simplistische en moderne {anilist} client",
+	"imageSource": "Bron van afbeelding:",
+	"iconCredits": "Symbolen op deze pagina zijn gemaakt door: {icons8}",
+	"features.layout.title": "Eenvoudige lay-out",
+	"features.layout.description": "Sakuta heeft een zeer eenvoudige lay-out en is niet overladen met informatie die je misschien eens in de 3 maanden nodig hebt.",
+	"features.linked.title": "Verbonden met AniList",
+	"features.linked.description": "Alle data komt rechtstreeks van AniList. Daarnaast, als je een anime/manga op AniList wilt bekijken, is er een knop om dit gemakkelijk te doen!",
+	"features.mobile.title": "Mobielvriendelijk",
+	"features.mobile.description": "Sakuta werd ontworpen met mobiele telefoons in gedachten. De hele website kan op een intuïtieve manier direct vanaf je telefoon genavigeerd worden! Je kunt Sakuta zelfs aan je startscherm toevoegen om het net zoals een App te gebruiken!",
+	"features.list.title": "Beheer je watchlist",
+	"features.list.description": "Binnenkort kun je inloggen met je AniList account en je volglijst, profiel enz. gemakkelijk rechtstreeks vanuit Sakuta beheren!"
+}

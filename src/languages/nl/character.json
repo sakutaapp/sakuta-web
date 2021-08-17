@@ -1,0 +1,14 @@
+{
+	"role.MAIN": "Hoofd",
+	"role.SUPPORTING": "Secundair",
+	"role.BACKGROUND": "Achtergrond",
+	"role.MAIN.long": "Hoofdpersoon",
+	"role.SUPPORTING.long": "Secundair personage",
+	"role.BACKGROUND.long": "Achtergrondpersonage",
+	"birthDate.text": "Geboren in {0}",
+	"age.text": "{0} jaar oud",
+	"favorites.text": "{0} favorieten",
+	"favorites.heading": "Favorieten:",
+	"birthDate.heading": "Geboortedatum:",
+	"age.heading": "Leeftijd:"
+}

@@ -1,0 +1,9 @@
+{
+	"filters.type.ALL": "Alle types",
+	"sort.POPULARITY_DESC": "Meest populair",
+	"sort.POPULARITY": "Minst populair",
+	"sort.TRENDING_DESC": "Trending",
+	"sort.FAVOURITES_DESC": "Meeste ge-favoriet",
+	"sort.FAVOURITES": "Minste ge-favoriet",
+	"sort.SCORE_DESC": "Best beoordeeld"
+}
