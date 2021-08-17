@@ -5,7 +5,7 @@
         <p class="font-semibold">{{ $t("imprint.responsible") }}</p>
         <p>
             Dennis Paulus<br>
-            Voerder Straße 99 (rear building)<br>
+            Voerder Straße 99 ({{ $t("imprint.rearBuilding") }})<br>
             58135 Hagen<br>
             {{ $t("imprint.germany") }}
         </p>
