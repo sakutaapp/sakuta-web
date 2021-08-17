@@ -25,6 +25,8 @@
 
 
 <script>
+import Vue from "vue";
+
 import search from "../apollo/queries/search";
 import scrollMonitor from "scrollmonitor";
 
@@ -54,7 +56,7 @@ function validateQuery(query) {
     return query.replace(/[<>]/g, "");
 }
 
-export default {
+export default Vue.extend({
     apollo: {
         search: {
             query: search,
@@ -119,5 +121,5 @@ export default {
             }
         }
     }
-};
+});
 </script>

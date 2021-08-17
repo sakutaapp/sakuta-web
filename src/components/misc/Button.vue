@@ -6,18 +6,18 @@
 <script lang="ts">
 import Vue from 'vue'
 export default Vue.extend({
-  props: {
-    color: String,
-    textColor: String,
-    to: String,
-    nuxtLink: Boolean,
-    newTab: Boolean,
-    css: String
-  },
-  computed: {
-    classes() {
-      return `${this.css} px-2 py-1 rounded shadow transition duration-100`;
+    props: {
+        color: String,
+        textColor: String,
+        to: String,
+        nuxtLink: Boolean,
+        newTab: Boolean,
+        css: String
+    },
+    computed: {
+        classes() {
+            return `${this.css} px-2 py-1 rounded shadow transition duration-100`;
+        }
     }
-  }
 });
 </script>

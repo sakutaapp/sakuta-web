@@ -30,6 +30,7 @@ function getOrdinalSuffix(i: number) {
 }
 
 import Vue from "vue";
+
 export default Vue.extend({
     props: {
         character: Object

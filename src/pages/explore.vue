@@ -8,8 +8,10 @@
 </template>
 
 <script>
+import Vue from "vue";
 import explore from "../apollo/queries/explore";
-export default {
+
+export default Vue.extend({
     apollo: {
         Data: {
             query: explore,
@@ -33,5 +35,5 @@ export default {
             return array;
         }
     }
-};
+});
 </script>

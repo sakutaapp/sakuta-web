@@ -21,8 +21,10 @@
 
 
 <script>
+import Vue from "vue";
 import user from "../../apollo/queries/user";
-export default {
+
+export default Vue.extend({
     apollo: {
         User: {
             query: user,
@@ -45,5 +47,5 @@ export default {
             ]
         }
     }
-};
+});
 </script>

@@ -14,13 +14,14 @@
 
 <script lang="ts">
 import Vue from "vue";
+
 export default Vue.extend({
-  props: {
-    user: Object
-  },
-  computed: {
-      avatar(): any { return this.user?.avatar?.large || "" },
-      name(): any { return this.user?.name || "" }
-  }
+    props: {
+        user: Object
+    },
+    computed: {
+        avatar(): any { return this.user?.avatar?.large || "" },
+        name(): any { return this.user?.name || "" }
+    }
 });
 </script>

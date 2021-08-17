@@ -20,8 +20,10 @@
 
 
 <script>
+import Vue from "vue";
 import manga from "../../apollo/queries/manga";
-export default {
+
+export default Vue.extend({
     apollo: {
         Media: {
             query: manga,
@@ -98,5 +100,5 @@ export default {
             }
         }
     }
-};
+});
 </script>
