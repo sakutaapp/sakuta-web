@@ -4,7 +4,7 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
                 <div class="text-left">
                     <nuxt-link to="/"><img src="/assets/svg/logo.svg" class="w-2/3 lg:w-1/2" /></nuxt-link>
-                    <p class="mt-2 text-gray-400">© 2021 Sakuta | All rights reserved.</p>
+                    <p class="mt-2 text-gray-400">© 2021 Sakuta | Licensed under <a href="https://github.com/sakutaapp/sakuta-web/blob/master/LICENSE.md" target="_blank" class="underline hover:text-primary transition duration-100">MIT License</a></p>
                 </div>
                 <div class="text-left flex flex-col" v-for="category in links" :key="category.title">
                     <h2 class="font-semibold mb-1">{{ $t(category.title) }}</h2>
