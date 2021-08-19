@@ -5,5 +5,6 @@
 	"sort.TRENDING_DESC": "Trends",
 	"sort.FAVOURITES_DESC": "Am meisten favorisiert",
 	"sort.FAVOURITES": "Am wenigsten favorisiert",
-	"sort.SCORE_DESC": "Bestbewerteste"
+	"sort.SCORE_DESC": "Bestbewerteste",
+	"placeholder": "Suchen..."
 }

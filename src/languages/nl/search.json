@@ -5,5 +5,6 @@
 	"sort.TRENDING_DESC": "Trending",
 	"sort.FAVOURITES_DESC": "Meeste ge-favoriet",
 	"sort.FAVOURITES": "Minste ge-favoriet",
-	"sort.SCORE_DESC": "Best beoordeeld"
+	"sort.SCORE_DESC": "Best beoordeeld",
+	"placeholder": "Zoeken..."
 }
