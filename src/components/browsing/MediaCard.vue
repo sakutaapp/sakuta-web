@@ -1,7 +1,7 @@
 <template>
     <nuxt-link :to="`/${type}/${id}`" class="media-card">
-        <div class="w-full aspect-w-3 aspect-h-3.5 media-card-cover rounded-lg overflow-hidden transition-all duration-250" :style="`background-image: url('${coverImage}')`">
-            <div class="w-full h-full bg-dark-900 bg-opacity-70 backdrop-filter backdrop-blur-sm opacity-0 transition duration-250 p-2 md:p-3 lg:p-4 text-white text-opacity-80 media-card-cover-inner">
+        <div class="w-full aspect-w-3 aspect-h-3.5 media-card-cover rounded-lg overflow-hidden transition-all duration-250" :style="`background-image: url('${coverImage}')`" @mouseenter="showInner = true" @mouseleave="showInner = false">
+            <div :class="`w-full h-full bg-dark-900 bg-opacity-70 backdrop-filter backdrop-blur-sm transition duration-250 p-2 md:p-3 lg:p-4 text-white text-opacity-80 media-card-cover-inner ${showInner ? 'opacity-100' : 'opacity-0'}`">
                 <h3 class="text-lg md:text-xl lg:text-2xl font-bold uppercase text-white text-opacity-100">{{ title }}</h3>
                 <h3 v-if="format" class="text-sm md:text-base lg:text-lg font-bold uppercase">{{ $t(`media.format.${format}`) }}</h3>
                 <h4 v-if="status" class="text-xs md:text-sm font-semibold uppercase">{{ $t(`media.status.${status}`) }}</h4>
@@ -16,6 +16,11 @@
 import Vue from "vue";
 
 export default Vue.extend({
+    data() {
+        return {
+            showInner: false
+        }
+    },
     props: {
         media: Object
     },
@@ -41,10 +46,6 @@ export default Vue.extend({
 
 .media-card:hover .media-card-cover {
     background-size: 105%;
-}
-
-.media-card:hover .media-card-cover-inner {
-    opacity: 100%;
 }
 
 .media-card:hover .media-card-text {
