@@ -56,7 +56,7 @@ export default Vue.extend({
                     links: [
                         {
                             external: true,
-                            link: "https://twitter.com/sakutaapp",
+                            link: "https://twitter.com/trysakuta",
                             text: "Twitter"
                         },
                         {
