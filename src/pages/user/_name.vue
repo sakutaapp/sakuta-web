@@ -25,6 +25,11 @@ import Vue from "vue";
 import user from "../../apollo/queries/user";
 
 export default Vue.extend({
+    head() {
+        return {
+            title: this.User?.name || "User",
+        }
+    },
     apollo: {
         User: {
             query: user,

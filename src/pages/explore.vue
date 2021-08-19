@@ -12,6 +12,9 @@ import Vue from "vue";
 import explore from "../apollo/queries/explore";
 
 export default Vue.extend({
+    head: {
+        title: "Explore",
+    },
     apollo: {
         Data: {
             query: explore,

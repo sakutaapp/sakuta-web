@@ -20,6 +20,7 @@ export default Vue.extend({
     },
     head() {
         return {
+            titleTemplate: "%s | Sakuta",
             bodyAttrs: {
                 class: "bg-gray-900 dark:bg-dark-900 text-gray-300"
             },

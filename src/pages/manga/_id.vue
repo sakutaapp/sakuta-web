@@ -24,6 +24,11 @@ import Vue from "vue";
 import manga from "../../apollo/queries/manga";
 
 export default Vue.extend({
+    head() {
+        return {
+            title: this.Media?.title?.english || this.Media?.title?.romaji || this.Media?.title?.native || "Manga",
+        }
+    },
     apollo: {
         Media: {
             query: manga,

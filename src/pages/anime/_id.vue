@@ -25,6 +25,11 @@ import Vue from "vue";
 import anime from "../../apollo/queries/anime";
 
 export default Vue.extend({
+    head() {
+        return {
+            title: this.Media?.title?.english || this.Media?.title?.romaji || this.Media?.title?.native || "Anime",
+        }
+    },
     apollo: {
         Media: {
             query: anime,

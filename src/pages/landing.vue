@@ -15,6 +15,9 @@ import Vue from "vue";
 import landing from "../apollo/queries/landing";
 
 export default Vue.extend({
+    head: {
+        title: "Home",
+    },
     apollo: {
         Media: {
             query: landing,

@@ -57,6 +57,9 @@ function validateQuery(query) {
 }
 
 export default Vue.extend({
+    head: {
+        title: "Search",
+    },
     apollo: {
         search: {
             query: search,
