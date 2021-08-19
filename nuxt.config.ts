@@ -13,6 +13,7 @@ const config: NuxtConfig = {
     ssr: false,
     target: "static",
     components: [ { path: '~/components', pathPrefix: false } ],
+    generate: { fallback: true },
 
     buildModules,
     head,
