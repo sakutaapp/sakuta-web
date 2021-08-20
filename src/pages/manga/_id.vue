@@ -75,7 +75,7 @@ export default Vue.extend({
                 },
                 {
                     prop: "mean",
-                    value: this.$i18n.t(`media.mean`, [this.Media?.meanScore])
+                    value: this.Media?.meanScore ? this.$i18n.t(`media.mean`, [this.Media?.meanScore]) : undefined
                 },
                 {
                     prop: "hashtag",
