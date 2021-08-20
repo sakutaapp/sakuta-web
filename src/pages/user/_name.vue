@@ -1,5 +1,5 @@
 <template>
-    <Container>
+    <Container class="mt-5">
         <anilist-gql-response>{{ User }}</anilist-gql-response>
         <UserHeader :user="User" />
         <div class="flex flex-col md:flex-row md:space-x-3 space-y-4 md:space-y-0">
@@ -40,7 +40,7 @@ export default Vue.extend({
         }
     },
     computed: {
-        about() { return this.User?.about },
+        about() { return this.User?.about || this.$i18n.t("user.noAbout") },
         statistics() {
             return [
                 { stat: "animeCount", value: this.User?.statistics?.anime?.count },
