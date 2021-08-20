@@ -71,7 +71,7 @@ export default Vue.extend({
                     value: this.$i18n.t("media.season", { season: this.$i18n.t(`media.season.${this.Media?.season}`), year: this.Media?.seasonYear }),
                 },
                 {
-                    prop: "length",
+                    prop: ((this.Media?.format === 'MOVIE' || this.Media?.format === 'MUSIC') && this.Media?.episodes === 1) ? "lengthSingle" : "length",
                     value: this.Media?.duration ? this.$i18n.tc("media.length", this.Media?.duration, [this.Media?.duration]) : undefined
                 },
                 {
