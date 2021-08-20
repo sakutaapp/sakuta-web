@@ -10,10 +10,8 @@
                 </Section>
             </div>
             <div class="w-full md:w-4/5 flex flex-col space-y-3">
-                <Section>
-                    <h2 class="text-lg font-semibold">{{ $t("user.section.about") }}</h2>
-                    <p v-html="about" />
-                </Section>
+                <UserAbout :about="about" />
+                <UserActivities :activities="activities" @fetch="page++" />
             </div>
         </div>
     </Container>
@@ -23,11 +21,17 @@
 <script>
 import Vue from "vue";
 import user from "../../apollo/queries/user";
+import userActivity from "../../apollo/queries/userActivity";
 
 export default Vue.extend({
     head() {
         return {
             title: this.User?.name || "User",
+        }
+    },
+    data() {
+        return {
+            page: 1,
         }
     },
     apollo: {
@@ -36,6 +40,18 @@ export default Vue.extend({
             prefetch: ({ route }) => ({ id: route.params.name }),
             variables () {
                 return { name: this.$route.params.name }
+            }
+        },
+        activities: {
+            query: userActivity,
+            variables () {
+                return {
+                    page: this.page,
+                    id: this.User?.id
+                }
+            },
+            update: (data) => {
+                return data.Page.activities;
             }
         }
     },
