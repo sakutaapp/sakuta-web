@@ -40,7 +40,7 @@ export default Vue.extend({
         }
     },
     computed: {
-        about() { return this.User?.about },
+        about() { return this.User?.about || this.$i18n.t("user.noAbout") },
         statistics() {
             return [
                 { stat: "animeCount", value: this.User?.statistics?.anime?.count },
