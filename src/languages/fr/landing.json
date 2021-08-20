@@ -1,0 +1,15 @@
+{
+	"heading": "Bienvenue sur {sakuta} !",
+	"subheading": "La nouvelle façon d'organiser vos anime",
+	"intro": "Un client {anilist} simple et moderne",
+	"imageSource": "Source de l'image :",
+	"iconCredits": "Les icônes de cette page viennent de {icons8}",
+	"features.layout.title": "Mise en page simple",
+	"features.layout.description": "Sakuta a une mise en page très simple et n'est pas encombré d'informations dont vous n'aurez besoin moins d'une fois tous les 3 mois.",
+	"features.linked.title": "Connecté à AniList",
+	"features.linked.description": "Toutes les données proviennent d'AniList. En plus de cela, si vous voulez voir un anime/manga sur AniList, il y a un bouton pour le faire facilement !",
+	"features.mobile.title": "Compatible avec les appareils mobiles",
+	"features.mobile.description": "Sakuta a été conçu en pensant aux portables. L'ensemble du site Web peut être navigué directement depuis votre téléphone de manière intuitive ! Vous pouvez même ajouter Sakuta à votre écran d'accueil pour l'utiliser comme une application !",
+	"features.list.title": "Gérez votre watchlist",
+	"features.list.description": "Bientôt, vous serez en mesure de vous connecter en utilisant votre compte AniList et vous pourrez gérer facilement votre watchlist, votre profil, etc. directement depuis Sakuta !"
+}
