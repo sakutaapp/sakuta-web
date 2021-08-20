@@ -72,7 +72,7 @@ export default Vue.extend({
                 },
                 {
                     prop: "length",
-                    value: this.$i18n.tc("media.length", this.Media?.duration, [this.Media?.duration])
+                    value: this.Media?.duration ? this.$i18n.tc("media.length", this.Media?.duration, [this.Media?.duration]) : undefined
                 },
                 {
                     prop: "source",
@@ -80,7 +80,7 @@ export default Vue.extend({
                 },
                 {
                     prop: "mean",
-                    value: this.$i18n.t(`media.mean`, [this.Media?.meanScore])
+                    value: this.Media?.meanScore ? this.$i18n.t(`media.mean`, [this.Media?.meanScore]) : undefined
                 },
                 {
                     prop: "hashtag",
