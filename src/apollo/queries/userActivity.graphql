@@ -12,6 +12,7 @@ query ($page: Int!, $perPage: Int = 10, $id: Int!) {
                 createdAt
                 media {
                     id
+                    type
                     title {
                         english
                         romaji
