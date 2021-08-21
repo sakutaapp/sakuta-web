@@ -1,0 +1,14 @@
+{
+	"role.MAIN": "Principal",
+	"role.SUPPORTING": "Secondaire",
+	"role.BACKGROUND": "Arrière-plan",
+	"role.MAIN.long": "Personnage principal",
+	"role.SUPPORTING.long": "Personnage secondaire",
+	"role.BACKGROUND.long": "Personnage de fond",
+	"birthDate.text": "🎂 {0}",
+	"age.text": "{0} ans",
+	"favorites.text": "{0} favoris",
+	"favorites.heading": "Favoris :",
+	"birthDate.heading": "Date de naissance :",
+	"age.heading": "Âge :"
+}

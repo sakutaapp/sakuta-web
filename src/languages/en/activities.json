@@ -1,0 +1,8 @@
+{
+    "status.completed": "Completed",
+    "status.pausedWatching": "Paused watching",
+    "status.watchedEpisode": "Watched episode {0} | Watched episodes {0}",
+    "status.plansToWatch": "Plans to watch",
+    "status.plansToRead": "Plans to read",
+    "status.readChapter": "Read chapter {0} | Read chapters {0}"
+}

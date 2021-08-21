@@ -13,5 +13,6 @@
 	"month.11.full": "November",
 	"month.12.full": "December",
 	"date.dayMonth": "{month} {day}{suffix}",
-	"date.full": "{month} {day}{suffix} {year}"
+	"date.full": "{month} {day}{suffix} {year}",
+	"likes": "{0} like | {0} likes"
 }

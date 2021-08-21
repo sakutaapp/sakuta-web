@@ -71,8 +71,8 @@ export default Vue.extend({
                     value: this.$i18n.t("media.season", { season: this.$i18n.t(`media.season.${this.Media?.season}`), year: this.Media?.seasonYear }),
                 },
                 {
-                    prop: "length",
-                    value: this.$i18n.tc("media.length", this.Media?.duration, [this.Media?.duration])
+                    prop: ((this.Media?.format === 'MOVIE' || this.Media?.format === 'MUSIC') && this.Media?.episodes === 1) ? "lengthSingle" : "length",
+                    value: this.Media?.duration ? this.$i18n.tc("media.length", this.Media?.duration, [this.Media?.duration]) : undefined
                 },
                 {
                     prop: "source",
@@ -80,7 +80,7 @@ export default Vue.extend({
                 },
                 {
                     prop: "mean",
-                    value: this.$i18n.t(`media.mean`, [this.Media?.meanScore])
+                    value: this.Media?.meanScore ? this.$i18n.t(`media.mean`, [this.Media?.meanScore]) : undefined
                 },
                 {
                     prop: "hashtag",

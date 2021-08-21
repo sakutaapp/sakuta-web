@@ -1,0 +1,11 @@
+{
+	"section.statistics": "Statistiques",
+	"section.about": "À propos",
+	"stats.animeCount.title": "Animes regardés",
+	"stats.minutesWatched.title": "Minutes passées à regarder des Anime",
+	"stats.episodesWatched.title": "Épisodes d'Anime vus",
+	"stats.mangaCount.title": "Mangas lus",
+	"stats.chaptersRead.title": "Chapitres de Mangas lus",
+	"stats.volumesRead.title": "Tomes de Mangas lus",
+	"noAbout": "Cet utilisateur n'a rien écrit dans sa section \"À propos\""
+}

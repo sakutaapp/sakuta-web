@@ -1,0 +1,6 @@
+{
+	"heading": "Confidentialité",
+	"text": "Sakuta ne recueille aucune information d'utilisateur. Toutes les informations sont recueillies sur les serveurs AniList. Tous les paramètres sont soit enregistrés localement sur votre appareil soit sur les serveurs d'AniList. Cependant, grâce à l'utilisation de notre Service, notre hébergeur \"Netlify\" et la plate-forme \"AniList\" peuvent recueillir vos données. Pour en savoir plus sur l'utilisation de vos informations, consultez {netlify} et {anilist}!",
+	"netlifyLink": "Politique de confidentialité de Netlify",
+	"anilistLink": "Politique de confidentialité d'AniList"
+}
