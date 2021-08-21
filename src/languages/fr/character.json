@@ -5,7 +5,7 @@
 	"role.MAIN.long": "Personnage principal",
 	"role.SUPPORTING.long": "Personnage secondaire",
 	"role.BACKGROUND.long": "Personnage de fond",
-	"birthDate.text": "Né le {0}",
+	"birthDate.text": "🎂 {0}",
 	"age.text": "{0} ans",
 	"favorites.text": "{0} favoris",
 	"favorites.heading": "Favoris :",
