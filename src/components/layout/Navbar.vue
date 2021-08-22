@@ -1,5 +1,5 @@
 <template>
-    <div :class="`bg-gray-800 dark:bg-dark-800 shadow-sm py-4 ${ fixed ? 'fixed fixed-navbar backdrop-filter backdrop-blur-lg w-full z-90 border-b shadow border-gray-900 dark:border-black top-0' : '' }`">
+    <div :class="`bg-gray-800 dark:bg-dark-800 shadow-sm py-4 ${fixed ? 'fixed fixed-navbar backdrop-filter backdrop-blur-lg w-full z-90 border-b shadow border-gray-900 dark:border-black top-0' : ''}`">
         <Container>
             <div class="flex items-center">
                 <div class="flex-grow w-1/6 text-left">
@@ -23,41 +23,41 @@ import Vue from "vue";
 
 export default Vue.extend({
     props: {
-        fixed: Boolean
+        fixed: Boolean,
     },
     data() {
         return {
             navLinks: [
                 {
                     to: "/",
-                    name: "home"
+                    name: "home",
                 },
                 {
                     to: "/explore",
-                    name: "explore"
+                    name: "explore",
                 },
                 {
                     to: "/search",
-                    name: "search"
-                }
+                    name: "search",
+                },
             ],
-            sidebar: false
-        }
+            sidebar: false,
+        };
     },
     computed: {
         nav(): any {
-            if(localStorage.getItem("homePage") !== "explore") return this.navLinks;
-            return this.navLinks.filter(link => link.name !== "home");
-        }
-    }
+            if (localStorage.getItem("homePage") !== "explore") return this.navLinks;
+            return this.navLinks.filter((link) => link.name !== "home");
+        },
+    },
 });
 </script>
 
 <style>
 .fixed-navbar {
-    background-color: rgba(17,24,39,.8)!important;
+    background-color: rgba(17, 24, 39, 0.8) !important;
 }
 .dark .fixed-navbar {
-    background-color: rgba(15,15,15,.8)!important;
+    background-color: rgba(15, 15, 15, 0.8) !important;
 }
 </style>

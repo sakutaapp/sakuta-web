@@ -12,8 +12,8 @@ import Vue from "vue";
 
 export default Vue.extend({
     props: {
-        character: Object
-    }
+        character: Object,
+    },
 });
 </script>
 

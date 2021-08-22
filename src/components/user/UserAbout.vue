@@ -9,7 +9,7 @@
 import Vue from "vue";
 export default Vue.extend({
     props: {
-        about: String
-    }
+        about: String,
+    },
 });
 </script>

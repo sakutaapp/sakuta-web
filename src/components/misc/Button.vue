@@ -4,7 +4,7 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from "vue";
 export default Vue.extend({
     props: {
         color: String,
@@ -12,12 +12,12 @@ export default Vue.extend({
         to: String,
         nuxtLink: Boolean,
         newTab: Boolean,
-        css: String
+        css: String,
     },
     computed: {
         classes() {
             return `${this.css} px-2 py-1 rounded shadow transition duration-100`;
-        }
-    }
+        },
+    },
 });
 </script>

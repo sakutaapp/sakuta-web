@@ -21,26 +21,21 @@ export default Vue.extend({
     apollo: {
         Media: {
             query: landing,
-            variables () {
-                return { id: this.image.anime }
-            }
-        }
+            variables() {
+                return { id: this.image.anime };
+            },
+        },
     },
     computed: {
         source() {
             return this.Media?.title?.english || this.Media?.title?.romaji || this.Media?.title?.native || "...";
-        }
+        },
     },
     data() {
         return {
-            features: [
-                "layout",
-                "linked",
-                "mobile",
-                "list"
-            ],
-            image: { anime: null, url: "" }
-        }
+            features: ["layout", "linked", "mobile", "list"],
+            image: { anime: null, url: "" },
+        };
     },
     mounted() {
         this.setImage();
@@ -49,7 +44,7 @@ export default Vue.extend({
         async setImage() {
             let images = (await this.$axios.get("https://screencaps.sakuta.app/index.json")).data;
             this.image = images?.images[Math.floor(Math.random() * images?.images.length)] || "";
-        }
-    }
+        },
+    },
 });
 </script>

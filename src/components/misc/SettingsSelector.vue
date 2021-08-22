@@ -1,6 +1,6 @@
 <template>
     <div class="flex space-x-2">
-        <p v-for="option in options" :key="option" :class="`cursor-pointer transition duration-100 px-2.5 py-1 rounded ${ option === value ? 'bg-white bg-opacity-10 hover:bg-opacity-15 text-white' : 'bg-white bg-opacity-0 hover:bg-opacity-5' }`" @click="$emit('input', option)">{{ lang ? $i18n.messages[option]["meta.lang"] : $t(`settings.option.${option}`) }}</p>
+        <p v-for="option in options" :key="option" :class="`cursor-pointer transition duration-100 px-2.5 py-1 rounded ${option === value ? 'bg-white bg-opacity-10 hover:bg-opacity-15 text-white' : 'bg-white bg-opacity-0 hover:bg-opacity-5'}`" @click="$emit('input', option)">{{ lang ? $i18n.messages[option]["meta.lang"] : $t(`settings.option.${option}`) }}</p>
     </div>
 </template>
 
@@ -11,7 +11,7 @@ export default Vue.extend({
     props: {
         value: String,
         options: Array,
-        lang: Boolean
-    }
+        lang: Boolean,
+    },
 });
 </script>

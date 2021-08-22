@@ -15,7 +15,7 @@ import Vue from "vue";
 
 export default Vue.extend({
     props: {
-        links: Array
-    }
+        links: Array,
+    },
 });
 </script>

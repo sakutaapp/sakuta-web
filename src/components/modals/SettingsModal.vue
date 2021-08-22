@@ -24,8 +24,8 @@ export default Vue.extend({
             theme: localStorage.getItem("theme") === "dark" ? localStorage.getItem("theme") : "blue",
             homePage: localStorage.getItem("homePage") === "explore" ? localStorage.getItem("homePage") : "landing",
             navbar: localStorage.getItem("navbar") === "fixed" ? localStorage.getItem("navbar") : "unfixed",
-            lang: localStorage.getItem("lang") || "en"
-        }
+            lang: localStorage.getItem("lang") || "en",
+        };
     },
     watch: {
         theme(theme) {
@@ -42,7 +42,7 @@ export default Vue.extend({
         lang(lang) {
             localStorage.setItem("lang", lang);
             this.$i18n.locale = lang;
-        }
-    }
+        },
+    },
 });
 </script>

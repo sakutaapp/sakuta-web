@@ -1,85 +1,85 @@
 query ($id: Int!) {
-	Media (id: $id, type: ANIME) {
+    Media(id: $id, type: ANIME) {
         id
         idMal
-		format
-		status
-		description
-		startDate {
-			year
-			month
-			day
-		}
-		endDate {
-			year
-			month
-			day
-		}
-		season
-		seasonYear
-		episodes
-		duration
-		source
-		hashtag
-		trailer {
-			id
-		}
-		genres
-		synonyms
-		meanScore
-		tags {
-			id
-			name
-			description
-			rank
-			isGeneralSpoiler
-			isMediaSpoiler
-		name
-		description
-		rank
-		isGeneralSpoiler
-		isMediaSpoiler
-		}
-		characters {
-			edges {
-				id
-				role
-				node {
-					id
-					name {
-						full
-					}
-					image {
-						large
-						medium
-					}
-					description(asHtml: true)
-					gender
-					dateOfBirth {
-						year
-						month
-						day
-					}
-					age
-					siteUrl
-					favourites
-				}
-			}
-		}
-		studios {
-			edges {
-				id
-				isMain
-				node {
-					id
-					name
-					isAnimationStudio
-					favourites
-				}
-			}
-		}
-		favourites
-		siteUrl
+        format
+        status
+        description
+        startDate {
+            year
+            month
+            day
+        }
+        endDate {
+            year
+            month
+            day
+        }
+        season
+        seasonYear
+        episodes
+        duration
+        source
+        hashtag
+        trailer {
+            id
+        }
+        genres
+        synonyms
+        meanScore
+        tags {
+            id
+            name
+            description
+            rank
+            isGeneralSpoiler
+            isMediaSpoiler
+            name
+            description
+            rank
+            isGeneralSpoiler
+            isMediaSpoiler
+        }
+        characters {
+            edges {
+                id
+                role
+                node {
+                    id
+                    name {
+                        full
+                    }
+                    image {
+                        large
+                        medium
+                    }
+                    description(asHtml: true)
+                    gender
+                    dateOfBirth {
+                        year
+                        month
+                        day
+                    }
+                    age
+                    siteUrl
+                    favourites
+                }
+            }
+        }
+        studios {
+            edges {
+                id
+                isMain
+                node {
+                    id
+                    name
+                    isAnimationStudio
+                    favourites
+                }
+            }
+        }
+        favourites
+        siteUrl
         bannerImage
         coverImage {
             extraLarge
@@ -87,14 +87,14 @@ query ($id: Int!) {
         }
         title {
             english
-			romaji
-			native
+            romaji
+            native
         }
         streamingEpisodes {
-			title
-			thumbnail
-			url
-			site
-		}
+            title
+            thumbnail
+            url
+            site
+        }
     }
 }

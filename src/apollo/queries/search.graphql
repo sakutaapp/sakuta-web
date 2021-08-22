@@ -2,9 +2,9 @@ query ($page: Int!, $perPage: Int = 48, $sort: [MediaSort]!, $search: String, $t
     Page(page: $page, perPage: $perPage) {
         media(sort: $sort, search: $search, type: $type) {
             id
-                title {
+            title {
                 english
-                romaji,
+                romaji
                 native
             }
             format

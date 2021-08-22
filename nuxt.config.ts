@@ -12,13 +12,13 @@ const config: NuxtConfig = {
     srcDir: "src",
     ssr: false,
     target: "static",
-    components: [ { path: '~/components', pathPrefix: false } ],
+    components: [{ path: "~/components", pathPrefix: false }],
     generate: { fallback: true },
 
     buildModules,
     head,
     modules,
-    plugins
+    plugins,
 };
 
 export default config;

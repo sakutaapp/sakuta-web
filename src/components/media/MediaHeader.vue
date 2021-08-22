@@ -1,7 +1,7 @@
 <template>
     <div class="w-full h-64 rounded-lg shadow-lg mb-5" :style="`background-image: url('${coverImageXl}'); background-size: cover; background-position: center;`">
-        <div class="h-full w-full rounded-lg backdrop-filter backdrop-blur-lg p-5 flex items-center space-x-5" style="background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.7) 100%);">
-            <img :src="coverImageXl" class="h-full rounded-lg">
+        <div class="h-full w-full rounded-lg backdrop-filter backdrop-blur-lg p-5 flex items-center space-x-5" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%)">
+            <img :src="coverImageXl" class="h-full rounded-lg" />
             <div class="text-white flex flex-col space-y-1">
                 <h1 class="text-xl sm:text-2xl md:text-4xl font-semibold">{{ title }}</h1>
                 <div class="flex flex-col md:flex-row md:items-center md:space-x-3">
@@ -29,20 +29,44 @@ import Vue from "vue";
 export default Vue.extend({
     props: {
         media: Object,
-        mediaType: String
+        mediaType: String,
     },
     computed: {
-        type(): any { if (this.mediaType === "manga") { return "manga" } else { return "anime" } },
+        type(): any {
+            if (this.mediaType === "manga") {
+                return "manga";
+            } else {
+                return "anime";
+            }
+        },
 
-        coverImageXl(): any { return this.media?.coverImage?.extraLarge || "" },
-        title(): any { return this.media?.title?.english || this.media?.title?.romaji || this.media?.title?.native || "" },
-        favourites(): any { return this.media?.favourites || 0 },
-        format(): any { return this.media?.format || "TV" },
-        status(): any { return this.media?.status || "FINISHED" },
-        episodes(): any { return this.media?.episodes > 0 ? (((this.media?.format === 'MOVIE' || this.media?.format === 'MUSIC') && this.media?.episodes === 1) ? undefined : this.media?.episodes) : undefined },
-        volumes(): any { return this.media?.volumes || 0 },
-        id(): any { return this.media?.id || 0 },
-        idMal(): any { return this.media?.idMal || 0 }
-    }
+        coverImageXl(): any {
+            return this.media?.coverImage?.extraLarge || "";
+        },
+        title(): any {
+            return this.media?.title?.english || this.media?.title?.romaji || this.media?.title?.native || "";
+        },
+        favourites(): any {
+            return this.media?.favourites || 0;
+        },
+        format(): any {
+            return this.media?.format || "TV";
+        },
+        status(): any {
+            return this.media?.status || "FINISHED";
+        },
+        episodes(): any {
+            return this.media?.episodes > 0 ? ((this.media?.format === "MOVIE" || this.media?.format === "MUSIC") && this.media?.episodes === 1 ? undefined : this.media?.episodes) : undefined;
+        },
+        volumes(): any {
+            return this.media?.volumes || 0;
+        },
+        id(): any {
+            return this.media?.id || 0;
+        },
+        idMal(): any {
+            return this.media?.idMal || 0;
+        },
+    },
 });
 </script>

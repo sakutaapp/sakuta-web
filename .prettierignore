@@ -1,0 +1,8 @@
+src/languages/**/*.json
+config/head.ts
+.editorconfig
+.gitignore
+yarn.lock
+yarn-error.log
+dist/**/*
+.nuxt/**/*
