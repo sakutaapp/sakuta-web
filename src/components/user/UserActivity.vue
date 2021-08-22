@@ -8,12 +8,7 @@
             </div>
             <div class="flex flex-col justify-between text-right text-sm text-gray-500 flex-grow w-full">
                 <p>
-                    {{
-                        $moment
-                            .unix(date)
-                            .locale($i18n.locale)
-                            .fromNow()
-                    }}
+                    {{ $moment.unix(date).locale($i18n.locale).fromNow() }}
                 </p>
                 <div class="flex justify-end items-center space-x-1">
                     <p class="flex-grow">{{ $tc("general.likes", likeCount, [likeCount]) }}</p>
@@ -27,11 +22,11 @@
 <script lang="ts">
 function toCamelCase(string: string): string {
     return string
-        .replace(/\s(.)/g, function(a: string) {
+        .replace(/\s(.)/g, function (a: string) {
             return a.toUpperCase();
         })
         .replace(/\s/g, "")
-        .replace(/^(.)/, function(b: string) {
+        .replace(/^(.)/, function (b: string) {
             return b.toLowerCase();
         });
 }

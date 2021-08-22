@@ -1,4 +1,4 @@
-query($page: Int!, $perPage: Int = 10, $id: Int!) {
+query ($page: Int!, $perPage: Int = 10, $id: Int!) {
     Page(page: $page, perPage: $perPage) {
         activities(userId: $id, sort: ID_DESC, type: MEDIA_LIST) {
             ... on ListActivity {

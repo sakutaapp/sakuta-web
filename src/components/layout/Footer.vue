@@ -3,7 +3,7 @@
         <Container>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
                 <div class="text-left">
-                    <nuxt-link to="/"><img src="/assets/svg/logo.svg" class="w-2/3 lg:w-1/2"/></nuxt-link>
+                    <nuxt-link to="/"><img src="/assets/svg/logo.svg" class="w-2/3 lg:w-1/2" /></nuxt-link>
                     <p class="mt-2 text-gray-400" v-html="license($t('footer.license'))"></p>
                 </div>
                 <div class="text-left flex flex-col" v-for="category in links" :key="category.title">

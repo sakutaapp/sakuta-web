@@ -3,7 +3,7 @@
         <Container>
             <div class="flex items-center">
                 <div class="flex-grow w-1/6 text-left">
-                    <nuxt-link to="/"><img src="/assets/svg/logo.svg" class="h-8"/></nuxt-link>
+                    <nuxt-link to="/"><img src="/assets/svg/logo.svg" class="h-8" /></nuxt-link>
                 </div>
                 <div class="w-full flex-grow hidden md:flex justify-center items-center space-x-4">
                     <nuxt-link exact-active-class="text-white bg-opacity-12 hover:bg-opacity-18" v-for="link in nav" :key="link.to" :to="link.to" class="hover:text-white transition duration-250 bg-white bg-opacity-0 hover:bg-opacity-5 px-2.5 py-1 rounded">{{ $t(`nav.link.${link.name}`) }}</nuxt-link>

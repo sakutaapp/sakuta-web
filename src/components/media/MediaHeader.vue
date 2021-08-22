@@ -1,6 +1,6 @@
 <template>
     <div class="w-full h-64 rounded-lg shadow-lg mb-5" :style="`background-image: url('${coverImageXl}'); background-size: cover; background-position: center;`">
-        <div class="h-full w-full rounded-lg backdrop-filter backdrop-blur-lg p-5 flex items-center space-x-5" style="background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.7) 100%);">
+        <div class="h-full w-full rounded-lg backdrop-filter backdrop-blur-lg p-5 flex items-center space-x-5" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%)">
             <img :src="coverImageXl" class="h-full rounded-lg" />
             <div class="text-white flex flex-col space-y-1">
                 <h1 class="text-xl sm:text-2xl md:text-4xl font-semibold">{{ title }}</h1>
