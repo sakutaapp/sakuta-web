@@ -3,8 +3,7 @@
         <Container>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
                 <div class="text-left">
-                    <nuxt-link to="/"><img src="/assets/svg/logo.svg" class="w-2/3 lg:w-1/2" /></nuxt-link>
-                    <p class="mt-2 text-gray-400">© 2021 Sakuta | Licensed under <a href="https://github.com/sakutaapp/sakuta-web/blob/master/LICENSE.md" target="_blank" class="underline hover:text-primary transition duration-100">MIT License</a></p>
+                    <p class="mt-2 text-gray-400" v-html="license($t('footer.license'))"></p>
                 </div>
                 <div class="text-left flex flex-col" v-for="category in links" :key="category.title">
                     <h2 class="font-semibold mb-1">{{ $t(category.title) }}</h2>
@@ -62,12 +61,13 @@ export default Vue.extend({
                         {
                             external: true,
                             link: "https://github.com/sakutaapp",
-                            text: "GitHub"
-                        }
-                    ]
-                }
-            ]
-        }
-    }
+    },
+    methods: {
+        license(string: string): any {
+            const match = string.match(/\[.*?\]/g);
+            if (!match) return string;
+            return "© 2021 Sakuta | " + string.replace(match[0], `<a href="https://github.com/sakutaapp/sakuta-web/blob/master/LICENSE.md" target="_blank" class="underline hover:text-primary transition duration-100">${match[0].slice(1, match[0].length - 1)}</a>`);
+        },
+    },
 });
 </script>
