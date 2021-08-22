@@ -4,9 +4,9 @@
         <h2 class="text-xl font-semibold mb-3">{{ $t("imprint.accordingTo") }}</h2>
         <p class="font-semibold">{{ $t("imprint.responsible") }}</p>
         <p>
-            Dennis Paulus<br>
-            Voerder Straße 99 ({{ $t("imprint.rearBuilding") }})<br>
-            58135 Hagen<br>
+            Dennis Paulus<br />
+            Voerder Straße 99 ({{ $t("imprint.rearBuilding") }})<br />
+            58135 Hagen<br />
             {{ $t("imprint.germany") }}
         </p>
         <p class="mt-1"><b>E-Mail:</b> hello@crugg.de</p>
@@ -28,11 +28,8 @@ export default Vue.extend({
     },
     data() {
         return {
-            disclaimers: [
-                "content",
-                "links"
-            ]
-        }
-    }
+            disclaimers: ["content", "links"],
+        };
+    },
 });
 </script>

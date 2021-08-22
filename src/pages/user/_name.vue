@@ -17,7 +17,6 @@
     </Container>
 </template>
 
-
 <script>
 import Vue from "vue";
 import user from "../../apollo/queries/user";
@@ -27,36 +26,38 @@ export default Vue.extend({
     head() {
         return {
             title: this.User?.name || "User",
-        }
+        };
     },
     data() {
         return {
             page: 1,
-        }
+        };
     },
     apollo: {
         User: {
             query: user,
             prefetch: ({ route }) => ({ id: route.params.name }),
-            variables () {
-                return { name: this.$route.params.name }
-            }
+            variables() {
+                return { name: this.$route.params.name };
+            },
         },
         activities: {
             query: userActivity,
-            variables () {
+            variables() {
                 return {
                     page: this.page,
-                    id: this.User?.id
-                }
+                    id: this.User?.id,
+                };
             },
             update: (data) => {
                 return data.Page.activities;
-            }
-        }
+            },
+        },
     },
     computed: {
-        about() { return this.User?.about || this.$i18n.t("user.noAbout") },
+        about() {
+            return this.User?.about || this.$i18n.t("user.noAbout");
+        },
         statistics() {
             return [
                 { stat: "animeCount", value: this.User?.statistics?.anime?.count },
@@ -65,8 +66,8 @@ export default Vue.extend({
                 { stat: "mangaCount", value: this.User?.statistics?.manga?.count },
                 { stat: "chaptersRead", value: this.User?.statistics?.manga?.chaptersRead },
                 { stat: "volumesRead", value: this.User?.statistics?.manga?.volumesRead },
-            ]
-        }
-    }
+            ];
+        },
+    },
 });
 </script>

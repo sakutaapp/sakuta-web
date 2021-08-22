@@ -18,7 +18,6 @@
     </Container>
 </template>
 
-
 <script>
 import Vue from "vue";
 import manga from "../../apollo/queries/manga";
@@ -27,37 +26,51 @@ export default Vue.extend({
     head() {
         return {
             title: this.Media?.title?.english || this.Media?.title?.romaji || this.Media?.title?.native || "Manga",
-        }
+        };
     },
     apollo: {
         Media: {
             query: manga,
             prefetch: ({ route }) => ({ id: route.params.id }),
-            variables () {
-                return { id: this.$route.params.id }
-            }
-        }
+            variables() {
+                return { id: this.$route.params.id };
+            },
+        },
     },
     data() {
         return {
             modalData: {
                 show: false,
-                character: false
-            }
-        }
+                character: false,
+            },
+        };
     },
     computed: {
-        hash() { return location.hash },
-        description() { return this.Media?.description || "" },
-        characters() { return this.Media?.characters?.edges || [] },
-        episodes() { return this.Media?.streamingEpisodes || [] },
-        trailer() { return this.Media?.trailer?.id || undefined },
-        genres() { return this.Media?.genres || [] },
-        tags() { return this.Media?.tags || [] },
+        hash() {
+            return location.hash;
+        },
+        description() {
+            return this.Media?.description || "";
+        },
+        characters() {
+            return this.Media?.characters?.edges || [];
+        },
+        episodes() {
+            return this.Media?.streamingEpisodes || [];
+        },
+        trailer() {
+            return this.Media?.trailer?.id || undefined;
+        },
+        genres() {
+            return this.Media?.genres || [];
+        },
+        tags() {
+            return this.Media?.tags || [];
+        },
         studiosString() {
             let studiosArray = [];
-            if(this.Media?.studios?.edges) {
-                this.Media?.studios?.edges?.forEach(studio => {
+            if (this.Media?.studios?.edges) {
+                this.Media?.studios?.edges?.forEach((studio) => {
                     studiosArray.push(studio.node.name);
                 });
             }
@@ -71,39 +84,39 @@ export default Vue.extend({
                 },
                 {
                     prop: "source",
-                    value: this.$i18n.t(`media.source.${this.Media?.source}`)
+                    value: this.$i18n.t(`media.source.${this.Media?.source}`),
                 },
                 {
                     prop: "mean",
-                    value: this.Media?.meanScore ? this.$i18n.t(`media.mean`, [this.Media?.meanScore]) : undefined
+                    value: this.Media?.meanScore ? this.$i18n.t(`media.mean`, [this.Media?.meanScore]) : undefined,
                 },
                 {
                     prop: "hashtag",
-                    value: this.Media?.hashtag
+                    value: this.Media?.hashtag,
                 },
                 {
                     prop: "synonyms",
-                    value: this.Media?.synonyms.join(", ")
+                    value: this.Media?.synonyms.join(", "),
                 },
                 {
                     prop: "studios",
-                    value: this.studiosString
-                }
+                    value: this.studiosString,
+                },
             ];
-        }
+        },
     },
     methods: {
         modal(character) {
-            if(character) {
-                if(this.Media?.characters?.edges.find(e => e.node.id === character)) {
+            if (character) {
+                if (this.Media?.characters?.edges.find((e) => e.node.id === character)) {
                     this.modalData.show = true;
-                    this.modalData.character = this.Media?.characters?.edges.find(e => e.node.id === character);
+                    this.modalData.character = this.Media?.characters?.edges.find((e) => e.node.id === character);
                 }
             } else {
                 this.modalData.show = false;
                 this.modalData.character = false;
             }
-        }
-    }
+        },
+    },
 });
 </script>

@@ -3,6 +3,7 @@
         <Container>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
                 <div class="text-left">
+                    <nuxt-link to="/"><img src="/assets/svg/logo.svg" class="w-2/3 lg:w-1/2"/></nuxt-link>
                     <p class="mt-2 text-gray-400" v-html="license($t('footer.license'))"></p>
                 </div>
                 <div class="text-left flex flex-col" v-for="category in links" :key="category.title">
@@ -29,26 +30,26 @@ export default Vue.extend({
                     links: [
                         {
                             link: "/explore",
-                            text: "nav.link.explore"
+                            text: "nav.link.explore",
                         },
                         {
                             link: "/search",
-                            text: "nav.link.search"
-                        }
-                    ]
+                            text: "nav.link.search",
+                        },
+                    ],
                 },
                 {
                     title: "footer.category.legal",
                     links: [
                         {
                             link: "/imprint",
-                            text: "footer.link.imprint"
+                            text: "footer.link.imprint",
                         },
                         {
                             link: "/privacy",
-                            text: "footer.link.privacy"
-                        }
-                    ]
+                            text: "footer.link.privacy",
+                        },
+                    ],
                 },
                 {
                     title: "footer.category.social",
@@ -56,11 +57,17 @@ export default Vue.extend({
                         {
                             external: true,
                             link: "https://twitter.com/trysakuta",
-                            text: "Twitter"
+                            text: "Twitter",
                         },
                         {
                             external: true,
                             link: "https://github.com/sakutaapp",
+                            text: "GitHub",
+                        },
+                    ],
+                },
+            ],
+        };
     },
     methods: {
         license(string: string): any {

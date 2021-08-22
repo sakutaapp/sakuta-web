@@ -21,11 +21,11 @@ const head: NuxtOptionsHead = {
         { name: "og:url", content: "https://sakuta.app" },
         { name: "og:description", content: "The new way to track Anime - Sakuta is a simple and modern AniList Client releasing soon!" },
         { name: "og:type", content: "website" },
-        { name: "og:image", content: "https://sakuta.app/assets/cover.png" }
+        { name: "og:image", content: "https://sakuta.app/assets/cover.png" },
     ],
     link: [
-        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
-    ]
+        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+    ],
 }
 
-export default head
+export default head;

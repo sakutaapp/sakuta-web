@@ -4,7 +4,6 @@
     </div>
 </template>
 
-
 <style>
 .animated-eye {
     animation: eye-rotate 2s ease-in-out infinite alternate;

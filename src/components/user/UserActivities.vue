@@ -16,38 +16,38 @@ import scrollMonitor from "scrollmonitor";
 
 export default Vue.extend({
     props: {
-        activities: Array
+        activities: Array,
     },
     data() {
         return {
-            previousActivities: []
-        }
+            previousActivities: [],
+        };
     },
     methods: {
         fetchMore(): any {
             /// @ts-ignore
             this.previousActivities = [...this.previousActivities, ...this.activities];
-            this.$emit("fetch")
-        }
+            this.$emit("fetch");
+        },
     },
     watch: {
         activities: {
             deep: true,
             handler(newValue, oldValue) {
-                if(oldValue === undefined) {
+                if (oldValue === undefined) {
                     /// @ts-ignore
                     this.previousActivities = this.activities;
                     this.$emit("fetch");
-                    const elementWatcher = scrollMonitor.create(document.getElementById("scroll-sensor"))
+                    const elementWatcher = scrollMonitor.create(document.getElementById("scroll-sensor"));
                     elementWatcher.enterViewport(() => {
-                        if(window.scrollY > 0) {
+                        if (window.scrollY > 0) {
                             this.fetchMore();
                             console.log(1);
                         }
                     });
                 }
-            }
-        }
-    }
+            },
+        },
+    },
 });
 </script>

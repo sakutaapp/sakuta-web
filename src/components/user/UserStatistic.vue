@@ -11,7 +11,7 @@ import Vue from "vue";
 export default Vue.extend({
     props: {
         prop: String,
-        value: String
-    }
+        value: String,
+    },
 });
 </script>

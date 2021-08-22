@@ -2,9 +2,9 @@ query {
     trendingAnime: Page(page: 1, perPage: 12) {
         media(sort: TRENDING_DESC, type: ANIME) {
             id
-                title {
+            title {
                 english
-                romaji,
+                romaji
                 native
             }
             format
@@ -22,7 +22,7 @@ query {
             id
             title {
                 english
-                romaji,
+                romaji
                 native
             }
             format
@@ -40,7 +40,7 @@ query {
             id
             title {
                 english
-                romaji,
+                romaji
                 native
             }
             format
@@ -58,7 +58,7 @@ query {
             id
             title {
                 english
-                romaji,
+                romaji
                 native
             }
             format
@@ -75,9 +75,9 @@ query {
     trendingMovies: Page(page: 1, perPage: 12) {
         media(sort: TRENDING_DESC, type: ANIME, format: MOVIE) {
             id
-                title {
+            title {
                 english
-                romaji,
+                romaji
                 native
             }
             format
@@ -95,7 +95,7 @@ query {
             id
             title {
                 english
-                romaji,
+                romaji
                 native
             }
             format
@@ -109,13 +109,12 @@ query {
         }
     }
 
-
     trendingManga: Page(page: 1, perPage: 12) {
         media(sort: TRENDING_DESC, type: MANGA) {
             id
             title {
                 english
-                romaji,
+                romaji
                 native
             }
             format
@@ -133,7 +132,7 @@ query {
             id
             title {
                 english
-                romaji,
+                romaji
                 native
             }
             format
@@ -151,7 +150,7 @@ query {
             id
             title {
                 english
-                romaji,
+                romaji
                 native
             }
             format
@@ -167,9 +166,9 @@ query {
     mostFavoritedManga: Page(page: 1, perPage: 12) {
         media(sort: FAVOURITES_DESC, type: MANGA) {
             id
-                title {
+            title {
                 english
-                romaji,
+                romaji
                 native
             }
             format

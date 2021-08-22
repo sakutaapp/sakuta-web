@@ -20,23 +20,23 @@ export default Vue.extend({
             query: explore,
             update: (data) => {
                 return {
-                    ...data
-                }
-            }
-        }
+                    ...data,
+                };
+            },
+        },
     },
     computed: {
         categories() {
             let array = [];
-            if(!this.Data) return array;
+            if (!this.Data) return array;
             Object.keys(this.Data).forEach((key) => {
                 array.push({
                     ...this.Data[key],
-                    key
+                    key,
                 });
             });
             return array;
-        }
-    }
+        },
+    },
 });
 </script>

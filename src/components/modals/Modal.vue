@@ -20,7 +20,7 @@ import Vue from "vue";
 export default Vue.extend({
     props: {
         header: Boolean,
-        headerImage: String
-    }
+        headerImage: String,
+    },
 });
 </script>

@@ -17,18 +17,18 @@ export default Vue.extend({
     },
     data() {
         return {
-            showSpoilers: false
-        }
+            showSpoilers: false,
+        };
     },
     computed: {
         filteredTags(): any {
-            if(this.showSpoilers) return this.tags;
+            if (this.showSpoilers) return this.tags;
             return this.tags.filter((tag: any) => {
-                if(tag.isMediaSpoiler) return false;
-                if(tag.isGeneralSpoiler) return false;
+                if (tag.isMediaSpoiler) return false;
+                if (tag.isGeneralSpoiler) return false;
                 return true;
             });
-        }
-    }
+        },
+    },
 });
 </script>

@@ -12,13 +12,13 @@ import Vue from "vue";
 
 export default Vue.extend({
     props: {
-        episode: Object
+        episode: Object,
     },
     methods: {
         open() {
-            window.open(this.episode.url, '_blank')
-        }
-    }
+            window.open(this.episode.url, "_blank");
+        },
+    },
 });
 </script>
 

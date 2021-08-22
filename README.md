@@ -7,12 +7,17 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/sakutaapp/sakuta-web?style=flat-square)
 
 This is the main repository of [Sakuta](https://sakuta.app) - the new way to track anime. Sakuta is a simple and modern AniList client built using VueJS and NuxtJS
+
 ## Commands
+
 ### Dev Server
+
 ```
 yarn dev
 ```
+
 or
+
 ```
 npm run dev
 ```

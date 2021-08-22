@@ -1,10 +1,10 @@
-query ($page: Int!, $perPage: Int = 48, $sort: [MediaSort]!, $search: String, $type: MediaType) {
+query($page: Int!, $perPage: Int = 48, $sort: [MediaSort]!, $search: String, $type: MediaType) {
     Page(page: $page, perPage: $perPage) {
         media(sort: $sort, search: $search, type: $type) {
             id
-                title {
+            title {
                 english
-                romaji,
+                romaji
                 native
             }
             format

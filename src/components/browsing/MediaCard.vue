@@ -18,22 +18,38 @@ import Vue from "vue";
 export default Vue.extend({
     data() {
         return {
-            showInner: false
-        }
+            showInner: false,
+        };
     },
     props: {
-        media: Object
+        media: Object,
     },
     computed: {
-        coverImage(): any { return this.media?.coverImage?.large || "" },
-        title(): any {  return this.media?.title.english || this.media?.title.romaji || this.media?.title.native || "" },
-        id(): any { return this.media?.id || 0 },
-        type(): any { return this.media?.type ? this.media?.type.toLowerCase() : "unknown" },
-        format(): any { return this.media?.format || undefined },
-        status(): any { return this.media?.status || undefined },
-        season(): any { return this.media?.season || undefined },
-        seasonYear(): any { return this.media?.seasonYear || undefined }
-    }
+        coverImage(): any {
+            return this.media?.coverImage?.large || "";
+        },
+        title(): any {
+            return this.media?.title.english || this.media?.title.romaji || this.media?.title.native || "";
+        },
+        id(): any {
+            return this.media?.id || 0;
+        },
+        type(): any {
+            return this.media?.type ? this.media?.type.toLowerCase() : "unknown";
+        },
+        format(): any {
+            return this.media?.format || undefined;
+        },
+        status(): any {
+            return this.media?.status || undefined;
+        },
+        season(): any {
+            return this.media?.season || undefined;
+        },
+        seasonYear(): any {
+            return this.media?.seasonYear || undefined;
+        },
+    },
 });
 </script>
 
