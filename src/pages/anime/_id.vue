@@ -123,5 +123,19 @@ export default Vue.extend({
             }
         },
     },
+    watch: {
+        Media: {
+            deep: true,
+            handler(newData, oldData) {
+                if (oldData) return;
+                this.$nuxt.$loading.finish();
+            },
+        },
+    },
+    mounted() {
+        this.$nextTick(() => {
+            this.$nuxt.$loading.start();
+        });
+    },
 });
 </script>

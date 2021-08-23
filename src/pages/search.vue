@@ -113,6 +113,7 @@ export default Vue.extend({
             deep: true,
             handler(newValue, oldValue) {
                 if (oldValue === undefined) {
+                    this.$nuxt.$loading.finish();
                     this.previousEntries = this.data;
                     this.page++;
                     const element = document.getElementById("scroll-sensor");
@@ -126,6 +127,11 @@ export default Vue.extend({
                 }
             },
         },
+    },
+    mounted() {
+        this.$nextTick(() => {
+            this.$nuxt.$loading.start();
+        });
     },
 });
 </script>

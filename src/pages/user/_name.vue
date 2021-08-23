@@ -31,6 +31,7 @@ export default Vue.extend({
     data() {
         return {
             page: 1,
+            dataLoaded: 0,
         };
     },
     apollo: {
@@ -68,6 +69,31 @@ export default Vue.extend({
                 { stat: "volumesRead", value: this.User?.statistics?.manga?.volumesRead },
             ];
         },
+    },
+    watch: {
+        User: {
+            deep: true,
+            handler(newData, oldData) {
+                if (oldData) return;
+                this.dataLoaded++;
+            },
+        },
+        activities: {
+            deep: true,
+            handler(newData, oldData) {
+                if (oldData) return;
+                this.dataLoaded++;
+            },
+        },
+        dataLoaded() {
+            if (this.dataLoaded < 2) return;
+            this.$nuxt.$loading.finish();
+        },
+    },
+    mounted() {
+        this.$nextTick(() => {
+            this.$nuxt.$loading.start();
+        });
     },
 });
 </script>
