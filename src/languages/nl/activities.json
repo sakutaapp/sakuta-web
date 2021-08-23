@@ -1,0 +1,8 @@
+{
+    "status.completed": "Voltooid",
+    "status.pausedWatching": "Kijken gepauzeerd",
+    "status.watchedEpisode": "{0} aflevering bekeken | {0} afleveringen bekeken",
+    "status.plansToWatch": "Gepland om te kijken",
+    "status.plansToRead": "Gepland om te lezen",
+    "status.readChapter": "{0} hoofdstuk gelezen | {0} hoofdstukken gelezen"
+}

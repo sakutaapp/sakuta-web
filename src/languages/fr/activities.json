@@ -1,0 +1,8 @@
+{
+    "status.completed": "Terminé",
+    "status.pausedWatching": "En pause",
+    "status.watchedEpisode": "A vu l'épisode {0} de | A vu les épisodes {0} de",
+    "status.plansToWatch": "Prévoit de voir",
+    "status.plansToRead": "Prévoit de lire",
+    "status.readChapter": "A lu le chapitre {0} de | A lu les chapitres {0} de"
+}

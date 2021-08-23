@@ -37,6 +37,7 @@
 	"mean": "{0}/100",
 	"props.season.title": "Saison",
 	"props.length.title": "Durchschn. Folgenlänge",
+	"props.lengthSingle.title": "Dauer",
 	"props.start.title": "Startdatum",
 	"props.source.title": "Vorlage",
 	"props.mean.title": "Bewertung",
