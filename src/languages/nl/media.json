@@ -37,6 +37,7 @@
 	"mean": "{0}/100",
 	"props.season.title": "Seizoen",
 	"props.length.title": "Gemiddelde afleveringsduur",
+	"props.lengthSingle.title": "Lengte",
 	"props.start.title": "Startdatum",
 	"props.source.title": "Bron",
 	"props.mean.title": "Waardering",

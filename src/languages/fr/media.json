@@ -37,6 +37,7 @@
 	"mean": "{0}/100",
 	"props.season.title": "Saison",
 	"props.length.title": "Longueur moyenne d'un épisode",
+	"props.lengthSingle.title": "Durée",
 	"props.start.title": "Date de début ",
 	"props.source.title": "Source",
 	"props.mean.title": "Note",

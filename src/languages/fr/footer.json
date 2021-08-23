@@ -3,5 +3,6 @@
 	"category.legal": "Mentions légales",
 	"category.social": "Réseaux sociaux",
 	"link.imprint": "Informations",
-	"link.privacy": "Confidentialité"
+	"link.privacy": "Confidentialité",
+	"license": "Sous licence [MIT]"
 }

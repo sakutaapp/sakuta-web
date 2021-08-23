@@ -3,5 +3,6 @@
 	"category.legal": "Juridisch",
 	"category.social": "Sociale media",
 	"link.imprint": "Impressum",
-	"link.privacy": "Privacybeleid"
+	"link.privacy": "Privacybeleid",
+	"license": "Gelicenseerd onder de [MIT-licentie]"
 }
