@@ -14,6 +14,7 @@ const config: NuxtConfig = {
     target: "static",
     components: [{ path: "~/components", pathPrefix: false }],
     generate: { fallback: true },
+    loading: "~/components/Loader.vue",
 
     buildModules,
     head,

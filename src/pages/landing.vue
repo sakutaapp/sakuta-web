@@ -35,15 +35,38 @@ export default Vue.extend({
         return {
             features: ["layout", "linked", "mobile", "list"],
             image: { anime: null, url: "" },
+            dataLoaded: 0,
         };
     },
     mounted() {
         this.setImage();
+        this.$nextTick(() => {
+            this.$nuxt.$loading.start();
+        });
     },
     methods: {
         async setImage() {
             let images = (await this.$axios.get("https://screencaps.sakuta.app/index.json")).data;
             this.image = images?.images[Math.floor(Math.random() * images?.images.length)] || "";
+        },
+    },
+    watch: {
+        Media: {
+            deep: true,
+            handler(newData, oldData) {
+                if (oldData) return;
+                this.dataLoaded++;
+            },
+        },
+        image: {
+            deep: true,
+            handler(newData, oldData) {
+                this.dataLoaded++;
+            },
+        },
+        dataLoaded() {
+            if (this.dataLoaded < 2) return;
+            this.$nuxt.$loading.finish();
         },
     },
 });
