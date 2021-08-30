@@ -1,4 +1,6 @@
 {
+    "tooLong.1": "Loading takes longer than usual...",
+    "tooLong.2": "Please check your connection. If you are connected to the internet and this issue persists, check our [1:status page] or tweet at [2:@trysakuta]!",
     "1": "Doing things...",
     "2": "Stealing cookies...",
     "3": "(╯°□°）╯︵ ┻━┻",
