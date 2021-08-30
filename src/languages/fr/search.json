@@ -1,10 +1,8 @@
 {
 	"filters.type.ALL": "Tous types",
 	"sort.POPULARITY_DESC": "Les plus populaires",
-	"sort.POPULARITY": "Les moins populaires",
 	"sort.TRENDING_DESC": "Tendance",
 	"sort.FAVOURITES_DESC": "Les plus favorisés",
-	"sort.FAVOURITES": "Les moins favorisés",
 	"sort.SCORE_DESC": "Les mieux notés",
 	"placeholder": "Rechercher..."
 }
