@@ -33,7 +33,7 @@ import Vue from "vue";
 import search from "../apollo/queries/search";
 import scrollMonitor from "scrollmonitor";
 
-const sortOptions = ["POPULARITY_DESC", "POPULARITY", "TRENDING_DESC", "FAVOURITES_DESC", "FAVOURITES", "SCORE_DESC"];
+const sortOptions = ["POPULARITY_DESC", "FAVOURITES_DESC", "SCORE_DESC"];
 
 function validateSortOption(sortOption) {
     if (sortOption && sortOptions.includes(sortOption)) {
