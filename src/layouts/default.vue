@@ -3,7 +3,7 @@
         <Navbar :fixed="navbar" @toggleSettings="settingsModal = true" />
         <nuxt :class="navbar ? 'pt-21' : ''" />
         <Footer />
-        <SettingsModal v-if="settingsModal" @close="settingsModal = false" @theme="$event === 'dark' ? (theme = true) : (theme = false)" @navbar="$event === 'fixed' ? (navbar = true) : (navbar = false)" />
+        <SettingsModal v-if="settingsModal" @close="settingsModal = false" @theme="$event !== 'deep-pink' ? (theme = true) : (theme = false)" @navbar="$event === 'fixed' ? (navbar = true) : (navbar = false)" />
     </div>
 </template>
 
@@ -13,7 +13,7 @@ import Vue from "vue";
 export default Vue.extend({
     data() {
         return {
-            theme: localStorage.getItem("theme") === "dark",
+            theme: localStorage.getItem("theme") !== "deep-pink",
             navbar: localStorage.getItem("navbar") === "fixed",
             settingsModal: false,
         };

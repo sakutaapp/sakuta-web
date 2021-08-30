@@ -3,7 +3,7 @@
         <h1 class="font-bold text-3xl mb-2">{{ $t("settings.heading") }}</h1>
 
         <h2 class="font-semibold text-xl mt-2">{{ $t("settings.setting.theme") }}</h2>
-        <SettingsSelector :options="['blue', 'dark']" v-model="theme" />
+        <SettingsSelector :options="['dark', 'deep-pink']" v-model="theme" />
 
         <h2 class="font-semibold text-xl mt-2">{{ $t("settings.setting.homePage") }}</h2>
         <SettingsSelector :options="['landing', 'explore']" v-model="homePage" />
@@ -21,7 +21,7 @@ import Vue from "vue";
 export default Vue.extend({
     data() {
         return {
-            theme: localStorage.getItem("theme") === "dark" ? localStorage.getItem("theme") : "blue",
+            theme: localStorage.getItem("theme") === "deep-pink" ? localStorage.getItem("theme") : "dark",
             homePage: localStorage.getItem("homePage") === "explore" ? localStorage.getItem("homePage") : "landing",
             navbar: localStorage.getItem("navbar") === "fixed" ? localStorage.getItem("navbar") : "unfixed",
             lang: localStorage.getItem("lang") || "en",
