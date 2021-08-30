@@ -3,7 +3,7 @@
         <img src="/assets/svg/icon_white.svg" class="h-42 w-42 pageLoader" />
         <div class="relative w-full text-center">
             <h1 class="text-xl">{{ $t(loadingText) }}</h1>
-            <p :class="`w-full absolute top-15 ${tooLong ? 'opacity-100' : 'opacity-0'} transition duration-100`">Loading takes longer than usual...<br />If this issue persists, send a tweet to <a href="https://twitter.com/trysakuta">@trysakuta</a>!</p>
+            <p :class="`w-full absolute top-15 ${tooLong ? 'opacity-100' : 'opacity-0'} transition duration-100`" v-html="tooLongLoadingText" />
         </div>
     </div>
 </template>
@@ -42,6 +42,15 @@ export default Vue.extend({
                     this.startFadeOut = false;
                 }, 500);
             }, 500);
+        },
+    },
+    computed: {
+        tooLongLoadingText() {
+            const string: string = this.$t("loading.tooLong.2") as string;
+            const match1 = string.match(/\[1:.*?\]/g);
+            const match2 = string.match(/\[2:.*?\]/g);
+            if (!match1 || !match2) return "Error";
+            return this.$t("loading.tooLong.1") + "<br />" + string.replace(match1[0], `<a href="https://status.sakuta.app" class="underline" target="_blank">${match1[0].slice(3, match1[0].length - 1)}</a>`).replace(match2[0], `<a href="https://twitter.com/trysakuta" class="underline" target="_blank">${match2[0].slice(3, match2[0].length - 1)}</a>`);
         },
     },
 });
