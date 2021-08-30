@@ -30,6 +30,7 @@
 	"source.NOVEL": "Novel",
 	"source.DOUUJINSHI": "Doujinshi",
 	"source.ANIME": "Anime",
+	"source.null": "Unknown",
 	"type.ANIME": "Anime",
 	"type.MANGA": "Manga",
 	"season": "{season} {year}",
