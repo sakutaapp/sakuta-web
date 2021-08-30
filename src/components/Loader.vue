@@ -33,13 +33,13 @@ export default Vue.extend({
             }, 8000);
         },
         finish() {
+            this.tooLong = false;
             setTimeout(() => {
                 this.startFadeOut = true;
                 setTimeout(() => {
                     console.log(2);
                     this.loading = false;
                     this.startFadeOut = false;
-                    this.tooLong = false;
                 }, 500);
             }, 500);
         },
