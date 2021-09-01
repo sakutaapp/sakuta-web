@@ -1,5 +1,6 @@
 {
 	"link.home": "Home",
 	"link.explore": "Explore",
-	"link.search": "Search"
+	"link.search": "Search",
+    "featureWip": "This feature is still in development!"
 }
