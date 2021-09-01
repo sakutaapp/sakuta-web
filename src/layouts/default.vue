@@ -4,6 +4,7 @@
         <nuxt :class="navbar ? 'pt-21' : ''" />
         <Footer />
         <SettingsModal v-if="settingsModal" @close="settingsModal = false" @theme="$event !== 'deep-pink' ? (theme = true) : (theme = false)" @navbar="$event === 'fixed' ? (navbar = true) : (navbar = false)" />
+        <DevPageWarning v-if="showPageWarning" @continue="closeDevPageWarning()" />
     </div>
 </template>
 
@@ -16,7 +17,14 @@ export default Vue.extend({
             theme: localStorage.getItem("theme") !== "deep-pink",
             navbar: localStorage.getItem("navbar") === "fixed",
             settingsModal: false,
+            showPageWarning: localStorage.getItem("continue") !== "true",
         };
+    },
+    methods: {
+        closeDevPageWarning() {
+            localStorage.setItem("continue", "true");
+            this.showPageWarning = false;
+        },
     },
     head() {
         return {
