@@ -4,7 +4,7 @@
         <nuxt :class="navbar ? 'pt-21' : ''" />
         <Footer />
         <SettingsModal v-if="settingsModal" @close="settingsModal = false" @theme="$event !== 'deep-pink' ? (theme = true) : (theme = false)" @navbar="$event === 'fixed' ? (navbar = true) : (navbar = false)" />
-        <DevPageWarning v-if="showPageWarning" @continue="closeDevPageWarning()" />
+        <DevPageWarning v-if="showPageWarning && !isMainSite" @continue="closeDevPageWarning()" />
     </div>
 </template>
 
@@ -24,6 +24,11 @@ export default Vue.extend({
         closeDevPageWarning() {
             localStorage.setItem("continue", "true");
             this.showPageWarning = false;
+        },
+    },
+    computed: {
+        isMainSite() {
+            return document.location.hostname === "sakuta.app";
         },
     },
     head() {
