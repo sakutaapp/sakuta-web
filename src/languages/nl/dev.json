@@ -1,0 +1,8 @@
+{
+    "pageWarning.title": "Je bent op {0}",
+    "pageWarning.text": "Dit is de ontwikkelingsversie van sakuta.app. Wanneer je dit gebruikt kan je problemen ondervinden. Rapporteer deze via [Twitter]!",
+    "pageWarning.button": "Ga naar {0}",
+    "pageWarning.continue": "Doorgaan naar {0}",
+    "unofficialPageWarning.title": "Je bent op een onofficiële versie van Sakuta!",
+    "unofficialPageWarning.text": "Onofficiële versies kunnen mogelijk gevaarlijk zijn. De officiële versie kan worden gevonden op sakuta.app!"
+}
