@@ -16,6 +16,7 @@
         "@nuxtjs/moment": "^1.6.1",
         "@nuxtjs/pwa": "^3.3.5",
         "core-js": "^3.15.1",
+        "fuzzy-search": "^3.2.1",
         "graphql-tag": "^2.12.5",
         "nuxt": "^2.15.7",
         "nuxt-webfontloader": "^1.1.0",
@@ -29,6 +30,7 @@
         "@graphql-codegen/typescript-operations": "^2.0.1",
         "@nuxt/types": "^2.15.7",
         "@nuxt/typescript-build": "^2.1.0",
+        "@types/fuzzy-search": "^2.1.1",
         "nuxt-windicss": "^1.1.1",
         "prettier": "^2.3.2"
     }

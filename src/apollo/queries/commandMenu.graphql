@@ -1,0 +1,31 @@
+query ($query: String, $type: MediaType) {
+    media: Page(page: 1, perPage: 11) {
+        media(sort: POPULARITY_DESC, search: $query, type: $type) {
+            id
+            title {
+                english
+                romaji
+                native
+            }
+            format
+            status
+            season
+            seasonYear
+            coverImage {
+                medium
+            }
+        }
+    }
+    user: Page(page: 1, perPage: 11) {
+        users(search: $query) {
+            id
+            name
+            avatar {
+                medium
+            }
+            isFollowing
+            isFollower
+            isBlocked
+        }
+    }
+}
