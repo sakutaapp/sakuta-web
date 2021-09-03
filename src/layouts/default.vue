@@ -1,6 +1,6 @@
 <template>
     <div class="relative min-h-screen pb-64 md:pb-45 caret-primary">
-        <Navbar :fixed="navbar" @toggleSettings="settingsModal = true" />
+        <Navbar :fixed="navbar" @toggleSettings="settingsModal = true" @toggle-command-menu="toggleCommandMenu()" />
         <nuxt :class="navbar ? 'pt-21' : ''" />
         <Footer />
         <SettingsModal v-if="settingsModal" @close="settingsModal = false" @theme="$event !== 'deep-pink' ? (theme = true) : (theme = false)" @navbar="$event === 'fixed' ? (navbar = true) : (navbar = false)" />

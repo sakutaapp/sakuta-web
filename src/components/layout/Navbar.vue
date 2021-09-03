@@ -13,7 +13,7 @@
                 </div>
             </div>
         </Container>
-        <NavBottom @settings="$emit('toggleSettings')" />
+        <NavBottom @settings="$emit('toggleSettings')" @toggle-command-menu="$emit('toggle-command-menu')" />
     </div>
 </template>
 
