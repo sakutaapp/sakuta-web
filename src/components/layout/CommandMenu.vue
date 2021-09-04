@@ -120,15 +120,19 @@ export default Vue.extend({
         },
         up() {
             if (this.activeIndex > 0) {
+                if (!this.options[this.activeIndex - 1]) return;
                 this.activeOption = this.options[this.activeIndex - 1].name;
             } else {
+                if (!this.options[this.options.length - 1]) return;
                 this.activeOption = this.options[this.options.length - 1].name;
             }
         },
         down() {
             if (this.activeIndex + 1 < this.options.length) {
+                if (!this.options[this.activeIndex + 1]) return;
                 this.activeOption = this.options[this.activeIndex + 1].name;
             } else {
+                if (!this.options[0]) return;
                 this.activeOption = this.options[0].name;
             }
         },
