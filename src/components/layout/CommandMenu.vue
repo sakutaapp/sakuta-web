@@ -150,14 +150,30 @@ export default Vue.extend({
             this.page = "animeSearch";
         },
         animeSearchAction(id) {
-            this.$router.push(`/anime/${id}`);
+            if (id === "more") {
+                if (document.location.pathname.startsWith("/search")) {
+                    document.location.href = `/search?type=ANIME&sort=POPULARITY_DESC&q=${encodeURIComponent(this.query)}`;
+                } else {
+                    this.$router.push(`/search?type=ANIME&sort=POPULARITY_DESC&q=${encodeURIComponent(this.query)}`);
+                }
+            } else {
+                this.$router.push(`/anime/${id}`);
+            }
             this.$emit("close");
         },
         mangaSearch() {
             this.page = "mangaSearch";
         },
         mangaSearchAction(id) {
-            this.$router.push(`/manga/${id}`);
+            if (id === "more") {
+                if (document.location.pathname.startsWith("/search")) {
+                    document.location.href = `/search?type=MANGA&sort=POPULARITY_DESC&q=${encodeURIComponent(this.query)}`;
+                } else {
+                    this.$router.push(`/search?type=MANGA&sort=POPULARITY_DESC&q=${encodeURIComponent(this.query)}`);
+                }
+            } else {
+                this.$router.push(`/manga/${id}`);
+            }
             this.$emit("close");
         },
         userSearch() {
@@ -253,7 +269,13 @@ export default Vue.extend({
                             image: media.coverImage.medium,
                         });
                     });
-                    this.options = options;
+                    this.options = options.slice(0, 10);
+                    if (options.length > 10) {
+                        this.options.push({
+                            name: "more",
+                            icon: '<circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>',
+                        });
+                    }
                     this.loading = false;
                     if (this.options.findIndex((option) => option.name === this.activeOption) < 0 && this.options.length > 0) this.activeOption = this.options[0].name;
                 }

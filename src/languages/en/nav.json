@@ -13,5 +13,6 @@
     "commandMenu.subPage.animeSearch": "Anime search",
     "commandMenu.subPage.mangaSearch": "Manga search",
     "commandMenu.subPage.userSearch": "User search",
-    "commandMenu.noResults": "No results were found..."
+    "commandMenu.noResults": "No results were found...",
+    "commandMenu.more": "View more results"
 }

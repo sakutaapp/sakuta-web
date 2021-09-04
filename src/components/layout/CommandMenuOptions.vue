@@ -3,7 +3,7 @@
         <div v-for="option in options" :key="option.name" :ref="option.name" :class="`${option.name === value ? 'bg-white bg-opacity-5' : ''} px-4 py-2 cursor-pointer relative`" @mouseover="$emit('input', option.name)" @click="$emit('enter')">
             <div class="bg-primary absolute left-0 top-0 h-full w-0.8" v-if="option.name === value" />
             <div class="flex items-center space-x-3">
-                <svg v-if="page === ''" class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" v-html="option.icon" />
+                <svg v-if="option.icon" class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" v-html="option.icon" />
                 <div v-else class="bg-gray-900 dark:bg-dark-900 rounded w-8 overflow-hidden"><img :src="option.image" class="w-full h-full" /></div>
                 <div class="flex flex-col">
                     <p>{{ option.display ? option.display : $t(`nav.commandMenu.${option.name}`) }}</p>
