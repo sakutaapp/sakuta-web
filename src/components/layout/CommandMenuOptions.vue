@@ -41,6 +41,9 @@ export default Vue.extend({
         value(newValue) {
             if (!this.$refs[newValue]) return;
             /// @ts-ignore
+            if (!this.$refs[newValue][0]) return;
+            if (!this.$refs.commandMenuScroll) return;
+            /// @ts-ignore
             if (this.$refs[newValue][0].offsetTop - 85 + this.$refs[newValue][0].offsetHeight > this.$refs.commandMenuScroll.scrollTop + this.$refs.commandMenuScroll.offsetHeight) {
                 /// @ts-ignore
                 this.$refs.commandMenuScroll.scrollTop = this.$refs[newValue][0].offsetTop - 85;
