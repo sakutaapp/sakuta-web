@@ -35,7 +35,7 @@ export default Vue.extend({
     },
     mounted() {
         window.addEventListener("keydown", (e) => {
-            if (e.key === "k" && e.ctrlKey) {
+            if (e.key === "k" && (e.ctrlKey || e.metaKey)) {
                 e.preventDefault();
                 this.toggleCommandMenu();
             }
