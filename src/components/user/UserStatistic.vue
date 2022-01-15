@@ -1,7 +1,7 @@
 <template>
     <div class="whitespace-nowrap md:whitespace-normal">
-        <p class="text-gray-300 font-semibold">{{ $t(`user.stats.${prop}.title`) }}</p>
-        <p class="text-gray-400">{{ value }}</p>
+        <p class="text-gray-400 text-xs font-semibold uppercase">{{ $t(`user.stats.${prop}.title`) }}</p>
+        <p class="text-gray-300">{{ value }}</p>
     </div>
 </template>
 
