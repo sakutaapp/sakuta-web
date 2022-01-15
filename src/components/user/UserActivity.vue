@@ -3,8 +3,8 @@
         <div class="bg-gray-900 dark:bg-dark-900 px-5 py-3 flex rounded shadow hover:pl-6 cursor-pointer transition-all duration-250">
             <img :src="cover" class="h-20 rounded-md" />
             <div class="flex-grow w-full self-center ml-5">
-                <h3>{{ $tc(`activities.status.${status}`, plural ? 2 : 1, [progress]) }}</h3>
-                <h2 class="text-xl">{{ title }}</h2>
+                <h3 class="text-gray-400 text-xs uppercase">{{ $tc(`activities.status.${status}`, plural ? 2 : 1, [progress]) }}</h3>
+                <h2 class="text-lg">{{ title }}</h2>
             </div>
             <div class="flex flex-col justify-between text-right text-sm text-gray-500 flex-grow w-full">
                 <p>
