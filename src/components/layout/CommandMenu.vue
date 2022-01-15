@@ -220,6 +220,21 @@ export default Vue.extend({
                     });
                     this.options = search.search(newQuery);
                     if (this.options.findIndex((option) => option.name === this.activeOption) < 0 && this.options.length > 0) this.activeOption = this.options[0].name;
+
+                    switch (newQuery) {
+                        case "u:": {
+                            this.userSearch();
+                            break;
+                        }
+                        case "a:": {
+                            this.animeSearch();
+                            break;
+                        }
+                        case "m:": {
+                            this.mangaSearch();
+                            break;
+                        }
+                    }
                 }
             } else {
                 if (newQuery.length === 0) {
