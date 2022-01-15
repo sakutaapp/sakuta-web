@@ -38,6 +38,9 @@ export default Vue.extend({
             variables() {
                 return { name: this.$route.params.name };
             },
+            error: () => {
+                $nuxt.$emit("goHome");
+            },
         },
         activities: {
             query: userActivity,

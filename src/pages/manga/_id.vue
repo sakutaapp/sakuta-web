@@ -35,6 +35,9 @@ export default Vue.extend({
             variables() {
                 return { id: this.$route.params.id };
             },
+            error: () => {
+                $nuxt.$emit("goHome");
+            },
         },
     },
     data() {

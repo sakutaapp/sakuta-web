@@ -40,6 +40,10 @@ export default Vue.extend({
                 this.toggleCommandMenu();
             }
         });
+        this.$nuxt.$on("goHome", () => {
+            console.log("goHome triggered");
+            this.$router.push("/");
+        });
     },
     computed: {
         isMainSite() {
