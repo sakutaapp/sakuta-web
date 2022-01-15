@@ -1,7 +1,7 @@
 <template>
     <Section>
         <h2 class="text-lg font-semibold mb-1">{{ $t("user.section.activity") }}</h2>
-        <div class="flex flex-col space-y-2">
+        <div class="grid grid-cols-2 gap-2">
             <UserActivity v-for="activity in previousActivities" :key="activity.id" :activity="activity" />
             <div id="scroll-sensor"></div>
             <UserActivity v-for="activity in activities" :key="activity.id" :activity="activity" />
