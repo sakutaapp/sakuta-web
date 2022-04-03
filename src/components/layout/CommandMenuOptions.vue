@@ -4,7 +4,7 @@
             <div class="bg-primary absolute left-0 top-0 h-full w-0.8" v-if="option.name === value" />
             <div class="flex items-center space-x-3">
                 <svg v-if="option.icon" class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" v-html="option.icon" />
-                <div v-else class="bg-gray-900 dark:bg-dark-900 rounded w-8 overflow-hidden"><img :src="option.image" class="w-full h-full" /></div>
+                <div v-else class="bg-gray-900 bg-dark-900 rounded w-8 overflow-hidden"><img :src="option.image" class="w-full h-full" /></div>
                 <div class="flex flex-col">
                     <p>{{ option.display ? option.display : $t(`nav.commandMenu.${option.name}`) }}</p>
                     <p class="text-sm text-white opacity-60" v-if="option.properties">{{ propertiesString(option.properties) }}</p>

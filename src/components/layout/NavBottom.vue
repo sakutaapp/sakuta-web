@@ -1,5 +1,5 @@
 <template>
-    <div class="fixed w-full bottom-0 left-0 flex md:hidden z-1 bg-gray-800 dark:bg-dark-800 flex justify-around items-center py-3 z-100 text-white">
+    <div class="fixed w-full bottom-0 left-0 flex md:hidden z-1 bg-dark-800 flex justify-around items-center py-3 z-100 text-white">
         <nuxt-link to="/explore" class="opacity-40 nav-bottom-link">
             <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
@@ -26,7 +26,7 @@
         </svg>
 
         <div class="fixed bottom-16 w-full p-2">
-            <div :class="`bg-gray-800 dark:bg-dark-800 rounded shadow text-center p-2 transition duration-250 transform ${showWip ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`">{{ $t("nav.featureWip") }}</div>
+            <div :class="`bg-dark-800 rounded shadow text-center p-2 transition duration-250 transform ${showWip ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`">{{ $t("nav.featureWip") }}</div>
         </div>
     </div>
 </template>

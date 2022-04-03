@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-gray-800 dark:bg-dark-800 shadow-sm py-8 absolute bottom-0 w-full">
+    <div class="bg-dark-800 shadow-sm py-8 absolute bottom-0 w-full">
         <Container>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
                 <div class="text-left">

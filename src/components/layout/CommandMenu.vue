@@ -1,6 +1,6 @@
 <template>
     <div class="fixed w-full top-30 md:top-50 left-0 z-10 flex items-center justify-center" @keydown.arrow-down.prevent="down()" @keydown.tab.prevent="down()" @keydown.arrow-up.prevent="up()" @keydown.enter="enter()">
-        <div class="bg-gray-800 dark:bg-dark-800 !bg-opacity-70 backdrop-filter backdrop-blur-lg w-9/10 max-w-128 shadow-2xl rounded-lg overflow-hidden relative">
+        <div class="bg-dark-800 !bg-opacity-70 backdrop-filter backdrop-blur-lg w-9/10 max-w-128 shadow-2xl rounded-lg overflow-hidden relative">
             <div class="px-5 py-3 flex flex-col items-start">
                 <div v-if="page !== ''" class="bg-white !bg-opacity-10 px-1.5 py-1 text-xs rounded mb-3">{{ $t(`nav.commandMenu.subPage.${page}`) }}</div>
                 <input ref="commandMenuSearch" id="commandMenuSearch" class="w-full bg-transparent text-white" @blur="setFocus(true)" type="text" autofocus v-model="query" :placeholder="$t('nav.commandMenu.placeholder')" autocomplete="off" />

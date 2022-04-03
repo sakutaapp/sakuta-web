@@ -1,5 +1,5 @@
 <template>
-    <div :class="`bg-gray-800 dark:bg-dark-800 shadow-sm py-4 ${fixed ? 'fixed fixed-navbar backdrop-filter backdrop-blur-lg w-full z-90 border-b shadow border-gray-900 dark:border-black top-0' : ''}`">
+    <div :class="`bg-dark-800 shadow-sm py-4 ${fixed ? 'fixed fixed-navbar backdrop-filter backdrop-blur-lg w-full z-90 border-b shadow border-black top-0' : ''}`">
         <Container>
             <div class="flex items-center">
                 <div class="flex-grow w-1/6 flex items-center justify-center md:block">
@@ -53,9 +53,6 @@ export default Vue.extend({
 
 <style>
 .fixed-navbar {
-    background-color: rgba(17, 24, 39, 0.8) !important;
-}
-.dark .fixed-navbar {
     background-color: rgba(15, 15, 15, 0.8) !important;
 }
 </style>
