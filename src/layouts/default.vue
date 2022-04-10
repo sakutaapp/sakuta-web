@@ -1,9 +1,9 @@
 <template>
     <div class="relative min-h-screen pb-64 md:pb-45 caret-primary">
-        <Navbar @toggleSettings="settingsModal = true" @toggle-command-menu="toggleCommandMenu()" />
+        <Navbar @toggleSettings="settingsMenu = true" @toggle-command-menu="toggleCommandMenu()" />
         <nuxt :class="navbar ? 'pt-21' : ''" />
         <Footer />
-        <SettingsModal v-if="settingsModal" @close="settingsModal = false" />
+        <SettingsMenu v-if="settingsMenu" @close="settingsMenu = false" />
         <DevPageWarning v-if="showPageWarning && !isMainSite" @continue="closeDevPageWarning()" />
         <transition name="command-menu-transition">
             <CommandMenu v-if="commandMenuEnabled" @close="commandMenuEnabled = false" />
@@ -17,7 +17,7 @@ import Vue from "vue";
 export default Vue.extend({
     data() {
         return {
-            settingsModal: false,
+            settingsMenu: false,
             showPageWarning: localStorage.getItem("continue") !== "true",
             commandMenuEnabled: false,
         };
@@ -42,6 +42,12 @@ export default Vue.extend({
             console.log("goHome triggered");
             this.$router.push("/");
         });
+        this.$nuxt.$on("lockScroll", () => {
+            document.body.classList.add("overflow-hidden");
+        });
+        this.$nuxt.$on("unlockScroll", () => {
+            document.body.classList.remove("overflow-hidden");
+        });
     },
     computed: {
         isMainSite() {
@@ -55,6 +61,15 @@ export default Vue.extend({
                 class: "bg-dark-900 text-gray-300",
             },
         };
+    },
+    watch: {
+        settingsMenu(settingsMenu) {
+            if (settingsMenu) {
+                this.$nuxt.$emit("lockScroll");
+            } else {
+                this.$nuxt.$emit("unlockScroll");
+            }
+        },
     },
 });
 </script>

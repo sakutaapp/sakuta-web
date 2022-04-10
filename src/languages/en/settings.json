@@ -1,11 +1,15 @@
 {
-	"heading": "Settings",
-	"setting.navigation": "Navigation",
-	"setting.language": "Language",
-	"option.dark": "Dark",
-	"option.deep-pink": "Deep pink",
-	"option.landing": "Landing page",
-	"option.explore": "Explore",
-    "option.top": "Top",
-    "option.bottom": "Bottom"
+    "headings.app": "App settings",
+    "headings.misc": "Miscellaneous",
+    "page.appearance": "Appearance",
+    "page.language": "Language",
+    "page.changelog": "Changelog",
+    "page.privacy": "Privacy",
+    "title.settings": "Settings",
+    "title.appearance": "Appearance settings",
+    "title.language": "Languages",
+    "title.changelog": "Changelog",
+    "title.privacy": "Privacy settings",
+    "options.bottomNavigation": "Floating navigation at the bottom",
+    "options.bottomNavigation.description": "Always show the navigation as floating pane at the bottom instead of the top of the page. Similiar to how the navigation works on Sakuta on mobile devices"
 }
