@@ -80,13 +80,7 @@ anilist-gql-response {
     background: #de0d8a;
 }
 ::-webkit-scrollbar-track {
-    background: #1f2937;
-    border-radius: 0px;
-    box-shadow: inset 0px 0px 0px 0px #f0f0f0;
-}
-
-.dark ::-webkit-scrollbar-track {
-    background: #181818;
+    background: none;
     border-radius: 0px;
     box-shadow: inset 0px 0px 0px 0px #f0f0f0;
 }
