@@ -1,6 +1,6 @@
 export default {
     custom: {
-        families: ["Inter"],
-        urls: ["https://fonts.googleapis.com/css?family=Inter:wght@400;500;600;700&display=swap"],
+        families: ["Poppins"],
+        urls: ["https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"],
     },
 };

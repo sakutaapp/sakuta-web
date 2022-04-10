@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-dark-800 shadow-sm py-8 absolute bottom-0 w-full">
+    <div :class="`bg-dark-800 shadow-sm py-8 absolute bottom-0 w-full ${alwaysShowBottom ? 'pb-25' : 'pb-25 md:pb-8'}`">
         <Container>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
                 <div class="text-left">
@@ -24,6 +24,7 @@ import Vue from "vue";
 export default Vue.extend({
     data() {
         return {
+            alwaysShowBottom: localStorage.getItem("navigation") === "bottom",
             links: [
                 {
                     title: "footer.category.sakuta",
@@ -75,6 +76,11 @@ export default Vue.extend({
             if (!match) return string;
             return "© 2021 Sakuta | " + string.replace(match[0], `<a href="https://github.com/sakutaapp/sakuta-web/blob/master/LICENSE.md" target="_blank" class="underline hover:text-primary transition duration-100">${match[0].slice(1, match[0].length - 1)}</a>`);
         },
+    },
+    mounted() {
+        this.$nuxt.$on("navigationTypeChange", (type: string) => {
+            this.alwaysShowBottom = type === "bottom";
+        });
     },
 });
 </script>

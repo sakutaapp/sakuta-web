@@ -26,7 +26,7 @@ export default defineConfig({
             },
         },
         fontFamily: {
-            sans: ["Inter", "sans-serif"],
+            sans: ["Poppins", "sans-serif"],
         },
     },
     plugins: [aspectRatio],

@@ -1,12 +1,11 @@
 {
 	"heading": "Settings",
-	"setting.homePage": "Home page",
-	"setting.navbar": "Navigation",
+	"setting.navigation": "Navigation",
 	"setting.language": "Language",
 	"option.dark": "Dark",
 	"option.deep-pink": "Deep pink",
 	"option.landing": "Landing page",
 	"option.explore": "Explore",
-	"option.fixed": "Fixed to screen",
-	"option.unfixed": "On top of page"
+    "option.top": "Top",
+    "option.bottom": "Bottom"
 }

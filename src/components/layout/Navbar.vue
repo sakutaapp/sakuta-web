@@ -1,19 +1,27 @@
 <template>
-    <div :class="`bg-dark-800 shadow-sm py-4 ${fixed ? 'fixed fixed-navbar backdrop-filter backdrop-blur-lg w-full z-90 border-b shadow border-black top-0' : ''}`">
+    <div class="bg-dark-900 shadow-sm py-4">
         <Container>
             <div class="flex items-center">
-                <div class="flex-grow w-1/6 flex items-center justify-center md:block">
+                <div class="flex-grow w-1/6">
                     <nuxt-link to="/"><img src="/assets/svg/logo.svg" class="h-8" /></nuxt-link>
                 </div>
-                <div class="w-full flex-grow hidden md:flex justify-center items-center space-x-4">
-                    <nuxt-link exact-active-class="text-white bg-opacity-12 hover:bg-opacity-18" v-for="link in nav" :key="link.to" :to="link.to" class="hover:text-white transition duration-250 bg-white bg-opacity-0 hover:bg-opacity-5 px-2.5 py-1 rounded">{{ $t(`nav.link.${link.name}`) }}</nuxt-link>
+                <div v-if="!alwaysShowBottom" class="w-full flex-grow hidden md:flex justify-center items-center space-x-4">
+                    <nuxt-link exact-active-class="text-white bg-dark-800" v-for="link in navLinks" :key="link.to" :to="link.to" class="hover:text-white transition duration-250 bg-dark-900 hover:bg-dark-800 px-4 py-1.5 rounded-full flex space-x-2">
+                        <Component :is="link.icon" :filled="$route.path === link.to" />
+                        <span>{{ $t(`nav.link.${link.name}`) }}</span>
+                    </nuxt-link>
                 </div>
-                <div class="flex-grow w-1/6 hidden md:flex justify-end space-x-3">
-                    <svg class="w-6 h-6 cursor-pointer block" @click="$emit('toggleSettings')" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path></svg>
+                <div class="flex-grow w-1/6 flex justify-end space-x-3">
+                    <div v-if="alwaysShowBottom" @click="$router.push('/search')" class="cursor-pointer bg-dark-800 md:bg-dark-900 hover:bg-dark-800 transition duration-250 p-2 rounded-full hidden md:flex items-center justify-center">
+                        <SearchIcon size="24" />
+                    </div>
+                    <div @click="$emit('toggleSettings')" class="center cursor-pointer bg-dark-800 md:bg-dark-900 hover:bg-dark-800 transition duration-250 p-2 rounded-full">
+                        <SettingsIcon size="24" />
+                    </div>
                 </div>
             </div>
         </Container>
-        <NavBottom @settings="$emit('toggleSettings')" @toggle-command-menu="$emit('toggle-command-menu')" />
+        <NavBottom @settings="$emit('toggleSettings')" :alwaysShow="alwaysShowBottom" @toggle-command-menu="$emit('toggle-command-menu')" />
     </div>
 </template>
 
@@ -21,38 +29,32 @@
 import Vue from "vue";
 
 export default Vue.extend({
-    props: {
-        fixed: Boolean,
-    },
     data() {
         return {
+            alwaysShowBottom: localStorage.getItem("navigation") === "bottom",
             navLinks: [
                 {
                     to: "/",
+                    icon: "HomeIcon",
                     name: "home",
                 },
                 {
                     to: "/explore",
+                    icon: "ExploreIcon",
                     name: "explore",
                 },
                 {
                     to: "/search",
+                    icon: "SearchIcon",
                     name: "search",
                 },
             ],
         };
     },
-    computed: {
-        nav(): any {
-            if (localStorage.getItem("homePage") !== "explore") return this.navLinks;
-            return this.navLinks.filter((link) => link.name !== "home");
-        },
+    mounted() {
+        this.$nuxt.$on("navigationTypeChange", (type: string) => {
+            this.alwaysShowBottom = type === "bottom";
+        });
     },
 });
 </script>
-
-<style>
-.fixed-navbar {
-    background-color: rgba(15, 15, 15, 0.8) !important;
-}
-</style>
