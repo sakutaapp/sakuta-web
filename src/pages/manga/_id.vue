@@ -5,13 +5,16 @@
         <div class="flex flex-col md:flex-row md:space-x-3 space-y-4 md:space-y-0">
             <div class="w-full md:w-1/5 flex flex-col space-y-3">
                 <MediaProperties :properties="properties" />
-                <MediaGenres :genres="genres" />
-                <MediaTags :tags="tags" />
-                <MediaTrailer :trailer="trailer" />
+                <MediaGenres class="hidden md:block" :genres="genres" />
+                <MediaTags class="hidden md:block" :tags="tags" />
+                <MediaTrailer class="hidden md:block" :trailer="trailer" />
             </div>
             <div class="w-full md:w-4/5 flex flex-col space-y-3">
                 <MediaDescription :description="description" />
+                <MediaGenres class="block md:hidden" :genres="genres" />
+                <MediaTags class="block md:hidden" :tags="tags" />
                 <MediaCharacters :characters="characters" @open="modal($event)" />
+                <MediaTrailer class="block md:hidden" :trailer="trailer" />
             </div>
         </div>
         <CharacterModal v-if="modalData.show && modalData.character" :character="modalData.character" @close="modal()" />

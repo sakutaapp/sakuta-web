@@ -1,7 +1,7 @@
 <template>
-    <div class="relative min-h-screen pb-64 md:pb-45 caret-primary">
+    <div class="relative min-h-screen pb-100 md:pb-45 caret-primary">
         <Navbar @toggleSettings="settingsMenu = true" @toggle-command-menu="toggleCommandMenu()" />
-        <nuxt :class="navbar ? 'pt-21' : ''" />
+        <nuxt />
         <Footer />
         <SettingsMenu v-if="settingsMenu" @close="settingsMenu = false" />
         <DevPageWarning v-if="showPageWarning && !isMainSite" @continue="closeDevPageWarning()" />

@@ -21,7 +21,8 @@
         "nuxt": "^2.15.7",
         "nuxt-webfontloader": "^1.1.0",
         "scrollmonitor": "^1.2.4",
-        "vue-i18n": "^8.25.0"
+        "vue-i18n": "^8.25.0",
+        "vue-tippy": "^4.13.0"
     },
     "devDependencies": {
         "@graphql-codegen/cli": "^2.0.1",

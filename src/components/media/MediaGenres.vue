@@ -1,7 +1,7 @@
 <template>
-    <Section class="overflow-x-scroll md:overflow-hidden">
+    <Section>
         <h2 class="text-lg font-semibold mb-1">{{ $t("media.section.genres") }}</h2>
-        <div class="flex md:flex-col space-x-1 md:space-x-0 md:space-y-1">
+        <div class="flex flex-col space-y-1">
             <Genre v-for="genre in genres" :key="genre" :text="genre" />
         </div>
     </Section>
