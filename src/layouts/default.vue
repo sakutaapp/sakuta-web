@@ -3,7 +3,9 @@
         <Navbar @toggleSettings="settingsMenu = true" @toggle-command-menu="toggleCommandMenu()" />
         <nuxt />
         <Footer />
-        <SettingsMenu v-if="settingsMenu" @close="settingsMenu = false" />
+        <transition name="settings-menu-transition">
+            <SettingsMenu v-if="settingsMenu" @close="settingsMenu = false" />
+        </transition>
         <DevPageWarning v-if="showPageWarning && !isMainSite" @continue="closeDevPageWarning()" />
         <transition name="command-menu-transition">
             <CommandMenu v-if="commandMenuEnabled" @close="commandMenuEnabled = false" />
@@ -118,6 +120,44 @@ anilist-gql-response {
         transform: scale(1);
         opacity: 1;
         filter: blur(0);
+    }
+}
+
+.settings-menu-transition-enter-active {
+    animation: settings-menu-transition-mobile 0.25s ease-out;
+}
+
+.settings-menu-transition-leave-active {
+    animation: settings-menu-transition-mobile 0.25s ease-out reverse;
+}
+
+@media (min-width: 768px) {
+    .settings-menu-transition-enter-active {
+        animation: settings-menu-transition 0.25s ease-out;
+    }
+
+    .settings-menu-transition-leave-active {
+        animation: settings-menu-transition 0.25s ease-out reverse;
+    }
+}
+
+@keyframes settings-menu-transition {
+    from {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes settings-menu-transition-mobile {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0%);
     }
 }
 
