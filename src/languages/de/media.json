@@ -34,7 +34,7 @@
 	"type.ANIME": "Anime",
 	"type.MANGA": "Manga",
 	"season": "{season} {year}",
-	"length": "{0} Minute | {0} Minuten",
+	"length": "{0} min | {0} min",
 	"mean": "{0}/100",
 	"props.season.title": "Saison",
 	"props.length.title": "Durchschn. Folgenlänge",

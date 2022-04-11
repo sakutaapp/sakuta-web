@@ -1,0 +1,6 @@
+{
+	"heading": "Privacy Policy",
+	"text": "Sakuta does not collect any user information. All information is taken from the AniList Servers. All settings are either saved locally on your device or on AniList's Servers. However, through the use of our Service, our hosting provider \"Netlify\" and the platform \"AniList\" may collect your data. To find out more about how they use your information, you check out {netlify} and {anilist}!",
+	"netlifyLink": "Netlify's Privacy Policy",
+	"anilistLink": "AniList's Privacy Policy"
+}

@@ -1,6 +1,19 @@
 {
 	"link.home": "Start",
 	"link.explore": "Erkunden",
+	"link.news": "Neuigkeiten",
 	"link.search": "Suche",
-	"featureWip": "Diese Funktion befindet sich noch in Entwicklung!"
+	"featureWip": "Diese Funktion befindet sich noch in Entwicklung!",
+	"commandMenu.placeholder": "Gib einen Befehl ein...",
+	"commandMenu.animeSearch": "Suche nach einen Anime...",
+	"commandMenu.mangaSearch": "Such nach einem Manga...",
+	"commandMenu.userSearch": "Suche nach einem Nutzer...",
+	"commandMenu.explore": "Erkundungsseite öffnen",
+	"commandMenu.search": "Suche öffnen",
+	"commandMenu.home": "Startseite öffnen",
+	"commandMenu.subPage.animeSearch": "Anime Suche",
+	"commandMenu.subPage.mangaSearch": "Manga Suche",
+	"commandMenu.subPage.userSearch": "Nutzer Suche",
+	"commandMenu.noResults": "Keine Ergebnisse gefunden...",
+	"commandMenu.more": "Mehr Ergebnisse ansehen"
 }

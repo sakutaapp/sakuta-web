@@ -1,0 +1,15 @@
+{
+	"heading": "欢迎来到{sakuta}！",
+	"subheading": "追动画的新选择",
+	"intro": "一个简单且现代的{anilist}客户端",
+	"imageSource": "图源：",
+	"iconCredits": "此页面上的图标由{icons8}制作",
+	"features.layout.title": "布局简单",
+	"features.layout.description": "Sakuta有着非常简单的布局且不会堆满你可能三月需要一次的消息。",
+	"features.linked.title": "与AniList相链接",
+	"features.linked.description": "所有数据都来自AniList。除此之外，如果你想在AniList上查看动画/漫画的信息，有一个按钮可以很轻易地做到这一点！",
+	"features.mobile.title": "移动端友好型",
+	"features.mobile.description": "Sakuta在设计时考虑到了移动端。整个网站可以以直观的方式从你的移动端上导航。你甚至可以将Sakuta添加到你的主屏幕上并像使用应用程序一样使用它！",
+	"features.list.title": "管理你的观看列表",
+	"features.list.description": "不久后你便可以使用你的AniList账号登录并可以轻松地用Sakuta管理你的观看列表和个人资料等东西！"
+}

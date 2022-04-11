@@ -1,9 +1,9 @@
 {
-	"link.home": "Accueil",
-	"link.explore": "Découvrir",
+	"link.home": "Home",
+	"link.explore": "Explore",
 	"link.news": "News",
-	"link.search": "Rechercher",
-	"featureWip": "Cette fonctionnalité est encore en développement !",
+	"link.search": "Search",
+	"featureWip": "This feature is still in development!",
 	"commandMenu.placeholder": "Type a command...",
 	"commandMenu.animeSearch": "Search for an anime...",
 	"commandMenu.mangaSearch": "Search for a manga...",

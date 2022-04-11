@@ -1,0 +1,14 @@
+{
+	"role.MAIN": "Main",
+	"role.SUPPORTING": "Supporting",
+	"role.BACKGROUND": "Background",
+	"role.MAIN.long": "Main character",
+	"role.SUPPORTING.long": "Supporting character",
+	"role.BACKGROUND.long": "Background character",
+	"birthDate.text": "Born {0}",
+	"age.text": "{0} years old",
+	"favorites.text": "{0} favorites",
+	"favorites.heading": "Favorites:",
+	"birthDate.heading": "Birth date:",
+	"age.heading": "Age:"
+}
