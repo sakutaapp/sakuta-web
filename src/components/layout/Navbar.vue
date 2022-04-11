@@ -44,6 +44,11 @@ export default Vue.extend({
                     name: "explore",
                 },
                 {
+                    to: "/news",
+                    icon: "BookIcon",
+                    name: "news",
+                },
+                {
                     to: "/search",
                     icon: "SearchIcon",
                     name: "search",

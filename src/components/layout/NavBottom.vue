@@ -12,6 +12,11 @@
                 <ExploreIcon :filled="$route.path === '/explore'" size="30" />
                 <span class="font-medium text-lg hidden md:block">{{ $t("nav.link.explore") }}</span>
             </nuxt-link>
+
+            <nuxt-link to="/news" class="opacity-40 nav-bottom-link flex items-center space-x-2 transition duration-250 bg-dark-800 hover:bg-dark-900 rounded-full px-4 py-2 :temp: hidden md:flex">
+                <BookIcon :filled="$route.path === '/news'" size="30" />
+                <span class="font-medium text-lg hidden md:block">{{ $t("nav.link.news") }}</span>
+            </nuxt-link>
         </div>
     </div>
 </template>

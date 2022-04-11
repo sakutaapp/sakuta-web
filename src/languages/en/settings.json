@@ -11,5 +11,5 @@
     "title.changelog": "Changelog",
     "title.privacy": "Privacy settings",
     "options.bottomNavigation": "Floating navigation at the bottom",
-    "options.bottomNavigation.description": "Always show the navigation as floating pane at the bottom instead of the top of the page. Similiar to how the navigation works on Sakuta on mobile devices"
+    "options.bottomNavigation.description": "Always show the navigation as floating pane at the bottom instead of the top of the page. This is similar to how the navigation works on Sakuta on mobile devices"
 }

@@ -34,6 +34,7 @@ export default Vue.extend({
         lang(lang) {
             localStorage.setItem("lang", lang);
             this.$i18n.locale = lang;
+            this.$nuxt.$emit("languageSwitch", lang);
         },
     },
 });
