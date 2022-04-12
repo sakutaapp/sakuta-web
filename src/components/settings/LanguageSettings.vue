@@ -9,9 +9,9 @@
                 <p>{{ $t("settings.language.unverified.text") }}</p>
             </div>
         </div>
-        <LanguageOption v-for="language in languages.filter((lang) => lang.progress > 95).sort((a, b) => b.progress - a.progress)" :key="language.code" :code="language.code" :flag="language.flagCode" :active="$i18n.locale === language.code" @select="lang = language.code" />
+        <LanguageOption v-for="language in languages.filter((lang) => lang.progress > 90).sort((a, b) => b.progress - a.progress)" :key="language.code" :code="language.code" :flag="language.flagCode" :active="$i18n.locale === language.code" @select="lang = language.code" />
         <h3 class="text-lg font-medium pt-2">Unfinished languages</h3>
-        <LanguageOption v-for="language in languages.filter((lang) => lang.progress <= 95).sort((a, b) => b.progress - a.progress)" :key="language.code" :code="language.code" :flag="language.flagCode" :progress="language.progress" :active="$i18n.locale === language.code" @select="lang = language.code" />
+        <LanguageOption v-for="language in languages.filter((lang) => lang.progress <= 90).sort((a, b) => b.progress - a.progress)" :key="language.code" :code="language.code" :flag="language.flagCode" :progress="language.progress" :active="$i18n.locale === language.code" @select="lang = language.code" />
     </div>
 </template>
 
