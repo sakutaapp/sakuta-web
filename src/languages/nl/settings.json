@@ -1,13 +1,17 @@
 {
-	"heading": "Instellingen",
-	"setting.theme": "Thema",
-	"setting.homePage": "Homepagina",
-	"setting.navbar": "Navigatie",
-	"setting.language": "Taal",
-	"option.dark": "Donker",
-	"option.deep-pink": "Donkerroze",
-	"option.landing": "Landingspagina",
-	"option.explore": "Ontdek",
-	"option.fixed": "Vastgezet op scherm",
-	"option.unfixed": "Bovenop pagina"
+    "headings.app": "App-instellingen",
+    "headings.misc": "Overig",
+    "page.appearance": "Weergave",
+    "page.language": "Taal",
+    "page.changelog": "Wijzigingen",
+    "page.privacy": "Privacy",
+    "title.settings": "Instellingen",
+    "title.appearance": "Weergave-instellingen",
+    "title.language": "Talen",
+    "title.changelog": "Wijzigingen",
+    "title.privacy": "Privacy-instellingen",
+    "options.bottomNavigation": "Zwevende navigatie onderaan",
+    "options.bottomNavigation.description": "Toon de navigatie altijd als zwevend paneel onderaan in plaats van bovenaan de pagina. Vergelijkbaar met hoe de navigatie werkt met Sakuta op mobiele apparaten",
+    "language.unverified.header": "Je bekijkt een niet-geverifieerde community vertaling",
+    "language.unverified.text": "Deze community vertaling is alleen gecontroleerd op algemene juistheid en kan nog steeds problemen bevatten. Als je fouten vindt, rapporteer deze dan aan het Sakuta team. (crugg@sakuta.app)"
 }

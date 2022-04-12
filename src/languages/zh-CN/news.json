@@ -1,0 +1,10 @@
+{
+    "notReleased.heading": "新闻尚未正式发布！",
+    "notReleased.text": "你现在看到的是早期预览。文章可能完全不符合公共标准，并且文章可能不完整或不准确。我们正在努力使它变得更好，感谢你的耐心等待。",
+    "notReleased.text.language": "由于你在查看该页面时使用的语言不是英语，你看到的可能要少。如果你想看看英文内容，请点击下面的按钮。",
+    "notReleased.viewInEnglish": "查看英语文章",
+    "noPosts": "无法找到任何帖子",
+    "loadingPosts": "正在加载帖子...",
+    "translation.heading": "你正在查看翻译",
+    "translation.text": "该文章是由{author}对文章{article}的官方翻译。"
+}

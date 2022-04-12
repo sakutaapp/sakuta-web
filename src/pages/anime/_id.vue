@@ -5,14 +5,16 @@
         <div class="flex flex-col md:flex-row md:space-x-3 space-y-4 md:space-y-0">
             <div class="w-full md:w-1/5 flex flex-col space-y-3">
                 <MediaProperties :properties="properties" />
-                <MediaGenres :genres="genres" />
-                <MediaTags :tags="tags" />
-                <MediaTrailer :trailer="trailer" />
+                <MediaGenres class="hidden md:block" :genres="genres" />
+                <MediaTags class="hidden md:block" :tags="tags" />
             </div>
             <div class="w-full md:w-4/5 flex flex-col space-y-3">
                 <MediaDescription :description="description" />
+                <MediaGenres class="block md:hidden" :genres="genres" />
+                <MediaTags class="block md:hidden" :tags="tags" />
                 <MediaCharacters :characters="characters" @open="modal($event)" />
                 <MediaEpisodes :episodes="episodes" />
+                <MediaTrailer :trailer="trailer" :customTrailer="customTrailer" />
             </div>
         </div>
         <CharacterModal v-if="modalData.show && modalData.character" :character="modalData.character" @close="modal()" />
@@ -36,6 +38,9 @@ export default Vue.extend({
             variables() {
                 return { id: this.$route.params.id };
             },
+            error: () => {
+                $nuxt.$emit("goHome");
+            },
         },
     },
     data() {
@@ -44,6 +49,7 @@ export default Vue.extend({
                 show: false,
                 character: false,
             },
+            customTrailer: undefined,
         };
     },
     computed: {
@@ -128,7 +134,12 @@ export default Vue.extend({
             deep: true,
             handler(newData, oldData) {
                 if (oldData) return;
-                this.$nuxt.$loading.finish();
+                this.$axios.$get(`https://cms.sakuta.app/items/anime_trailer/${this.Media.id}?fields=*,*.video_1080p.filename_disk,*.thumbnail.filename_disk`).then((response) => {
+                    if (response.data) {
+                        this.customTrailer = response.data;
+                    }
+                    this.$nuxt.$loading.finish();
+                });
             },
         },
     },

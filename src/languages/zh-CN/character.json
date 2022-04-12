@@ -1,0 +1,14 @@
+{
+	"role.MAIN": "主要人物",
+	"role.SUPPORTING": "次要人物",
+	"role.BACKGROUND": "背景人物",
+	"role.MAIN.long": "主要人物",
+	"role.SUPPORTING.long": "次要人物",
+	"role.BACKGROUND.long": "背景人物",
+	"birthDate.text": "出生日期：{0}",
+	"age.text": "{0} 岁",
+	"favorites.text": "{0} 人喜欢",
+	"favorites.heading": "喜欢该人物的人数：",
+	"birthDate.heading": "出生日期：",
+	"age.heading": "年龄："
+}

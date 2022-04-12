@@ -1,0 +1,10 @@
+{
+    "notReleased.heading": "Nieuws is nog niet officieel uit!",
+    "notReleased.text": "Wat je ziet is een \"early preview\". Het kan zijn dat artikelen niet helemaal aan de gangbare normen voldoen, en dat ze onvolledig of onjuist zijn. We werken er hard aan om dit te verbeteren, en we stellen je geduld op prijs.",
+    "notReleased.text.language": "Omdat je deze pagina bekijkt in een taal die niet Engels is, zie je misschien nog minder inhoud dan gewoonlijk. Als je de inhoud in het Engels wilt zien, klik dan op de knop hieronder.",
+    "notReleased.viewInEnglish": "Bekijk Engelse artikelen",
+    "noPosts": "Geen posts gevonden",
+    "loadingPosts": "Posts laden...",
+    "translation.heading": "Je bekijkt een vertaling",
+    "translation.text": "Dit artikel is een officiële vertaling van het artikel {article} door {author}."
+}

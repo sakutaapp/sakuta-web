@@ -1,0 +1,19 @@
+{
+    "share": "分享",
+    "viewOn": "在 {0} 上查看",
+    "month.1.full": "一月",
+    "month.2.full": "二月",
+    "month.3.full": "三月",
+    "month.4.full": "四月",
+    "month.5.full": "五月",
+    "month.6.full": "六月",
+    "month.7.full": "七月",
+    "month.8.full": "八月",
+    "month.9.full": "九月",
+    "month.10.full": "十月",
+    "month.11.full": "十一月",
+    "month.12.full": "十二月",
+    "date.dayMonth": "{month}月{day}日",
+    "date.full": "{year}年{month}月{day}日",
+    "likes": "{0} 人喜欢 | {0} 人喜欢"
+}

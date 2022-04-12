@@ -1,6 +1,19 @@
 {
 	"link.home": "Home",
 	"link.explore": "Ontdekken",
+	"link.news": "Nieuws",
 	"link.search": "Zoeken",
-	"featureWip": "Deze functie is nog in ontwikkeling!"
+	"featureWip": "Deze functie is nog in ontwikkeling!",
+	"commandMenu.placeholder": "Commando invoeren...",
+	"commandMenu.animeSearch": "Zoek voor een anime...",
+	"commandMenu.mangaSearch": "Zoek voor een manga...",
+	"commandMenu.userSearch": "Zoek voor een gebruiker...",
+	"commandMenu.explore": "Bekijk de verkenningspagina",
+	"commandMenu.search": "Bekijk de zoekpagina",
+	"commandMenu.home": "Bekijk de landingspagina",
+	"commandMenu.subPage.animeSearch": "Anime",
+	"commandMenu.subPage.mangaSearch": "Manga",
+	"commandMenu.subPage.userSearch": "Gebruikers",
+	"commandMenu.noResults": "Er zijn geen resultaten gevonden...",
+	"commandMenu.more": "Meer resultaten bekijken"
 }

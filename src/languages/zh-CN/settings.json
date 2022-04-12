@@ -1,0 +1,17 @@
+{
+    "headings.app": "App设置",
+    "headings.misc": "杂项",
+    "page.appearance": "外观",
+    "page.language": "语言",
+    "page.changelog": "更新日志",
+    "page.privacy": "隐私",
+    "title.settings": "设置",
+    "title.appearance": "外观设置",
+    "title.language": "语言",
+    "title.changelog": "更新日志",
+    "title.privacy": "隐私设置",
+    "options.bottomNavigation": "导航栏浮动在底部",
+    "options.bottomNavigation.description": "始终将浮动导航栏显示在底部而非页面顶部。该效果类似于导航栏在Sakuta移动端上的工作方式",
+    "language.unverified.header": "你正在查看未核实的社区翻译",
+    "language.unverified.text": "该社区翻译只检查了大体翻译的正确性，可能仍然包含一些问题。如果你发现了任何错误，请将它们报告给Sakuta团队。（crugg@sakuta.app）"
+}

@@ -1,0 +1,8 @@
+{
+    "status.completed": "已看完",
+    "status.pausedWatching": "暂停观看",
+    "status.watchedEpisode": "已观看的集数 {0} | 已观看的集数 {0}",
+    "status.plansToWatch": "稍后观看",
+    "status.plansToRead": "稍后阅读",
+    "status.readChapter": "已读的章节 {0} | 已读的章节 {0}"
+}

@@ -1,8 +1,8 @@
 <template>
-    <div class="w-full h-64 rounded-lg shadow-lg mb-5" :style="`background-image: url('${coverImageXl}'); background-size: cover; background-position: center;`">
+    <div class="w-full h-64 rounded-lg shadow-lg mb-7 md:mb-5" :style="`background-image: url('${coverImageXl}'); background-size: cover; background-position: center;`">
         <div class="h-full w-full rounded-lg backdrop-filter backdrop-blur-lg p-5 flex items-center space-x-5" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%)">
-            <img :src="coverImageXl" class="h-full rounded-lg" />
-            <div class="text-white flex flex-col space-y-1">
+            <img :src="coverImageXl" class="h-4/5 sm:h-full rounded-lg" />
+            <div class="text-white flex flex-col space-y-1 w-full flex-grow">
                 <h1 class="text-xl sm:text-2xl md:text-4xl font-semibold">{{ title }}</h1>
                 <div class="flex flex-col md:flex-row md:items-center md:space-x-3">
                     <p>{{ $t("media.favorites.text", [favourites]) }}</p>
@@ -14,10 +14,17 @@
                     <p v-if="type === 'anime' && episodes">{{ $tc("media.episodes.text", episodes, [episodes]) }}</p>
                     <p v-if="type === 'manga' && volumes">{{ $tc("media.volumes.text", volumes, [volumes]) }}</p>
                 </div>
-                <div class="hidden md:flex items-center space-x-5">
-                    <Button :to="`https://anilist.co/anime/${id}`" :newTab="true" css="bg-blue-500 hover:bg-blue-600" textColor="white">{{ $t("general.viewOn", ["AniList"]) }}</Button>
-                    <Button :to="`https://myanimelist.net/anime/${idMal}`" :newTab="true" css="bg-blue-800 hover:bg-blue-900" textColor="white">{{ $t("general.viewOn", ["MyAnimeList"]) }}</Button>
-                </div>
+            </div>
+            <div class="absolute -bottom-4 right-4 md:relative flex space-x-2 items-center">
+                <a :href="share()" class="center w-12 h-12 min-w-12 min-h-12 rounded-full bg-gray-600 hover:bg-gray-700 cursor-pointer transition duration-250 mt-3 md:mt-0" :content="$t('general.share')" v-tippy>
+                    <ShareIcon />
+                </a>
+                <a :href="`https://anilist.co/anime/${id}`" target="_blank" class="center w-12 h-12 min-w-12 min-h-12 rounded-full bg-blue-500 hover:bg-blue-600 cursor-pointer transition duration-250 !hidden !md:flex" :content="$t('general.viewOn', ['AniList'])" v-tippy>
+                    <AniListIcon />
+                </a>
+                <a :href="`https://myanimelist.net/anime/${id}`" target="_blank" class="center w-12 h-12 min-w-12 min-h-12 rounded-full bg-blue-800 hover:bg-blue-900 cursor-pointer transition duration-250 !hidden !md:flex" :content="$t('general.viewOn', ['MyAnimeList'])" v-tippy>
+                    <MyAnimeListIcon />
+                </a>
             </div>
         </div>
     </div>
@@ -66,6 +73,11 @@ export default Vue.extend({
         },
         idMal(): any {
             return this.media?.idMal || 0;
+        },
+    },
+    methods: {
+        share() {
+            return `javascript:navigator.share({ title: '${this.media?.title?.english || this.media?.title?.romaji || this.media?.title?.native || "[Unknown]"} on Sakuta', text: 'Check out ${this.media?.title?.english || this.media?.title?.romaji || this.media?.title?.native || "[Unknown]"} on Sakuta', url: document.location.href, });`;
         },
     },
 });

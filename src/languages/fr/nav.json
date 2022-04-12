@@ -1,6 +1,19 @@
 {
 	"link.home": "Accueil",
 	"link.explore": "Découvrir",
+	"link.news": "News",
 	"link.search": "Rechercher",
-	"featureWip": "Cette fonctionnalité est encore en développement !"
+	"featureWip": "Cette fonctionnalité est encore en développement !",
+	"commandMenu.placeholder": "Type a command...",
+	"commandMenu.animeSearch": "Search for an anime...",
+	"commandMenu.mangaSearch": "Search for a manga...",
+	"commandMenu.userSearch": "Search for a user...",
+	"commandMenu.explore": "View the explore page",
+	"commandMenu.search": "View the search page",
+	"commandMenu.home": "View the landing page",
+	"commandMenu.subPage.animeSearch": "Anime search",
+	"commandMenu.subPage.mangaSearch": "Manga search",
+	"commandMenu.subPage.userSearch": "User search",
+	"commandMenu.noResults": "No results were found...",
+	"commandMenu.more": "View more results"
 }

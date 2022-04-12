@@ -1,13 +1,17 @@
 {
-	"heading": "Paramètres",
-	"setting.theme": "Thème",
-	"setting.homePage": "Page d’accueil",
-	"setting.navbar": "Navigation",
-	"setting.language": "Langue",
-	"option.dark": "Sombre",
-	"option.deep-pink": "Rose profond",
-	"option.landing": "Page d'accueil",
-	"option.explore": "Découvrir",
-	"option.fixed": "Adapté à l'écran",
-	"option.unfixed": "En haut de la page"
+    "headings.app": "App settings",
+    "headings.misc": "Miscellaneous",
+    "page.appearance": "Appearance",
+    "page.language": "Language",
+    "page.changelog": "Changelog",
+    "page.privacy": "Privacy",
+    "title.settings": "Settings",
+    "title.appearance": "Appearance settings",
+    "title.language": "Languages",
+    "title.changelog": "Changelog",
+    "title.privacy": "Privacy settings",
+    "options.bottomNavigation": "Floating navigation at the bottom",
+    "options.bottomNavigation.description": "Always show the navigation as floating pane at the bottom instead of the top of the page. This is similar to how the navigation works on Sakuta on mobile devices",
+    "language.unverified.header": "You are viewing an unverified community translation",
+    "language.unverified.text": "This community translation has only been checked for general correctness and might still contain issues. If you find any errors, please report them to the Sakuta team. (crugg@sakuta.app)"
 }

@@ -1,13 +1,17 @@
 {
-	"heading": "Einstellungen",
-	"setting.theme": "Design",
-	"setting.homePage": "Startseite",
-	"setting.navbar": "Navigation",
-	"setting.language": "Sprache",
-	"option.dark": "Dunkel",
-	"option.deep-pink": "Dunkelpink",
-	"option.landing": "Landing Page",
-	"option.explore": "Erkunden",
-	"option.fixed": "Scrollt mit",
-	"option.unfixed": "Bleibt oben"
+    "headings.app": "App-Einstellungen",
+    "headings.misc": "Sonstiges",
+    "page.appearance": "Darstellung",
+    "page.language": "Sprache",
+    "page.changelog": "Änderungsprotokoll",
+    "page.privacy": "Privatsphäre",
+    "title.settings": "Einstellungen",
+    "title.appearance": "Darstellungseinstellungen",
+    "title.language": "Sprachen",
+    "title.changelog": "Änderungsprotokoll",
+    "title.privacy": "Privatsphäreeinstellungen",
+    "options.bottomNavigation": "Schwebende Navigation unten",
+    "options.bottomNavigation.description": "Zeige die Navigation immer als schwebendes Menü am unteren Bildschirmrand anstatt oben auf der Seite an. Dies ist ähnlich zu der Navigation auf mobilen Geräten.",
+    "language.unverified.header": "Du siehst eine ungeprüfte Community-Übersetzung",
+    "language.unverified.text": "Diese Communityübersetzung wurde nur auf die allgemeine Korrektheit überprüft und enthält möglicherweise noch Probleme. Wenn du Fehler findest, melde sie bitte an das Sakuta Team. (crugg@sakuta.app)"
 }

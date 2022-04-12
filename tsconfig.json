@@ -15,7 +15,7 @@
             "~/*": ["./*"],
             "@/*": ["./*"]
         },
-        "types": ["@nuxt/types", "@nuxtjs/axios", "@types/node", "@nuxtjs/apollo", "vue-apollo/types"]
+        "types": ["@nuxt/types", "@nuxtjs/axios", "@types/node", "@nuxtjs/apollo", "vue-apollo/types", "@types/fuzzy-search"]
     },
     "exclude": ["node_modules", ".nuxt", "dist"]
 }

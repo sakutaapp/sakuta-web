@@ -4,10 +4,7 @@
         <UserHeader :user="User" />
         <div class="flex flex-col md:flex-row md:space-x-3 space-y-4 md:space-y-0">
             <div class="w-full md:w-1/5 flex flex-col space-y-3">
-                <Section class="flex md:flex-col md:space-y-2 space-x-5 md:space-x-0 overflow-x-scroll md:overflow-hidden">
-                    <h2 class="text-lg font-semibold">{{ $t("user.section.statistics") }}</h2>
-                    <UserStatistic v-for="stat in statistics" :key="stat.stat" :prop="stat.stat" :value="stat.value" />
-                </Section>
+                <UserStatistics :statistics="statistics" />
             </div>
             <div class="w-full md:w-4/5 flex flex-col space-y-3">
                 <UserAbout :about="about" />
@@ -40,6 +37,9 @@ export default Vue.extend({
             prefetch: ({ route }) => ({ id: route.params.name }),
             variables() {
                 return { name: this.$route.params.name };
+            },
+            error: () => {
+                $nuxt.$emit("goHome");
             },
         },
         activities: {

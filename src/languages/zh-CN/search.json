@@ -1,0 +1,8 @@
+{
+	"filters.type.ALL": "所有类型",
+	"sort.POPULARITY_DESC": "最流行",
+	"sort.TRENDING_DESC": "热门",
+	"sort.FAVOURITES_DESC": "最多人喜欢",
+	"sort.SCORE_DESC": "评分最高",
+	"placeholder": "搜索..."
+}
