@@ -4,6 +4,7 @@
             <div class="flex items-center">
                 <div class="flex cursor-pointer transform scale-100 hover:scale-105 transition duration-250" @click="$router.push(`/user/${post.author.username}`)">
                     <img height="20px" with="20px" :src="`https://cms.sakuta.app/assets/${post.author.avatar.filename_disk}`" class="rounded-full flex-grow h-6 w-6 min-h-6 min-w-6" />
+                    <p class="text-md font-semibold opacity-85 ml-1">{{ post.author.username }}</p>
                 </div>
                 <p class="opacity-85 ml-5">{{ $moment.unix(publishedDate).locale($i18n.locale).fromNow() }}</p>
             </div>

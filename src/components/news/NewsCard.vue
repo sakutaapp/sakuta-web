@@ -5,7 +5,7 @@
             <p class="font-semibold">{{ post.title }}</p>
             <div class="flex items-center space-x-1">
                 <img height="20px" width="20px" :src="`https://cms.sakuta.app/assets/${post.author.avatar.filename_disk}`" class="rounded-full" />
-                <p class="text-sm font-semibold uppercase opacity-85 flex-grow w-full">{{ post.author.username }}</p>
+                <p class="text-sm font-semibold opacity-85 flex-grow w-full">{{ post.author.username }}</p>
             </div>
         </div>
     </div>
