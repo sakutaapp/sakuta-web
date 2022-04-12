@@ -4,7 +4,7 @@
             <div class="flex-grow">
                 <AttentionIcon :filled="true" size="50" />
             </div>
-            <div class="flex flex-col items-start">
+            <div class="flex flex-col items-start flex-grow w-full">
                 <h2 class="text-white font-semibold text-lg">{{ $t("news.notReleased.heading") }}</h2>
                 <p>{{ $t("news.notReleased.text") }}</p>
             </div>
