@@ -4,5 +4,7 @@
     "notReleased.text.language": "Da du diese Seite in einer anderen Sprache als Englisch ansiehst, könnte es sein, dass du weniger Inhalte siehst als üblich. Wenn du diesen Inhalt in englischer Sprache sehen möchtest, klicke auf den unteren Button.",
     "notReleased.viewInEnglish": "Englische Artikel ansehen",
     "noPosts": "Es konnten keine Artikel gefunden werden",
-    "loadingPosts": "Lade Artikel..."
+    "loadingPosts": "Lade Artikel...",
+    "translation.heading": "Du siehst eine Übersetzung",
+    "translation.text": "Dieser Artikel ist die offizielle Übersetzung des Artikels \"{article}\" von {author}."
 }

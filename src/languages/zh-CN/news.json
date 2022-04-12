@@ -4,5 +4,7 @@
     "notReleased.text.language": "由于你在查看该页面时使用的语言不是英语，你看到的可能要少。如果你想看看英文内容，请点击下面的按钮。",
     "notReleased.viewInEnglish": "查看英语文章",
     "noPosts": "无法找到任何帖子",
-    "loadingPosts": "正在加载帖子..."
+    "loadingPosts": "正在加载帖子...",
+    "translation.heading": "你正在查看翻译",
+    "translation.text": "该文章是由{author}对文章{article}的官方翻译。"
 }

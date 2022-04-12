@@ -11,5 +11,7 @@
     "title.changelog": "Änderungsprotokoll",
     "title.privacy": "Privatsphäreeinstellungen",
     "options.bottomNavigation": "Schwebende Navigation unten",
-    "options.bottomNavigation.description": "Zeige die Navigation immer als schwebendes Menü am unteren Bildschirmrand anstatt oben auf der Seite an. Dies ist ähnlich zu der Navigation auf mobilen Geräten."
+    "options.bottomNavigation.description": "Zeige die Navigation immer als schwebendes Menü am unteren Bildschirmrand anstatt oben auf der Seite an. Dies ist ähnlich zu der Navigation auf mobilen Geräten.",
+    "language.unverified.header": "Du siehst eine ungeprüfte Community-Übersetzung",
+    "language.unverified.text": "Diese Communityübersetzung wurde nur auf die allgemeine Korrektheit überprüft und enthält möglicherweise noch Probleme. Wenn du Fehler findest, melde sie bitte an das Sakuta Team. (crugg@sakuta.app)"
 }
