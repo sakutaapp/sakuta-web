@@ -16,7 +16,7 @@
                             <div class="w-12 h-12 rounded-full cursor-pointer transition duration-250 bg-dark-800 hover:bg-dark-900 hover:text-white center" @click="$emit('close')">
                                 <CloseIcon :size="20" />
                             </div>
-                            <span class="text-xs opacity-50 mt-1">ESC</span>
+                            <!--<span class="text-xs opacity-50 mt-1">ESC</span>-->
                         </div>
                     </div>
                 </div>
