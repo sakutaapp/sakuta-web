@@ -10,8 +10,12 @@
             </div>
         </div>
         <div class="mt-2" v-if="loaded">
-            <NewsHeader :post="post" />
-            <div class="news-content mt-8 mb-8" v-html="post.content" />
+            <NewsHeader class="mb-8" :post="post" />
+            <div class="bg-dark-800 rounded-lg p-3 mb-5" v-if="post.translationOriginal">
+                <h2 class="text-white font-semibold text-lg">{{ $t("news.translation.heading") }}</h2>
+                <p class="news-content" v-html="$t('news.translation.text', { article: `<a href='/news/${post.translationOriginal.slug}'>${post.translationOriginal.title}</a>`, author: `<a href='/user/${post.translationOriginal.author.username}'>${post.translationOriginal.author.username}</a>` })" />
+            </div>
+            <div class="news-content mb-8" v-html="post.content" />
             <VideoPlayer v-if="post.video" :options="getVideoOptions(post.video)" />
         </div>
     </Container>
@@ -47,7 +51,7 @@ export default Vue.extend({
         };
     },
     mounted() {
-        this.$axios.$get(`https://cms.sakuta.app/items/articles/${this.$route.params.slug}?fields=*,author.username,author.avatar.filename_disk,translator.username,image.filename_disk,translationOriginal.slug,translationOriginal.title,video.video_1080p.filename_disk,video.thumbnail.filename_disk`).then((response) => {
+        this.$axios.$get(`https://cms.sakuta.app/items/articles/${this.$route.params.slug}?fields=*,author.username,author.avatar.filename_disk,image.filename_disk,translationOriginal.slug,translationOriginal.title,translationOriginal.author.username,video.video_1080p.filename_disk,video.thumbnail.filename_disk`).then((response) => {
             this.post = response.data;
             this.loaded = true;
         });
