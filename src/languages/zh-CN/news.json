@@ -1,8 +1,8 @@
 {
-    "notReleased.heading": "News are not officially out yet!",
-    "notReleased.text": "What you are looking at is an early preview. Articles may not be completely up to common standards, and may be incomplete or incorrect. We are working hard to make it a better place, and we appreciate your patience.",
-    "notReleased.text.language": "Since you are viewing this page on a language which is not English, you may see even less content than usual. If you would like to see the content in English, please click the button below.",
-    "notReleased.viewInEnglish": "View English articles",
-    "noPosts": "Couldn't find any posts",
-    "loadingPosts": "Loading posts..."
+    "notReleased.heading": "新闻尚未正式发布！",
+    "notReleased.text": "你现在看到的是早期预览。文章可能完全不符合公共标准，并且文章可能不完整或不准确。我们正在努力使它变得更好，感谢你的耐心等待。",
+    "notReleased.text.language": "由于你在查看该页面时使用的语言不是英语，你看到的可能要少。如果你想看看英文内容，请点击下面的按钮。",
+    "notReleased.viewInEnglish": "查看英语文章",
+    "noPosts": "无法找到任何帖子",
+    "loadingPosts": "正在加载帖子..."
 }

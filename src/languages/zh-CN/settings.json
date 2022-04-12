@@ -1,15 +1,15 @@
 {
-    "headings.app": "App settings",
-    "headings.misc": "Miscellaneous",
-    "page.appearance": "Appearance",
-    "page.language": "Language",
-    "page.changelog": "Changelog",
-    "page.privacy": "Privacy",
-    "title.settings": "Settings",
-    "title.appearance": "Appearance settings",
-    "title.language": "Languages",
-    "title.changelog": "Changelog",
-    "title.privacy": "Privacy settings",
-    "options.bottomNavigation": "Floating navigation at the bottom",
-    "options.bottomNavigation.description": "Always show the navigation as floating pane at the bottom instead of the top of the page. This is similar to how the navigation works on Sakuta on mobile devices"
+    "headings.app": "App设置",
+    "headings.misc": "杂项",
+    "page.appearance": "外观",
+    "page.language": "语言",
+    "page.changelog": "更新日志",
+    "page.privacy": "隐私",
+    "title.settings": "设置",
+    "title.appearance": "外观设置",
+    "title.language": "语言",
+    "title.changelog": "更新日志",
+    "title.privacy": "隐私设置",
+    "options.bottomNavigation": "导航栏浮动在底部",
+    "options.bottomNavigation.description": "始终将浮动导航栏显示在底部而非页面顶部。该效果类似于导航栏在Sakuta移动端上的工作方式"
 }

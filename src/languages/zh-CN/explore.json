@@ -1,12 +1,12 @@
 {
-	"heading.trendingAnime": "Trending anime",
-	"heading.popularAnime": "Popular anime",
-	"heading.bestRatedAnime": "Best rated anime",
-	"heading.mostFavoritedAnime": "Most favorited anime",
-	"heading.trendingManga": "Trending manga",
-	"heading.popularManga": "Popular manga",
-	"heading.bestRatedManga": "Best rated manga",
-	"heading.mostFavoritedManga": "Most favorited manga",
-	"heading.trendingMovies": "Trending movies",
-	"heading.mostFavoritedMovies": "Most favorited movies"
+	"heading.trendingAnime": "热门动画",
+	"heading.popularAnime": "流行动画",
+	"heading.bestRatedAnime": "评分最佳的动画",
+	"heading.mostFavoritedAnime": "最多人喜欢的动画",
+	"heading.trendingManga": "热门漫画",
+	"heading.popularManga": "流行漫画",
+	"heading.bestRatedManga": "评分最佳的漫画",
+	"heading.mostFavoritedManga": "最多人喜欢的漫画",
+	"heading.trendingMovies": "热门电影",
+	"heading.mostFavoritedMovies": "最多人喜欢的电影"
 }

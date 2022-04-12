@@ -1,12 +1,12 @@
 {
-	"section.statistics": "Statistics",
-	"section.about": "About",
-	"section.activity": "Activity",
-	"stats.animeCount.title": "Animes watched",
-	"stats.minutesWatched.title": "Minutes spent watching Anime",
-	"stats.episodesWatched.title": "Anime episodes watched",
-	"stats.mangaCount.title": "Mangas read",
-	"stats.chaptersRead.title": "Mangas chapters read",
-	"stats.volumesRead.title": "Manga volumes read",
-	"noAbout": "This user hasn't set any text for their \"About\" section"
+	"section.statistics": "统计信息",
+	"section.about": "关于",
+	"section.activity": "活动",
+	"stats.animeCount.title": "已观看的动画",
+	"stats.minutesWatched.title": "动画的观看时间",
+	"stats.episodesWatched.title": "已看完的动画集数",
+	"stats.mangaCount.title": "已阅读的漫画",
+	"stats.chaptersRead.title": "已阅读的漫画章节",
+	"stats.volumesRead.title": "已阅读的漫画卷数",
+	"noAbout": "此用户尚未为其“关于”部分设置任何文本"
 }

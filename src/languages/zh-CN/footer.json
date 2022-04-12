@@ -1,8 +1,8 @@
 {
 	"category.sakuta": "Sakuta",
-	"category.legal": "Legal",
-	"category.social": "Social",
-	"link.imprint": "Imprint",
-	"link.privacy": "Privacy Policy",
-	"license": "Licensed under [MIT License]"
+	"category.legal": "法律相关",
+	"category.social": "社交媒体",
+	"link.imprint": "版权信息",
+	"link.privacy": "隐私政策",
+	"license": "基于[MIT License]"
 }

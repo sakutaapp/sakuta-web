@@ -1,5 +1,5 @@
 {
-	"favorites.text": "{0} 人喜欢",
+	"favorites.text": "{0} 人收藏",
 	"episodes.text": "{0} 集 | {0} 集",
 	"volumes.text": "{0} 卷 | {0} 卷",
 	"format.TV": "电视剧",
@@ -15,8 +15,8 @@
 	"status.FINISHED": "已完结",
 	"status.RELEASING": "连载中",
 	"status.NOT_YET_RELEASED": "尚未发布",
-	"status.CANCELLED": "Cancelled",
-	"status.HIATUS": "已暂停",
+	"status.CANCELLED": "已停更",
+	"status.HIATUS": "暂时停更",
 	"season.WINTER": "冬季",
 	"season.SPRING": "春季",
 	"season.SUMMER": "夏季",

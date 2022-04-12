@@ -1,8 +1,8 @@
 {
-    "pageWarning.title": "You are on {0}",
-    "pageWarning.text": "This is the development version of sakuta.app. When using this, you may run into problems. Please report these via [Twitter]!",
-    "pageWarning.button": "Go to {0}",
-    "pageWarning.continue": "Continue on {0}",
-    "unofficialPageWarning.title": "You are on an unofficial version of Sakuta!",
-    "unofficialPageWarning.text": "Unofficial versions might potentially be dangerous. The official version can be found at sakuta.app!"
+    "pageWarning.title": "你在{0}",
+    "pageWarning.text": "这是sakuta.app的开发版本。使用这个时你可能会遇到某些问题。请通过[Twitter]报告这些问题！",
+    "pageWarning.button": "前往{0}",
+    "pageWarning.continue": "继续{0}",
+    "unofficialPageWarning.title": "你正在使用非官方版本的Sakuta！",
+    "unofficialPageWarning.text": "非官方版本可能有潜在危险。官方版本可以在sakuta.app那找到！"
 }

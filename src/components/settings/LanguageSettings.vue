@@ -49,7 +49,7 @@ export default Vue.extend({
                 {
                     code: "zh-CN",
                     flagCode: "cn",
-                    progress: 29,
+                    progress: 93,
                     verified: false,
                 },
             ],

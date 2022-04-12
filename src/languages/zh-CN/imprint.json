@@ -1,14 +1,14 @@
 {
-	"heading": "Imprint",
-	"accordingTo": "According to § 5 TMG (German law)",
-	"responsible": "Responsible for this website is:",
-	"germany": "Germany",
-	"disclaimers": "Disclaimers",
-	"rearBuilding": "rear building",
-	"disclaimers.content.heading": "Accountability for content",
-	"disclaimers.content.text": "The contents of our pages have been created with the utmost care. However, we cannot guarantee the contents’ accuracy, completeness or topicality. According to statutory provisions, we are furthermore responsible for our own content on these web pages. In this matter, please note that we are not obliged to monitor the transmitted or saved information of third parties, or investigate circumstances pointing to illegal activity. Our obligations to remove or block the use of information under generally applicable laws remain unaffected by this as per §§ 8 to 10 of the Telemedia Act (TMG).",
-	"disclaimers.content.tldr": "tl;dr: Most data on this website is from AniList. We cannot guarantee the accuracy of that data. Besides this, we do not scan that data for illegal activity. If something illegal is reported to us, we will remove it from our website, though.",
-	"disclaimers.links.heading": "Accountability for links",
-	"disclaimers.links.text": "Responsibility for the content of external links (to web pages of third parties) lies solely with the operators of the linked pages. No violations were evident to us at the time of linking. Should any legal infringement become known to us, we will remove the respective link immediately.",
-	"disclaimers.links.tldr": "tl;dr: We're not responsible for external websites we link to. If we get informed that something shady happens there, we'll remove it, though!"
+	"heading": "版权信息",
+	"accordingTo": "基于§5 TMG（德国法律）",
+	"responsible": "本网站的负责人员：",
+	"germany": "德国",
+	"disclaimers": "免责声明",
+	"rearBuilding": "后部建筑",
+	"disclaimers.content.heading": "内容责任",
+	"disclaimers.content.text": "我们网页的内容是经过精心设计的。但我们不能保证内容的准确性、完整性或主题性。根据法律规定，我们还对这些网页上的内容负责。在这方面，请注意，我们并没有义务监测第三方传输或保存的信息，或是调查指向非法活动的情况。根据电信媒体法（TMG）第8至10条，我们在普遍适用的法律下删除或阻止使用信息的义务不受影响。",
+	"disclaimers.content.tldr": "tl;dr：该网站上的大多数数据都来自AniList。我们不能保证这些数据的准确性。除此之外，我们不会扫描这些数据中的非法活动。虽然如果有报告的违法行为时我们会将其从我们的网站上移除。",
+	"disclaimers.links.heading": "链接责任",
+	"disclaimers.links.text": "外部链接（指向第三方网页）的内容仅由链接页面的运营商负责。在链接时我们并没有发现任何的违法行为。如果我们发现任何违法行为，我们会立即删除与其相关的链接。",
+	"disclaimers.links.tldr": "tl;dr：我们并不对我们链接的外部网站负责。虽然如果我们被告知链接的外部外部网站出现了可疑行为时，我们会删除它。"
 }

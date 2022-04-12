@@ -1,14 +1,14 @@
 {
-	"role.MAIN": "Main",
-	"role.SUPPORTING": "Supporting",
-	"role.BACKGROUND": "Background",
-	"role.MAIN.long": "Main character",
-	"role.SUPPORTING.long": "Supporting character",
-	"role.BACKGROUND.long": "Background character",
-	"birthDate.text": "Born {0}",
-	"age.text": "{0} years old",
-	"favorites.text": "{0} favorites",
-	"favorites.heading": "Favorites:",
-	"birthDate.heading": "Birth date:",
-	"age.heading": "Age:"
+	"role.MAIN": "主要人物",
+	"role.SUPPORTING": "次要人物",
+	"role.BACKGROUND": "背景人物",
+	"role.MAIN.long": "主要人物",
+	"role.SUPPORTING.long": "次要人物",
+	"role.BACKGROUND.long": "背景人物",
+	"birthDate.text": "出生日期：{0}",
+	"age.text": "{0} 岁",
+	"favorites.text": "{0} 人喜欢",
+	"favorites.heading": "喜欢该人物的人数：",
+	"birthDate.heading": "出生日期：",
+	"age.heading": "年龄："
 }
