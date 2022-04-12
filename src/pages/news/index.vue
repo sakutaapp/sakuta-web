@@ -2,7 +2,7 @@
     <Container>
         <div class="bg-primary bg-opacity-15 rounded-lg flex space-x-3 p-3 items-center mt-3 mb-5">
             <div class="flex-grow">
-            <AttentionIcon :filled="true" size="50" />
+                <AttentionIcon :filled="true" size="50" />
             </div>
             <div class="flex flex-col items-start">
                 <h2 class="text-white font-semibold text-lg">{{ $t("news.notReleased.heading") }}</h2>
