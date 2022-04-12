@@ -7,14 +7,13 @@
                 <MediaProperties :properties="properties" />
                 <MediaGenres class="hidden md:block" :genres="genres" />
                 <MediaTags class="hidden md:block" :tags="tags" />
-                <MediaTrailer class="hidden md:block" :trailer="trailer" />
             </div>
             <div class="w-full md:w-4/5 flex flex-col space-y-3">
                 <MediaDescription :description="description" />
                 <MediaGenres class="block md:hidden" :genres="genres" />
                 <MediaTags class="block md:hidden" :tags="tags" />
                 <MediaCharacters :characters="characters" @open="modal($event)" />
-                <MediaTrailer class="block md:hidden" :trailer="trailer" />
+                <MediaTrailer :trailer="trailer" />
             </div>
         </div>
         <CharacterModal v-if="modalData.show && modalData.character" :character="modalData.character" @close="modal()" />

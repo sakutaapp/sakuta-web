@@ -7,7 +7,6 @@
                 <MediaProperties :properties="properties" />
                 <MediaGenres class="hidden md:block" :genres="genres" />
                 <MediaTags class="hidden md:block" :tags="tags" />
-                <MediaTrailer class="hidden md:block" :trailer="trailer" />
             </div>
             <div class="w-full md:w-4/5 flex flex-col space-y-3">
                 <MediaDescription :description="description" />
@@ -15,7 +14,7 @@
                 <MediaTags class="block md:hidden" :tags="tags" />
                 <MediaCharacters :characters="characters" @open="modal($event)" />
                 <MediaEpisodes :episodes="episodes" />
-                <MediaTrailer class="block md:hidden" :trailer="trailer" />
+                <MediaTrailer :trailer="trailer" :customTrailer="customTrailer" />
             </div>
         </div>
         <CharacterModal v-if="modalData.show && modalData.character" :character="modalData.character" @close="modal()" />
@@ -50,6 +49,7 @@ export default Vue.extend({
                 show: false,
                 character: false,
             },
+            customTrailer: undefined,
         };
     },
     computed: {
@@ -134,7 +134,12 @@ export default Vue.extend({
             deep: true,
             handler(newData, oldData) {
                 if (oldData) return;
-                this.$nuxt.$loading.finish();
+                this.$axios.$get(`https://cms.sakuta.app/items/anime_trailer/${this.Media.id}?fields=*,*.video_1080p.filename_disk,*.thumbnail.filename_disk`).then((response) => {
+                    if (response.data) {
+                        this.customTrailer = response.data;
+                    }
+                    this.$nuxt.$loading.finish();
+                });
             },
         },
     },

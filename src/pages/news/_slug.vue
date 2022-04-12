@@ -41,7 +41,6 @@
 
 <script lang="ts">
 import Vue from "vue";
-import "video.js/dist/video-js.css";
 
 export default Vue.extend({
     data() {
@@ -59,9 +58,6 @@ export default Vue.extend({
     methods: {
         getVideoOptions(videoData: any) {
             return {
-                autoplay: false,
-                controls: true,
-                fluid: true,
                 sources: [
                     {
                         src: `https://cms.sakuta.app/assets/${videoData.video_1080p.filename_disk}`,
@@ -69,56 +65,6 @@ export default Vue.extend({
                     },
                 ],
                 poster: `https://cms.sakuta.app/assets/${videoData.thumbnail.filename_disk}`,
-                controlBar: {
-                    remainingTimeDisplay: {
-                        displayNegative: true,
-                    },
-                },
-                userActions: {
-                    hotkeys: function (event: any) {
-                        // Space or K to play/pause
-                        if (event.which === 32 || event.which === 75) {
-                            // @ts-ignore
-                            this.playing ? this.pause() : this.play();
-                        }
-
-                        // Left or J to jump back 5 seconds
-                        if (event.which === 37 || event.which === 74) {
-                            // @ts-ignore
-                            this.currentTime(this.currentTime() - 5);
-                        }
-
-                        // Right or L to jump forward 5 seconds
-                        if (event.which === 39 || event.which === 76) {
-                            // @ts-ignore
-                            this.currentTime(this.currentTime() + 5);
-                        }
-
-                        // Up or I to increase volume
-                        if (event.which === 38 || event.which === 73) {
-                            // @ts-ignore
-                            this.volume(this.volume() + 0.1);
-                        }
-
-                        // Down or O to decrease volume
-                        if (event.which === 40 || event.which === 79) {
-                            // @ts-ignore
-                            this.volume(this.volume() - 0.1);
-                        }
-
-                        // M to mute/unmute
-                        if (event.which === 77) {
-                            // @ts-ignore
-                            this.muted(!this.muted());
-                        }
-
-                        // F to enter or exit fullscreen
-                        if (event.which === 70) {
-                            // @ts-ignore
-                            this.fullscreen() ? this.exitFullscreen() : this.requestFullscreen();
-                        }
-                    },
-                },
             };
         },
     },

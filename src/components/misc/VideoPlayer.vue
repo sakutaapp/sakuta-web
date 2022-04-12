@@ -6,6 +6,7 @@
 
 <script>
 import videojs from "video.js";
+import "video.js/dist/video-js.css";
 
 export default {
     name: "VideoPlayer",
@@ -20,10 +21,58 @@ export default {
     data() {
         return {
             player: null,
+            defaultOptions: {
+                autoplay: false,
+                controls: true,
+                fluid: true,
+                controlBar: {
+                    remainingTimeDisplay: {
+                        displayNegative: true,
+                    },
+                },
+                userActions: {
+                    hotkeys: function (event) {
+                        // Space or K to play/pause
+                        if (event.which === 32 || event.which === 75) {
+                            this.playing ? this.pause() : this.play();
+                        }
+
+                        // Left or J to jump back 5 seconds
+                        if (event.which === 37 || event.which === 74) {
+                            this.currentTime(this.currentTime() - 5);
+                        }
+
+                        // Right or L to jump forward 5 seconds
+                        if (event.which === 39 || event.which === 76) {
+                            this.currentTime(this.currentTime() + 5);
+                        }
+
+                        // Up or I to increase volume
+                        if (event.which === 38 || event.which === 73) {
+                            this.volume(this.volume() + 0.1);
+                        }
+
+                        // Down or O to decrease volume
+                        if (event.which === 40 || event.which === 79) {
+                            this.volume(this.volume() - 0.1);
+                        }
+
+                        // M to mute/unmute
+                        if (event.which === 77) {
+                            this.muted(!this.muted());
+                        }
+
+                        // F to enter or exit fullscreen
+                        if (event.which === 70) {
+                            this.fullscreen() ? this.exitFullscreen() : this.requestFullscreen();
+                        }
+                    },
+                },
+            },
         };
     },
     mounted() {
-        this.player = videojs(this.$refs.videoPlayer, this.options, function onPlayerReady() {});
+        this.player = videojs(this.$refs.videoPlayer, { ...this.defaultOptions, ...this.options }, function onPlayerReady() {});
     },
     beforeDestroy() {
         if (this.player) {
