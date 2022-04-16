@@ -16,7 +16,7 @@
                 <p class="news-content" v-html="$t('news.translation.text', { article: `<a href='/news/${post.translationOriginal.slug}'>${post.translationOriginal.title}</a>`, author: `<a href='/user/${post.translationOriginal.author.username}'>${post.translationOriginal.author.username}</a>` })" />
             </div>
             <div class="news-content mb-8" v-html="post.content" />
-            <VideoPlayer v-if="post.video" :options="getVideoOptions(post.video)" />
+            <VideoPlayer v-if="post.video" :video="post.video" />
         </div>
     </Container>
 </template>
@@ -50,23 +50,10 @@ export default Vue.extend({
         };
     },
     mounted() {
-        this.$axios.$get(`https://cms.sakuta.app/items/articles/${this.$route.params.slug}?fields=*,author.username,author.avatar.filename_disk,image.filename_disk,translationOriginal.slug,translationOriginal.title,translationOriginal.author.username,video.video_1080p.filename_disk,video.thumbnail.filename_disk`).then((response) => {
+        this.$axios.$get(`https://cms.sakuta.app/items/articles/${this.$route.params.slug}?fields=*,author.username,author.avatar.filename_disk,image.filename_disk,translationOriginal.slug,translationOriginal.title,translationOriginal.author.username,video.*.*`).then((response) => {
             this.post = response.data;
             this.loaded = true;
         });
-    },
-    methods: {
-        getVideoOptions(videoData: any) {
-            return {
-                sources: [
-                    {
-                        src: `https://cms.sakuta.app/assets/${videoData.video_1080p.filename_disk}`,
-                        type: "video/mp4",
-                    },
-                ],
-                poster: `https://cms.sakuta.app/assets/${videoData.thumbnail.filename_disk}`,
-            };
-        },
     },
 });
 </script>
