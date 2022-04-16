@@ -18,6 +18,7 @@ export default {
     },
     mounted() {
         const player = new Plyr("#player", {
+            crossorigin: true,
             controls: ["play-large", "play", "rewind", "fast-forward", "progress", "current-time", "duration", "mute", "volume", "captions", "settings", "pip", "airplay", "fullscreen"],
             settings: ["captions", "quality"],
             quality: {
