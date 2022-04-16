@@ -134,7 +134,7 @@ export default Vue.extend({
             deep: true,
             handler(newData, oldData) {
                 if (oldData) return;
-                this.$axios.$get(`https://cms.sakuta.app/items/anime_trailer/${this.Media.id}?fields=*,*.video_1080p.filename_disk,*.thumbnail.filename_disk`).then((response) => {
+                this.$axios.$get(`https://cms.sakuta.app/items/anime_trailer/${this.Media.id}?fields=*.*.*`).then((response) => {
                     if (response.data) {
                         this.customTrailer = response.data;
                     }

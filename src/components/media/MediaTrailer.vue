@@ -2,7 +2,7 @@
     <Section>
         <h2 class="text-lg font-semibold">{{ $t("media.section.trailer") }}</h2>
         <iframe v-if="!customTrailer" class="w-full" :src="`https://www.youtube-nocookie.com/embed/${trailer}`" title="YouTube video player" height="500px" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <VideoPlayer v-else :options="getVideoOptions()" />
+        <VideoPlayer v-else :video="getVideo()" />
     </Section>
 </template>
 
@@ -23,29 +23,19 @@ export default Vue.extend({
         };
     },
     methods: {
-        getVideoOptions() {
+        getVideo() {
             let trailerLanguage = "jp";
 
             if (this.customTrailer[`trailer_${localStorage.getItem("lang")}`]) {
                 trailerLanguage = localStorage.getItem("lang") as string;
                 console.log(trailerLanguage);
             } else if (this.customTrailer.trailer_en) {
-                console.log("B");
                 trailerLanguage = "en";
             } else {
-                console.log("C");
                 trailerLanguage = "jp";
             }
 
-            return {
-                sources: [
-                    {
-                        src: `https://cms.sakuta.app/assets/${this.customTrailer["trailer_" + trailerLanguage].video_1080p.filename_disk}`,
-                        type: "video/mp4",
-                    },
-                ],
-                poster: `https://cms.sakuta.app/assets/${this.customTrailer["trailer_" + trailerLanguage].thumbnail.filename_disk}`,
-            };
+            return this.customTrailer["trailer_" + trailerLanguage];
         },
     },
 });

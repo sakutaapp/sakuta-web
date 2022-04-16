@@ -1,0 +1,23 @@
+{
+    "play": "Play",
+    "pause": "Pause",
+    "rewind": "Go back {seektime} seconds",
+    "forward": "Skip {seektime} seconds",
+    "volume": "Volume",
+    "mute": "Mute",
+    "unmute": "Unmute",
+    "enableCaptions": "Enable captions",
+    "disableCaptions": "Disable captions",
+    "enterFullscreen": "Fullscreen",
+    "exitFullscreen": "Exit fullscreen",
+    "captions": "Captions",
+    "settings": "Settings",
+    "pip": "Picture-in-picture",
+    "menuBack": "Go back to previous menu",
+    "quality": "Quality",
+    "disabled": "Disabled",
+    "enabled": "Enabled",
+    "quality.4k": "4K",
+    "quality.2k": "2K",
+    "quality.hd": "HD"
+}
