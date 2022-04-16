@@ -53,6 +53,7 @@ export default {
                     2160: this.$t("player.quality.4k"),
                     1440: this.$t("player.quality.2k"),
                     1080: this.$t("player.quality.hd"),
+                    822: this.$t("player.quality.hd"),
                     720: this.$t("player.quality.hd"),
                     480: "",
                     360: "",
