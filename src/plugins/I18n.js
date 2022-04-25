@@ -16,7 +16,8 @@ function getMessages() {
     console.log(locales);
     const messages = {};
     locales.keys().forEach((key) => {
-        const matched = key.match(/(?<=\.\/)[A-Za-z-]*\/[A-Za-z]*(?=\.json)/g)[0];
+        const matched = [...key.matchAll(/(\.\/)([A-Za-z-]*\/[A-Za-z]*)(\.json)/gm)][0][2];
+        console.log(matched);
         const lang = matched.split("/")[0];
         const file = matched.split("/")[1];
 
