@@ -16,10 +16,17 @@ export default {
             default: {},
         },
     },
+    data() {
+        return {
+            brandingAdded: false,
+        };
+    },
     mounted() {
+        console.log(Plyr);
         const player = new Plyr("#player", {
             crossorigin: true,
-            controls: ["play-large", "play", "rewind", "fast-forward", "progress", "current-time", "duration", "mute", "volume", "captions", "settings", "pip", "airplay", "fullscreen"],
+            controls: ["play-large", "play", "rewind", "fast-forward", "progress", "current-time", "duration", "mute", "volume", "captions", "settings", "pip", "airplay", "fullscreen", "<p>Test</p>"],
+            // controls,
             settings: ["captions", "quality"],
             quality: {
                 default: "auto",
@@ -69,6 +76,16 @@ export default {
             tracks: this.getTracks(),
             default: 1080,
         };
+        player.on("ready", () => {
+            if (!this.brandingAdded) {
+                this.brandingAdded = true;
+                const controls = document.querySelector(".plyr__controls");
+                const branding = document.createElement("div");
+                branding.classList.add("plyr__controls_item", "mx-1");
+                branding.innerHTML = `<a href="https://sakuta.app" target="_blank" rel="noopener noreferrer" class="opacity-50 transition duration-250 hover:opacity-100"><img src="/assets/img/player_logo.png" style="height: 20px;"></a>`;
+                controls.insertBefore(branding, controls.children[7]);
+            }
+        });
     },
     methods: {
         getSources() {
