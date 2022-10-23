@@ -8,5 +8,9 @@
 	"stats.mangaCount.title": "Mangas read",
 	"stats.chaptersRead.title": "Mangas chapters read",
 	"stats.volumesRead.title": "Manga volumes read",
-	"noAbout": "This user hasn't set any text for their \"About\" section"
+	"noAbout": "This user hasn't set any text for their \"About\" section",
+    "tabs.overview": "Overview",
+    "tabs.animeList": "Anime List",
+    "tabs.mangaList": "Manga List",
+    "tabs.stats": "Stats"
 }
