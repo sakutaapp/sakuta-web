@@ -17,7 +17,7 @@
         :style="{
           height: '24px',
           width: '36px',
-          backgroundImage: `url('https://cdn.taigabot.net/flaggi/webp/1/${flag}.webp')`,
+          backgroundImage: `url('https://flags.blazing.works/webp/1/${flag}.webp')`,
           backgroundSize: 'contain',
         }"
       />
