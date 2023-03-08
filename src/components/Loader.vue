@@ -54,8 +54,8 @@ export default Vue.extend({
   methods: {
     start() {
       this.loading = true;
-      const strings = Object.keys(this.$i18n.messages.en).filter((string) => {
-        return string.startsWith("loading.");
+      const strings = Object.keys(this.$i18n.messages.en).filter((key) => {
+        return /^loading\.[0-9]+$/.test(key);
       });
       const randomIndex = Math.floor(Math.random() * strings.length);
       this.loadingText = strings[randomIndex];
