@@ -26,11 +26,11 @@ export default Vue.extend({
   props: {
     prop: {
       type: String,
-      required: true,
+      default: null,
     },
     value: {
       type: String,
-      required: true,
+      default: null,
     },
     list: {
       type: Boolean,

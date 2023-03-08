@@ -66,11 +66,11 @@ export default Vue.extend({
   props: {
     media: {
       type: Object,
-      required: true,
+      default: null,
     },
     mediaType: {
       type: String,
-      required: true,
+      default: null,
     },
   },
   computed: {
