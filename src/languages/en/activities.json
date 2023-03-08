@@ -4,5 +4,7 @@
     "status.watchedEpisode": "Watched episode {0} | Watched episodes {0}",
     "status.plansToWatch": "Plans to watch",
     "status.plansToRead": "Plans to read",
-    "status.readChapter": "Read chapter {0} | Read chapters {0}"
+    "status.readChapter": "Read chapter {0} | Read chapters {0}",
+    "status.pausedReading": "Paused reading",
+    "status.rewatchedEpisode": "Rewatched episode {0} | Rewatched episodes {0}"
 }
