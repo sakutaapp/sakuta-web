@@ -124,12 +124,17 @@ export default Vue.extend({
         if (oldData) {
           return;
         }
-        this.$axios.$get(`https://cms.sakuta.app/items/anime_trailer/${this.Media.id}?fields=*.*.*`).then((response) => {
-          if (response.data) {
-            this.customTrailer = response.data;
-          }
-          this.$nuxt.$loading.finish();
-        });
+        this.$axios
+          .$get(`https://cms.sakuta.app/items/anime_trailer/${this.Media.id}?fields=*.*.*`)
+          .then((response) => {
+            if (response.data) {
+              this.customTrailer = response.data;
+            }
+            this.$nuxt.$loading.finish();
+          })
+          .catch(() => {
+            this.$nuxt.$loading.finish();
+          });
       },
     },
   },
