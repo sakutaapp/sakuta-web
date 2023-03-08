@@ -3,17 +3,8 @@
     <h2 class="text-lg font-semibold">
       {{ $t("media.section.trailer") }}
     </h2>
-    <iframe
-      v-if="!customTrailer"
-      class="w-full"
-      :src="`https://www.youtube-nocookie.com/embed/${trailer}`"
-      title="YouTube video player"
-      height="500px"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    />
-    <VideoPlayer v-else :video="getVideo()" />
+    <VideoPlayer v-if="customTrailer" :video="getVideo()" />
+    <VideoEmbed v-else-if="!customTrailer && trailer" :id="trailer" />
   </Section>
 </template>
 
@@ -24,7 +15,7 @@ export default Vue.extend({
   props: {
     trailer: {
       type: String,
-      required: true,
+      default: null,
     },
     customTrailer: {
       type: Object,
