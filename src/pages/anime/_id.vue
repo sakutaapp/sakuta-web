@@ -14,7 +14,7 @@
         <MediaTags class="block md:hidden" :tags="tags" />
         <MediaCharacters :characters="characters" @open="modal($event)" />
         <MediaEpisodes :episodes="episodes" />
-        <MediaTrailer :trailer="trailer" :custom-trailer="customTrailer" />
+        <MediaTrailer v-if="trailer || customTrailer" :trailer="trailer" :custom-trailer="customTrailer" />
       </div>
     </div>
     <CharacterModal v-if="modalData.show && modalData.character" :character="modalData.character" @close="modal()" />
