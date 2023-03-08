@@ -1,6 +1,6 @@
 <template>
   <Container>
-    <div class="bg-primary bg-opacity-15 rounded-lg flex space-x-3 p-3 items-center mt-3 mb-5">
+    <div class="bg-primary bg-opacity-15 rounded-lg flex space-x-3 p-3 items-center mt-3 mb-4">
       <div class="flex-grow">
         <AttentionIcon :filled="true" size="50" />
       </div>
@@ -11,7 +11,7 @@
         <p>{{ $t("news.notReleased.text") }}</p>
       </div>
     </div>
-    <div v-if="loaded" class="mt-2">
+    <div v-if="loaded" class="mt-2 mb-12">
       <NewsHeader class="mb-8" :post="post" />
       <div v-if="post.translationOriginal" class="bg-dark-800 rounded-lg p-3 mb-5">
         <h2 class="text-white font-semibold text-lg">
