@@ -20,7 +20,7 @@ export default Vue.extend({
     },
     rank: {
       type: String,
-      required: true,
+      default: null,
     },
     spoiler: {
       type: Boolean,
