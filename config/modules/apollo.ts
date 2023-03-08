@@ -1,7 +1,7 @@
 export default {
-    clientConfigs: {
-        default: {
-            httpEndpoint: "https://graphql.anilist.co/",
-        },
+  clientConfigs: {
+    default: {
+      httpEndpoint: "https://graphql.anilist.co/",
     },
+  },
 };

@@ -1,35 +1,35 @@
 query ($page: Int!, $perPage: Int = 10, $id: Int!) {
-    Page(page: $page, perPage: $perPage) {
-        activities(userId: $id, sort: ID_DESC, type: MEDIA_LIST) {
-            ... on ListActivity {
-                id
-                replyCount
-                status
-                progress
-                likeCount
-                isLiked
-                siteUrl
-                createdAt
-                media {
-                    id
-                    type
-                    title {
-                        english
-                        romaji
-                        native
-                    }
-                    coverImage {
-                        medium
-                    }
-                }
-                likes {
-                    id
-                    name
-                    avatar {
-                        medium
-                    }
-                }
-            }
+  Page(page: $page, perPage: $perPage) {
+    activities(userId: $id, sort: ID_DESC, type: MEDIA_LIST) {
+      ... on ListActivity {
+        id
+        replyCount
+        status
+        progress
+        likeCount
+        isLiked
+        siteUrl
+        createdAt
+        media {
+          id
+          type
+          title {
+            english
+            romaji
+            native
+          }
+          coverImage {
+            medium
+          }
         }
+        likes {
+          id
+          name
+          avatar {
+            medium
+          }
+        }
+      }
     }
+  }
 }

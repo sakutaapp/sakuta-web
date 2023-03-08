@@ -1,20 +1,20 @@
 query ($page: Int!, $perPage: Int = 48, $sort: [MediaSort]!, $search: String, $type: MediaType) {
-    Page(page: $page, perPage: $perPage) {
-        media(sort: $sort, search: $search, type: $type) {
-            id
-            title {
-                english
-                romaji
-                native
-            }
-            format
-            type
-            status
-            season
-            seasonYear
-            coverImage {
-                large
-            }
-        }
+  Page(page: $page, perPage: $perPage) {
+    media(sort: $sort, search: $search, type: $type) {
+      id
+      title {
+        english
+        romaji
+        native
+      }
+      format
+      type
+      status
+      season
+      seasonYear
+      coverImage {
+        large
+      }
     }
+  }
 }
