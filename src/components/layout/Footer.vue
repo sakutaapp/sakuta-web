@@ -87,16 +87,14 @@ export default Vue.extend({
       if (!match) {
         return string;
       }
-      return (
-        "© 2021 Sakuta | " +
-        string.replace(
-          match[0],
-          `<a href="https://github.com/sakutaapp/sakuta-web/blob/master/LICENSE.md" target="_blank" class="underline hover:text-primary transition duration-100">${match[0].slice(
-            1,
-            match[0].length - 1,
-          )}</a>`,
-        )
-      );
+      const currentYear = new Date().getFullYear();
+      return `© 2021-${currentYear} Sakuta | ${string.replace(
+        match[0],
+        `<a href="https://github.com/sakutaapp/sakuta-web/blob/master/LICENSE.md" target="_blank" class="underline hover:text-primary transition duration-100">${match[0].slice(
+          1,
+          match[0].length - 1,
+        )}</a>`,
+      )}`;
     },
   },
 });
