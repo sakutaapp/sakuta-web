@@ -1,13 +1,14 @@
-# editorconfig.org
 root = true
 
 [*]
-indent_style = space
-indent_size = 4
-end_of_line = lf
 charset = utf-8
+tab_width = 2
 trim_trailing_whitespace = true
 insert_final_newline = true
+end_of_line = lf
 
-[*.md]
+[*.{md,markdown,mdx,mdown}]
 trim_trailing_whitespace = false
+
+[*.{cmd,bat}]
+end_of_line = crlf

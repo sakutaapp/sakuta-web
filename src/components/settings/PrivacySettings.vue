@@ -1,3 +1,3 @@
 <template>
-    <p>This panel is still under development!</p>
+  <p>This panel is still under development!</p>
 </template>

@@ -1,98 +1,98 @@
 query ($id: Int!) {
-    Media(id: $id, type: MANGA) {
-        id
-        idMal
-        format
-        status
-        description
-        startDate {
-            year
-            month
-            day
-        }
-        endDate {
-            year
-            month
-            day
-        }
-        chapters
-        volumes
-        source
-        hashtag
-        trailer {
-            id
-        }
-        genres
-        synonyms
-        meanScore
-        tags {
-            id
-            name
-            description
-            rank
-            isGeneralSpoiler
-            isMediaSpoiler
-            name
-            description
-            rank
-            isGeneralSpoiler
-            isMediaSpoiler
-        }
-        characters {
-            edges {
-                id
-                role
-                node {
-                    id
-                    name {
-                        full
-                    }
-                    image {
-                        large
-                        medium
-                    }
-                    description(asHtml: true)
-                    gender
-                    dateOfBirth {
-                        year
-                        month
-                        day
-                    }
-                    age
-                    siteUrl
-                    favourites
-                }
-            }
-        }
-        studios {
-            edges {
-                id
-                isMain
-                node {
-                    id
-                    name
-                    isAnimationStudio
-                    favourites
-                }
-            }
-        }
-        favourites
-        siteUrl
-        bannerImage
-        coverImage {
-            extraLarge
-            color
-        }
-        title {
-            english
-            romaji
-            native
-        }
-        streamingEpisodes {
-            title
-            thumbnail
-            url
-            site
-        }
+  Media(id: $id, type: MANGA) {
+    id
+    idMal
+    format
+    status
+    description
+    startDate {
+      year
+      month
+      day
     }
+    endDate {
+      year
+      month
+      day
+    }
+    chapters
+    volumes
+    source
+    hashtag
+    trailer {
+      id
+    }
+    genres
+    synonyms
+    meanScore
+    tags {
+      id
+      name
+      description
+      rank
+      isGeneralSpoiler
+      isMediaSpoiler
+      name
+      description
+      rank
+      isGeneralSpoiler
+      isMediaSpoiler
+    }
+    characters {
+      edges {
+        id
+        role
+        node {
+          id
+          name {
+            full
+          }
+          image {
+            large
+            medium
+          }
+          description(asHtml: true)
+          gender
+          dateOfBirth {
+            year
+            month
+            day
+          }
+          age
+          siteUrl
+          favourites
+        }
+      }
+    }
+    studios {
+      edges {
+        id
+        isMain
+        node {
+          id
+          name
+          isAnimationStudio
+          favourites
+        }
+      }
+    }
+    favourites
+    siteUrl
+    bannerImage
+    coverImage {
+      extraLarge
+      color
+    }
+    title {
+      english
+      romaji
+      native
+    }
+    streamingEpisodes {
+      title
+      thumbnail
+      url
+      site
+    }
+  }
 }

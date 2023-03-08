@@ -1,8 +1,7 @@
 {
-    "explorer.compactFolders": false,
-    "editor.formatOnPaste": true,
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "prettier.tabWidth": 4,
-    "javascript.format.semicolons": "insert"
+  "explorer.compactFolders": false,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "javascript.format.semicolons": "insert"
 }

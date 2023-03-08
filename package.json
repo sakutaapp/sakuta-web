@@ -1,39 +1,50 @@
 {
-    "name": "sakuta-web",
-    "version": "1.0.0",
-    "private": true,
-    "scripts": {
-        "dev": "nuxt",
-        "build": "nuxt build",
-        "start": "nuxt start",
-        "generate": "nuxt generate",
-        "format": "prettier --write .",
-        "ci:format": "prettier --check ."
-    },
-    "dependencies": {
-        "@nuxtjs/apollo": "^4.0.1-rc.5",
-        "@nuxtjs/axios": "^5.13.6",
-        "@nuxtjs/moment": "^1.6.1",
-        "@nuxtjs/pwa": "^3.3.5",
-        "core-js": "^3.15.1",
-        "fuzzy-search": "^3.2.1",
-        "graphql-tag": "^2.12.5",
-        "nuxt": "^2.15.7",
-        "nuxt-webfontloader": "^1.1.0",
-        "plyr": "^3.6.12",
-        "scrollmonitor": "^1.2.4",
-        "vue-i18n": "^8.25.0",
-        "vue-tippy": "^4.13.0"
-    },
-    "devDependencies": {
-        "@graphql-codegen/cli": "^2.0.1",
-        "@graphql-codegen/typescript": "^2.0.0",
-        "@graphql-codegen/typescript-graphql-files-modules": "^2.0.0",
-        "@graphql-codegen/typescript-operations": "^2.0.1",
-        "@nuxt/types": "^2.15.7",
-        "@nuxt/typescript-build": "^2.1.0",
-        "@types/fuzzy-search": "^2.1.1",
-        "nuxt-windicss": "^1.1.1",
-        "prettier": "^2.3.2"
-    }
+  "name": "sakuta-web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "NODE_OPTIONS=--openssl-legacy-provider nuxt",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider nuxt build",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider nuxt start",
+    "generate": "NODE_OPTIONS=--openssl-legacy-provider nuxt generate",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "lint": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore .",
+    "lint:fix": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore --fix ."
+  },
+  "dependencies": {
+    "@nuxtjs/apollo": "4.0.1-rc.5",
+    "@nuxtjs/axios": "5.13.6",
+    "@nuxtjs/moment": "1.6.1",
+    "@nuxtjs/pwa": "3.3.5",
+    "core-js": "3.15.1",
+    "fuzzy-search": "^3.2.1",
+    "graphql-tag": "^2.12.5",
+    "nuxt": "2.15.7",
+    "nuxt-webfontloader": "^1.1.0",
+    "plyr": "^3.6.12",
+    "scrollmonitor": "1.2.4",
+    "vue-i18n": "^8.25.0",
+    "vue-tippy": "^4.13.0"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^2.0.1",
+    "@graphql-codegen/typescript": "^2.0.0",
+    "@graphql-codegen/typescript-graphql-files-modules": "^2.0.0",
+    "@graphql-codegen/typescript-operations": "^2.0.1",
+    "@nuxt/types": "2.15.7",
+    "@nuxt/typescript-build": "2.1.0",
+    "@nuxtjs/eslint-config-typescript": "^11.0.0",
+    "@nuxtjs/eslint-module": "^3.1.0",
+    "@types/fuzzy-search": "^2.1.1",
+    "@types/node": "^18.14.6",
+    "eslint": "^8.24.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-vue": "^9.5.1",
+    "nuxt-windicss": "1.1.1",
+    "prettier": "^2.3.2",
+    "vue": "2",
+    "vue-apollo": "^3.1.0",
+    "windicss": "^3.5.6"
+  }
 }

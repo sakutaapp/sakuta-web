@@ -6,3 +6,5 @@ yarn.lock
 yarn-error.log
 dist/**/*
 .nuxt/**/*
+pnpm-lock.yaml
+package-lock.json
