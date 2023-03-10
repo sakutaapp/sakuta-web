@@ -1,13 +1,13 @@
 <template>
   <div
-    class="fixed w-screen h-screen top-0 left-0 flex items-center justify-center bg-black bg-opacity-60 backdrop-filter backdrop-blur-md z-110"
+    class="fixed w-screen h-screen top-0 left-0 flex items-end justify-center bg-black bg-opacity-60 backdrop-filter backdrop-blur-md z-110"
     @click.self="$emit('close')"
   >
-    <div class="bg-dark-800 rounded-lg shadow min-w-64 md:min-w-128 max-w-9/10 relative">
+    <div class="bg-dark-800 rounded-t-lg shadow min-w-full md:min-w-128 max-w-full md:max-w-3/4 lg:max-w-1/2 relative pb-5">
       <CloseButton class="absolute top-2 right-2 z-10" @close="$emit('close')" />
       <div
         v-if="header"
-        class="h-32 md:h-64 relative rounded-t-lg"
+        class="h-42 md:h-64 relative rounded-t-lg"
         :style="`background-image: url('${headerImage}'); background-position: center; background-size: cover;`"
       >
         <div

@@ -2,7 +2,7 @@
   <Modal :header="true" :header-image="character.node.image.large" @close="$emit('close')">
     <template #header>
       <div class="flex h-full text-white space-x-5">
-        <img :src="character.node.image.large" height="100%" class="rounded-lg" />
+        <img :src="character.node.image.large" height="110%" class="rounded-lg" />
         <div class="flex flex-col justify-center">
           <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold">
             {{ character.node.name.full }}
