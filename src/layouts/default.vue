@@ -8,7 +8,7 @@
     </transition>
     <DevPageWarning v-if="showPageWarning && !isMainSite" @continue="closeDevPageWarning()" />
     <transition name="command-menu-transition">
-      <CommandMenu v-if="commandMenuEnabled" @close="commandMenuEnabled = false" />
+      <CommandMenu v-if="commandMenuEnabled" :search-only="commandMenuSearchOnly" @close="commandMenuEnabled = false" />
     </transition>
   </div>
 </template>
@@ -22,6 +22,7 @@ export default Vue.extend({
       settingsMenu: false,
       showPageWarning: localStorage.getItem("continue") !== "true",
       commandMenuEnabled: false,
+      commandMenuSearchOnly: false,
     };
   },
   head() {
@@ -50,6 +51,7 @@ export default Vue.extend({
     window.addEventListener("keydown", (e) => {
       if (e.key === "k" && (e.ctrlKey || e.metaKey)) {
         e.preventDefault();
+        this.commandMenuSearchOnly = false;
         this.toggleCommandMenu();
       }
     });
@@ -62,6 +64,10 @@ export default Vue.extend({
     });
     this.$nuxt.$on("unlockScroll", () => {
       document.body.classList.remove("overflow-hidden");
+    });
+    this.$nuxt.$on("openSearch", () => {
+      this.commandMenuSearchOnly = true;
+      this.commandMenuEnabled = true;
     });
   },
   methods: {

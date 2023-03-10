@@ -39,7 +39,7 @@ import Vue from "vue";
 import FuzzySearch from "fuzzy-search";
 import commandMenu from "../../apollo/queries/commandMenu";
 
-const mainOptions = [
+const searchOptions = [
   {
     name: "animeSearch",
     icon: '<rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><polyline points="17 2 12 7 7 2"></polyline>',
@@ -48,6 +48,10 @@ const mainOptions = [
     name: "mangaSearch",
     icon: '<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>',
   },
+];
+
+const mainOptions = [
+  ...searchOptions,
   {
     name: "userSearch",
     icon: '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>',
@@ -55,10 +59,6 @@ const mainOptions = [
   {
     name: "explore",
     icon: '<circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>',
-  },
-  {
-    name: "search",
-    icon: '<circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>',
   },
 ];
 
@@ -85,6 +85,12 @@ export default Vue.extend({
           }
         }
       },
+    },
+  },
+  props: {
+    searchOnly: {
+      type: Boolean,
+      default: false,
     },
   },
   data() {

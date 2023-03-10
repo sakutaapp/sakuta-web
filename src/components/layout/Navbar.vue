@@ -12,12 +12,21 @@
             v-for="link in navLinks"
             :key="link.to"
             exact-active-class="text-white bg-dark-800"
-            :to="link.to"
+            :to="link.to || ''"
             class="hover:text-white transition duration-250 bg-dark-900 hover:bg-dark-800 px-4 py-1.5 rounded-full flex space-x-2"
+            @click="link.callback || null"
           >
             <Component :is="link.icon" :filled="$route.path === link.to" />
             <span>{{ $t(`nav.link.${link.name}`) }}</span>
           </nuxt-link>
+          <div
+            exact-active-class="text-white bg-dark-800"
+            class="hover:text-white transition duration-250 bg-dark-900 hover:bg-dark-800 px-4 py-1.5 rounded-full flex space-x-2 cursor-pointer"
+            @click="$nuxt.$emit('openSearch')"
+          >
+            <SearchIcon />
+            <span>{{ $t(`nav.link.search`) }}</span>
+          </div>
         </div>
         <div class="flex-grow w-1/6 flex justify-end space-x-3">
           <div
@@ -62,11 +71,6 @@ export default Vue.extend({
           to: "/news",
           icon: "BookIcon",
           name: "news",
-        },
-        {
-          to: "/search",
-          icon: "SearchIcon",
-          name: "search",
         },
       ],
     };

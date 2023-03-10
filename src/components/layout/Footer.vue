@@ -40,8 +40,8 @@ export default Vue.extend({
               text: "nav.link.explore",
             },
             {
-              link: "/search",
-              text: "nav.link.search",
+              link: "/news",
+              text: "nav.link.news",
             },
           ],
         },
