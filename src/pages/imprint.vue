@@ -6,6 +6,7 @@
     <h2 class="text-xl font-semibold mb-3">
       {{ $t("imprint.accordingTo") }}
     </h2>
+    <p class="mb-2" v-html="operator($t('imprint.operator'))" />
     <p class="font-semibold">
       {{ $t("imprint.responsible") }}
     </p>
@@ -15,7 +16,7 @@
       58135 Hagen<br />
       {{ $t("imprint.germany") }}
     </p>
-    <p class="mt-1"><b>E-Mail:</b> hello@crugg.de</p>
+    <p class="mt-1"><b>E-Mail:</b> dennis@blazing.works</p>
 
     <h1 class="text-2xl font-bold mb-2 mt-10">
       {{ $t("imprint.disclaimers") }}
@@ -42,6 +43,11 @@ export default Vue.extend({
   },
   head: {
     title: "Imprint",
+  },
+  methods: {
+    operator(string: string) {
+      return string.replace("[BlazingWorks]", '<a href="https://blazing.works" target="__blank" class="underline">BlazingWorks</a>');
+    },
   },
 });
 </script>
