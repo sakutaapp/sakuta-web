@@ -32,7 +32,7 @@
           <div
             v-if="alwaysShowBottom"
             class="cursor-pointer bg-dark-800 md:bg-dark-900 hover:bg-dark-800 transition duration-250 p-2 rounded-full hidden md:flex items-center justify-center"
-            @click="$router.push('/search')"
+            @click="$nuxt.$emit('openSearch')"
           >
             <SearchIcon size="24" />
           </div>
