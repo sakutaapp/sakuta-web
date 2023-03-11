@@ -3,14 +3,7 @@
     <p class="md:text-xs font-semibold uppercase pl-5 md:pl-0">
       {{ $t(`settings.headings.${category}`) }}
     </p>
-    <SettingsTab
-      v-for="page in pages"
-      :key="page.name"
-      :class="page.name === 'appearance' ? 'hidden md:flex' : ''"
-      :page="page"
-      :active="page.name === activePage"
-      @pageswitch="$emit('pageswitch', $event)"
-    />
+    <SettingsTab v-for="page in pages" :key="page.name" :class="page.name === 'appearance' ? 'hidden md:flex' : ''" :page="page" />
   </div>
 </template>
 
@@ -25,10 +18,6 @@ export default Vue.extend({
     pages: {
       type: Array,
       required: true,
-    },
-    activePage: {
-      type: String,
-      default: "",
     },
   },
 });

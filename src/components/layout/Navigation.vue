@@ -2,11 +2,13 @@
   <div class="bg-dark-900 shadow-sm py-4">
     <Container>
       <div class="flex items-center">
+        <!-- Logo -->
         <div class="flex-grow w-1/6">
           <nuxt-link to="/">
             <img src="/assets/svg/logo.svg" class="h-8" />
           </nuxt-link>
         </div>
+        <!-- Navigation -->
         <div v-if="!alwaysShowBottom" class="w-full flex-grow hidden md:flex justify-center items-center space-x-4">
           <nuxt-link
             v-for="link in navLinks"
@@ -28,6 +30,7 @@
             <span>{{ $t(`nav.link.search`) }}</span>
           </div>
         </div>
+        <!-- Search / Settings -->
         <div class="flex-grow w-1/6 flex justify-end space-x-3">
           <div
             v-if="alwaysShowBottom"
@@ -38,7 +41,7 @@
           </div>
           <div
             class="center cursor-pointer bg-dark-800 md:bg-dark-900 hover:bg-dark-800 transition duration-250 p-2 rounded-full"
-            @click="$emit('toggleSettings')"
+            @click="$store.commit('settings/open')"
           >
             <SettingsIcon size="24" />
           </div>

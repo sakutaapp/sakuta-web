@@ -1,10 +1,10 @@
 <template>
   <div class="relative min-h-screen pb-100 md:pb-45 caret-primary">
-    <Navbar @toggleSettings="settingsMenu = true" @toggle-command-menu="toggleCommandMenu()" />
+    <Navigation @toggleSettings="settingsMenu = true" @toggle-command-menu="toggleCommandMenu()" />
     <nuxt />
     <Footer />
     <transition name="settings-menu-transition">
-      <SettingsMenu v-if="settingsMenu" @close="settingsMenu = false" />
+      <SettingsMenu v-if="settingsOpen" />
     </transition>
     <DevPageWarning v-if="showPageWarning && !isMainSite" @continue="closeDevPageWarning()" />
     <transition name="command-menu-transition">
@@ -19,7 +19,6 @@ import Vue from "vue";
 export default Vue.extend({
   data() {
     return {
-      settingsMenu: false,
       showPageWarning: localStorage.getItem("continue") !== "true",
       commandMenuEnabled: false,
       commandMenuSearchOnly: false,
@@ -36,6 +35,9 @@ export default Vue.extend({
   computed: {
     isMainSite() {
       return document.location.hostname === "sakuta.app";
+    },
+    settingsOpen() {
+      return this.$store.state.settings.open;
     },
   },
   watch: {

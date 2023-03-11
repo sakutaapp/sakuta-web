@@ -3,31 +3,21 @@
     <div class="h-full w-full hidden md:flex">
       <div class="md:w-1/20 lg:w-1/8 bg-dark-900" />
       <div class="md:w-19/20 lg:w-7/8 bg-dark-800 flex">
-        <div class="bg-dark-900 pr-5 pt-10 flex flex-col space-y-2 max-w-2/8">
-          <SettingsTabCategory
-            category="app"
-            :pages="pages.filter((page) => page.category === 'app')"
-            :active-page="activePage"
-            @pageswitch="activePage = $event"
-          />
-          <SettingsTabCategory
-            category="misc"
-            :pages="pages.filter((page) => page.category === 'misc')"
-            :active-page="activePage"
-            @pageswitch="activePage = $event"
-          />
+        <div class="bg-dark-900 pr-5 pt-10 flex flex-col space-y-2 min-w-64 max-w-64">
+          <SettingsTabCategory category="app" :pages="pages.filter((page) => page.category === 'app')" />
+          <SettingsTabCategory category="misc" :pages="pages.filter((page) => page.category === 'misc')" />
         </div>
         <div class="w-full overflow-auto">
           <div class="flex w-full max-w-6/8">
             <div class="w-full flex-grow pt-10 px-10">
-              <SettingsHolder :page="activePage" />
+              <SettingsHolder :page="activeTab" />
             </div>
             <div class="pt-10 flex flex-col items-center">
               <div
                 class="w-12 h-12 rounded-full cursor-pointer transition duration-250 bg-dark-800 hover:bg-dark-900 hover:text-white center"
-                @click="$emit('close')"
+                @click="$store.commit('settings/close')"
               >
-                <CloseIcon :size="20" />
+                <CloseIcon size="20" />
               </div>
               <!--<span class="text-xs opacity-50 mt-1">ESC</span>-->
             </div>
@@ -38,39 +28,23 @@
     <div class="flex flex-col bg-dark-900 h-full w-full pt-20 md:hidden">
       <div class="flex flex-col fixed w-full z-102 top-0 h-full pointer-events-none">
         <div class="p-2 bg-dark-800 flex items-center pr-5 pointer-events-auto">
-          <div class="p-3" @click="pageFocus ? (pageFocus = false) : $emit('close')">
+          <div class="p-3" @click="tabFocus ? (tabFocus = false) : $store.commit('settings/close')">
             <BackIcon size="30" />
           </div>
           <h1 class="font-semibold text-xl w-full">
-            {{ pageFocus ? $t(`settings.title.${activePage}`) : $t("settings.title.settings") }}
+            {{ tabFocus ? $t(`settings.title.${activeTab}`) : $t("settings.title.settings") }}
           </h1>
         </div>
         <div
           :class="`flex-grow h-full bg-dark-900 ${
-            pageFocus ? 'slideover-on pointer-events-auto' : 'slideover-off pointer-events-none'
+            tabFocus ? 'slideover-on pointer-events-auto' : 'slideover-off pointer-events-none'
           } transition duration-250 p-5`"
         >
-          <SettingsHolder :page="activePage" />
+          <SettingsHolder :page="activeTab" />
         </div>
       </div>
-      <SettingsTabCategory
-        category="app"
-        :pages="pages.filter((page) => page.category === 'app')"
-        :active-page="activePage"
-        @pageswitch="
-          activePage = $event;
-          pageFocus = true;
-        "
-      />
-      <SettingsTabCategory
-        category="misc"
-        :pages="pages.filter((page) => page.category === 'misc')"
-        :active-page="activePage"
-        @pageswitch="
-          activePage = $event;
-          pageFocus = true;
-        "
-      />
+      <SettingsTabCategory category="app" :pages="pages.filter((page) => page.category === 'app')" />
+      <SettingsTabCategory category="misc" :pages="pages.filter((page) => page.category === 'misc')" />
     </div>
   </div>
 </template>
@@ -104,9 +78,25 @@ export default Vue.extend({
           category: "misc",
         },
       ],
-      activePage: "appearance",
-      pageFocus: false,
     };
+  },
+  computed: {
+    activeTab: {
+      get() {
+        return this.$store.state.settings.tab;
+      },
+      set(tab) {
+        this.$store.commit("settings/setTab", tab);
+      },
+    },
+    tabFocus: {
+      get() {
+        return this.$store.state.settings.tabFocus;
+      },
+      set(tabFocus) {
+        this.$store.commit("settings/setTabFocus", tabFocus);
+      },
+    },
   },
   watch: {
     navigation(navigation) {
