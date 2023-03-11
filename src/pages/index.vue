@@ -39,6 +39,9 @@ export default Vue.extend({
       variables() {
         return { id: this.image.anime };
       },
+      skip() {
+        return !this.image.anime;
+      },
     },
   },
   computed: {
@@ -79,6 +82,7 @@ export default Vue.extend({
     async setImage() {
       const images = (await this.$axios.get("https://screencaps.sakuta.app/index.json")).data;
       this.image = images?.images[Math.floor(Math.random() * images?.images.length)] || "";
+      this.$apollo.queries.Media.refetch();
     },
   },
 });
