@@ -47,6 +47,11 @@ export default Vue.extend({
       pulled: false,
     };
   },
+  head() {
+    return {
+      title: "News",
+    };
+  },
   mounted() {
     this.updatePosts();
     this.$nuxt.$on("languageSwitch", this.updatePosts);

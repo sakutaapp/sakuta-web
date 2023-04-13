@@ -36,11 +36,48 @@
 <script lang="ts">
 import Vue from "vue";
 
+// Function to limit text to x characters, but not cut words
+function limitText(text: string, limit: number) {
+  if (text.length <= limit) return text;
+  return text.substr(0, text.lastIndexOf(" ", limit)) + "...";
+}
+
 export default Vue.extend({
-  data() {
+  data(): { post: any; loaded: boolean } {
     return {
       post: {},
       loaded: false,
+    };
+  },
+  head() {
+    return {
+      title: this.post?.title ?? "News",
+      meta: [
+        { hid: "description", name: "description", content: this.post?.content ? limitText(this.post?.content, 200) : "" },
+
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:site", content: "@trysakuta" },
+        { name: "twitter:title", content: (this.post?.title ? this.post?.title + " - " : "") + "Sakuta" },
+        { name: "twitter:description", content: this.post?.content ? limitText(this.post?.content, 200) : "" },
+        {
+          name: "twitter:image",
+          content: this.post?.image?.filename_disk
+            ? `https://cms.sakuta.app/assets/${this.post?.image?.filename_disk}`
+            : "https://sakuta.app/assets/cover.png",
+        },
+
+        { name: "og:title", content: (this.post?.title ? this.post?.title + " - " : "") + "Sakuta" },
+        { name: "og:site_name", content: "Sakuta" },
+        { name: "og:url", content: "https://sakuta.app" },
+        { name: "og:description", content: this.post?.content ? limitText(this.post?.content, 200) : "" },
+        { name: "og:type", content: "website" },
+        {
+          name: "og:image",
+          content: this.post?.image?.filename_disk
+            ? `https://cms.sakuta.app/assets/${this.post?.image?.filename_disk}`
+            : "https://sakuta.app/assets/cover.png",
+        },
+      ],
     };
   },
   mounted() {
@@ -48,7 +85,7 @@ export default Vue.extend({
       .$get(
         `https://cms.sakuta.app/items/articles/${this.$route.params.slug}?fields=*,author.username,author.avatar.filename_disk,image.filename_disk,translationOriginal.slug,translationOriginal.title,translationOriginal.author.username,video.*.*`,
       )
-      .then((response) => {
+      .then((response: any) => {
         this.post = response.data;
         this.loaded = true;
       });
