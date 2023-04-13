@@ -63,7 +63,13 @@ export default Vue.extend({
     statistics() {
       return [
         { stat: "animeCount", value: this.User?.statistics?.anime?.count },
-        { stat: "minutesWatched", value: this.User?.statistics?.anime?.minutesWatched },
+        {
+          stat: this.User?.statistics?.anime?.minutesWatched > 120 ? "hoursWatched" : "minutesWatched",
+          value:
+            this.User?.statistics?.anime?.minutesWatched > 120
+              ? Math.round(this.User?.statistics?.anime?.minutesWatched / 60)
+              : this.User?.statistics?.anime?.minutesWatched,
+        },
         { stat: "episodesWatched", value: this.User?.statistics?.anime?.episodesWatched },
         { stat: "mangaCount", value: this.User?.statistics?.manga?.count },
         { stat: "chaptersRead", value: this.User?.statistics?.manga?.chaptersRead },
