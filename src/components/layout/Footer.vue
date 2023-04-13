@@ -30,7 +30,7 @@ import Vue from "vue";
 export default Vue.extend({
   data() {
     return {
-      alwaysShowBottom: localStorage.getItem("navigation") === "bottom",
+      alwaysShowBottom: localStorage.getItem("sakuta_setting_navigation") === "bottom",
       links: [
         {
           title: "footer.category.sakuta",
