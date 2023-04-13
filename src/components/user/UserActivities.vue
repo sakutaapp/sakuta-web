@@ -3,7 +3,7 @@
     <h2 class="text-lg font-semibold mb-1">
       {{ $t("user.section.activity") }}
     </h2>
-    <div class="grid grid-cols-2 gap-2">
+    <div :class="`grid gap-2 ${singleActivities ? 'grid-cols-1' : 'grid-cols-2'}`">
       <UserActivity v-for="activity in previousActivities" :key="activity.id" :activity="activity" />
       <div id="scroll-sensor" />
       <UserActivity v-for="activity in activities" :key="activity.id" :activity="activity" />
@@ -26,6 +26,7 @@ export default Vue.extend({
   data() {
     return {
       previousActivities: [],
+      singleActivities: localStorage.getItem("sakuta_setting_singleActivities") === "true",
     };
   },
   watch: {
@@ -48,6 +49,11 @@ export default Vue.extend({
         }
       },
     },
+  },
+  mounted() {
+    this.$nuxt.$on("singleActivitiesChange", (singleActivities: string) => {
+      this.singleActivities = singleActivities === "true";
+    });
   },
   methods: {
     fetchMore(): any {

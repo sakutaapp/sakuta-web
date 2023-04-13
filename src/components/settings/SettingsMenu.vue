@@ -54,7 +54,7 @@ import Vue from "vue";
 export default Vue.extend({
   data() {
     return {
-      navigation: localStorage.getItem("navigation") === "bottom" ? "bottom" : "top",
+      navigation: localStorage.getItem("sakuta_setting_navigation") === "bottom" ? "bottom" : "top",
       lang: localStorage.getItem("lang") || "en",
       pages: [
         {
