@@ -8,7 +8,7 @@
     </transition>
     <DevPageWarning v-if="showPageWarning && !isMainSite" @continue="closeDevPageWarning()" />
     <transition name="command-menu-transition">
-      <CommandMenu v-if="commandMenuEnabled" :search-only="commandMenuSearchOnly" @close="commandMenuEnabled = false" />
+      <CommandMenu v-if="commandMenuOpen" :search-only="commandMenuSearchOnly" />
     </transition>
   </div>
 </template>
@@ -20,7 +20,6 @@ export default Vue.extend({
   data() {
     return {
       showPageWarning: localStorage.getItem("continue") !== "true",
-      commandMenuEnabled: false,
       commandMenuSearchOnly: false,
     };
   },
@@ -39,13 +38,22 @@ export default Vue.extend({
     settingsOpen() {
       return this.$store.state.settings.open;
     },
+    commandMenuOpen() {
+      return this.$store.state.commandMenu.open;
+    },
+    scrollAllowed() {
+      return this.$store.state.scroll.allowed;
+    },
   },
   watch: {
-    settingsMenu(settingsMenu) {
-      if (settingsMenu) {
-        this.$nuxt.$emit("lockScroll");
+    settingsOpen(settingsMenu) {
+      settingsMenu ? this.$store.commit("scroll/disallow") : this.$store.commit("scroll/allow");
+    },
+    scrollAllowed() {
+      if (this.scrollAllowed) {
+        document.body.classList.remove("overflow-hidden");
       } else {
-        this.$nuxt.$emit("unlockScroll");
+        document.body.classList.add("overflow-hidden");
       }
     },
   },
@@ -54,31 +62,22 @@ export default Vue.extend({
       if (e.key === "k" && (e.ctrlKey || e.metaKey)) {
         e.preventDefault();
         this.commandMenuSearchOnly = false;
-        this.toggleCommandMenu();
+        this.$store.commit("commandMenu/open");
       }
     });
     this.$nuxt.$on("goHome", () => {
       console.log("goHome triggered");
       this.$router.push("/");
     });
-    this.$nuxt.$on("lockScroll", () => {
-      document.body.classList.add("overflow-hidden");
-    });
-    this.$nuxt.$on("unlockScroll", () => {
-      document.body.classList.remove("overflow-hidden");
-    });
     this.$nuxt.$on("openSearch", () => {
       this.commandMenuSearchOnly = true;
-      this.commandMenuEnabled = true;
+      // this.commandMenuEnabled = true;
     });
   },
   methods: {
     closeDevPageWarning() {
       localStorage.setItem("continue", "true");
       this.showPageWarning = false;
-    },
-    toggleCommandMenu() {
-      this.commandMenuEnabled = !this.commandMenuEnabled;
     },
   },
 });

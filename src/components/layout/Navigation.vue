@@ -24,7 +24,7 @@
           <div
             exact-active-class="text-white bg-dark-800"
             class="hover:text-white transition duration-250 bg-dark-900 hover:bg-dark-800 px-4 py-1.5 rounded-full flex space-x-2 cursor-pointer"
-            @click="$nuxt.$emit('openSearch')"
+            @click="$store.commit('commandMenu/open')"
           >
             <SearchIcon />
             <span>{{ $t(`nav.link.search`) }}</span>

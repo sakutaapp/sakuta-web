@@ -5,7 +5,7 @@
       :key="option.name"
       :ref="option.name"
       :class="`${option.name === value ? 'bg-white bg-opacity-5' : ''} px-4 py-2 cursor-pointer relative`"
-      @mouseover="$emit('input', option.name)"
+      @mouseover="$emit('change', option.name)"
       @click="$emit('enter')"
     >
       <div v-if="option.name === value" class="bg-primary absolute left-0 top-0 h-full w-0.8" />
