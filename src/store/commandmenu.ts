@@ -19,6 +19,7 @@ export const mutations: MutationTree<RootState> = {
   },
   open(state) {
     state.open = true;
+    state.subpage = null;
   },
   close(state) {
     state.open = false;
