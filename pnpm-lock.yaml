@@ -28,10 +28,10 @@ specifiers:
   prettier: ^2.3.2
   scrollmonitor: 1.2.4
   vue: '2'
-  vue-apollo: ^3.1.0
+  vue-apollo: 3.1.0
   vue-i18n: ^8.25.0
   vue-tippy: ^4.13.0
-  vuex: ^3.6.2
+  vuex: 3.6.2
   windicss: ^3.5.6
 
 dependencies:
