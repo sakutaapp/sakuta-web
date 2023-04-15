@@ -46,7 +46,7 @@ export default Vue.extend({
         return { id: this.$route.params.id };
       },
       error: () => {
-        $nuxt.$emit("goHome");
+        this.$router.push("/");
       },
     },
   },

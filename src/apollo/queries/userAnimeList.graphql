@@ -1,0 +1,28 @@
+query ($name: String!, $chunk: Int!) {
+  MediaListCollection(userName: $name, type: ANIME, perChunk: 50, chunk: $chunk) {
+    lists {
+      name
+      isCustomList
+      isSplitCompletedList
+      status
+      entries {
+        score
+        progress
+        repeat
+        media {
+          id
+          episodes
+          title {
+            native
+            romaji
+            english
+          }
+          coverImage {
+            large
+          }
+        }
+      }
+    }
+    hasNextChunk
+  }
+}

@@ -7,7 +7,7 @@
       :class="`hover:text-white transition duration-250 bg-dark-800 hover:bg-dark-700 px-4 py-1.5 rounded-full flex space-x-2 ${
         tab.disabled ? 'cursor-not-allowed' : ''
       }`"
-      :active-class="tab.disabled ? '' : 'text-white bg-primary hover:bg-primary'"
+      :exact-active-class="tab.disabled ? '' : 'text-white bg-primary hover:bg-primary'"
     >
       {{ tab.text }}
     </nuxt-link>
@@ -21,7 +21,8 @@ export default Vue.extend({
   props: {
     username: {
       type: String,
-      required: true,
+      required: false,
+      default: "",
     },
   },
   data() {
@@ -36,7 +37,7 @@ export default Vue.extend({
           name: "animeList",
           text: this.$i18n.t("user.tabs.animeList"),
           url: "/anime",
-          disabled: true,
+          disabled: false,
         },
         {
           name: "mangaList",

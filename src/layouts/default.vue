@@ -65,14 +65,6 @@ export default Vue.extend({
         this.$store.commit("commandMenu/open");
       }
     });
-    this.$nuxt.$on("goHome", () => {
-      console.log("goHome triggered");
-      this.$router.push("/");
-    });
-    this.$nuxt.$on("openSearch", () => {
-      this.commandMenuSearchOnly = true;
-      // this.commandMenuEnabled = true;
-    });
   },
   methods: {
     closeDevPageWarning() {

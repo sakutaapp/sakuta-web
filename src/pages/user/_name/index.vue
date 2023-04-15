@@ -2,7 +2,7 @@
   <Container class="mt-5">
     <anilist-gql-response>{{ User }}</anilist-gql-response>
     <UserHeader :user="User" />
-    <UserTabs :username="username" class="mb-3 hidden md:flex" />
+    <UserTabs :username="User?.name" class="mb-3 hidden md:flex" />
     <div class="flex flex-col md:flex-row md:space-x-3 space-y-4 md:space-y-0">
       <div class="w-full md:w-1/5 flex flex-col space-y-3">
         <UserStatistics :statistics="statistics" />
@@ -17,7 +17,7 @@
 
 <script>
 import Vue from "vue";
-import user from "../../../apollo/queries/user";
+import userFull from "../../../apollo/queries/userFull";
 import userActivity from "../../../apollo/queries/userActivity";
 
 export default Vue.extend({
@@ -29,18 +29,18 @@ export default Vue.extend({
   },
   head() {
     return {
-      title: this.User?.name || "User",
+      title: this.User?.name ? this.User?.name + "'s profile" : "User profile",
     };
   },
   apollo: {
     User: {
-      query: user,
+      query: userFull,
       prefetch: ({ route }) => ({ id: route.params.name }),
       variables() {
         return { name: this.$route.params.name };
       },
       error: () => {
-        $nuxt.$emit("goHome");
+        this.$router.push("/");
       },
     },
     activities: {
@@ -75,9 +75,6 @@ export default Vue.extend({
         { stat: "chaptersRead", value: this.User?.statistics?.manga?.chaptersRead },
         { stat: "volumesRead", value: this.User?.statistics?.manga?.volumesRead },
       ];
-    },
-    username() {
-      return this.User?.name;
     },
   },
   watch: {

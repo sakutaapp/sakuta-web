@@ -2,34 +2,12 @@ query ($name: String!) {
   User(name: $name) {
     id
     name
-    about(asHtml: true)
     avatar {
       large
     }
-    bannerImage
     isFollower
     isFollowing
     isBlocked
-    statistics {
-      anime {
-        count
-        minutesWatched
-        episodesWatched
-        genrePreview: genres(limit: 5, sort: COUNT_DESC) {
-          genre
-          count
-        }
-      }
-      manga {
-        count
-        chaptersRead
-        volumesRead
-        genrePreview: genres(limit: 5, sort: COUNT_DESC) {
-          genre
-          count
-        }
-      }
-    }
     previousNames {
       name
     }
