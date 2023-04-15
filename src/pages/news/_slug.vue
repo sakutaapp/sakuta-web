@@ -33,17 +33,17 @@
   </Container>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 
 // Function to limit text to x characters, but not cut words
-function limitText(text: string, limit: number) {
+function limitText(text, limit) {
   if (text.length <= limit) return text;
   return text.substr(0, text.lastIndexOf(" ", limit)) + "...";
 }
 
 export default Vue.extend({
-  data(): { post: any; loaded: boolean } {
+  data() {
     return {
       post: {},
       loaded: false,
@@ -85,7 +85,7 @@ export default Vue.extend({
       .$get(
         `https://cms.sakuta.app/items/articles/${this.$route.params.slug}?fields=*,author.username,author.avatar.filename_disk,image.filename_disk,translationOriginal.slug,translationOriginal.title,translationOriginal.author.username,video.*.*`,
       )
-      .then((response: any) => {
+      .then((response) => {
         this.post = response.data;
         this.loaded = true;
       });
